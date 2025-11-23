@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holi Coverage - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (like the back arrow) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (NEWS DETAIL) --- */
+        
+        .article-container { 
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            background: var(--white); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        .article-header h1 { 
+            color: var(--secondary-color); 
+            font-size: 2.5rem; 
+            margin-bottom: 10px;
+        }
+        
+        /* Using date-text class for subtitles/dates when an actual date isn't present */
+        .article-header .date-text {
+            display: block;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .news-img { 
+            width: 100%; 
+            height: auto;
+            border-radius: 10px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        .article-body p { 
+            line-height: 1.8; 
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        .btn-back { 
+            display: inline-block; 
+            margin-top: 30px; 
+            color: var(--primary-color); 
+            font-weight: bold; 
+            font-size: 1.1rem;
+        }
+        .btn-back:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .article-container { 
+                margin: 30px 5%;
+                padding: 20px;
+            }
+            .article-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER: This div will be replaced by the content of header.html -->
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="article-container">
+        <div class="article-header">
+            <h1>Colors of Joy: Holi Press Coverage</h1>
+            <span class="date-text">Featured in Dainik Bhaskar Digital</span>
+        </div>
+        
+        <img class="news-img" src="images/news_holi.png" alt="Holi Article">
+        
+        <a href="news.html" class="btn-back"><i class="fas fa-arrow-left"></i> Return to News Archive</a>
+    </div>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER: This div will be replaced by the content of footer.html -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT: Load the header/footer and page-specific scripts -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load common components: 'news.html' tells the script to set the News link as active.
+        loadComponents('Holi Coverage - Sanskriti & Sanskar', 'news.html');
+    });
+</script>
+</body>
+</html>

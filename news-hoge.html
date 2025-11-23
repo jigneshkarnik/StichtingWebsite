@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het Hoge Heem - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (NEWS DETAIL) --- */
+        
+        .article-container { 
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            background: var(--white); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        .article-header h1 { 
+            color: var(--secondary-color); 
+            font-size: 2.5rem; 
+            margin-bottom: 10px;
+        }
+        
+        .article-header .date-text {
+            display: block;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .news-img { 
+            width: 100%; 
+            height: auto;
+            border-radius: 10px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        .news-img.vertical {
+            max-width: 400px; 
+            margin: 20px auto 30px; 
+            display: block;
+        }
+
+        .article-body p { 
+            line-height: 1.8; 
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        .article-body h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .btn-back { 
+            display: inline-block; 
+            margin-top: 30px; 
+            color: var(--primary-color); 
+            font-weight: bold; 
+            font-size: 1.1rem;
+        }
+        .btn-back:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .article-container { 
+                margin: 30px 5%;
+                padding: 20px;
+            }
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            .news-img.vertical {
+                max-width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="article-container">
+        <div class="article-header">
+            <h1>Het Hoge Heem 'India Day' Event</h1>
+            <span class="date-text">A day of joy and cultural sharing.</span>
+        </div>
+        
+        <img class="news-img" src="images/event_hoge_heem.jpg" alt="Hoge Heem Main">
+        
+        <div class="article-body">
+            <p>Our volunteers visited Het Hoge Heem residential care center to celebrate 'India Day'. It was a heartwarming event filled with traditional music, dance, and smiles.</p>
+            
+            <h3>More Moments</h3>
+            <img class="news-img vertical" src="images/news_hoge_heem_secondary.jpg" alt="Hoge Heem Vertical">
+        </div>
+        
+        <a href="news.html" class="btn-back"><i class="fas fa-arrow-left"></i> Return to News Archive</a>
+    </div>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Het Hoge Heem - Sanskriti & Sanskar', 'news.html'); 
+    });
+</script>
+</body>
+</html>

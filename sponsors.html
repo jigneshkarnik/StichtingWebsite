@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (SPONSORS) --- */
+        
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(rgba(15, 62, 68, 0.9), rgba(15, 62, 68, 0.9)); 
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* --- SPONSOR GRID --- */
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .sponsor-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .sponsor-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+        .sponsor-image-container {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .discover-btn {
+            display: inline-block;
+            padding: 8px 25px;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .discover-btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* --- CALL TO ACTION --- */
+        .sponsor-cta {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .sponsor-cta h2 { font-size: 2rem; margin-bottom: 15px; }
+        .sponsor-cta p { margin-bottom: 30px; color: #ddd; }
+        .cta-button {
+            background-color: var(--primary-color); 
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover { background-color: #117a8b; } 
+
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Esteemed Sponsors</h1>
+            <p>Grateful for the support of organizations that help us keep our culture alive.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <div class="sponsor-grid">
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_gemeente_uithoorn.png" alt="Gemeente Uithoorn">
+                </div>
+                <a href="https://www.uithoorn.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_uithoorn_amstel.png" alt="Uithoorn aan de Amstel">
+                </div>
+                <a href="https://uithoornaandeamstel.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_uithoorn_voorelkaar.png" alt="Uithoorn voor Elkaar">
+                </div>
+                <a href="https://www.uithoornvoorelkaar.nu/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_sisar.png" alt="Sisar">
+                </div>
+                <a href="https://www.sisar.nl/home-en" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_mothers_kitchen.png" alt="Mothers Kitchen Almere">
+                </div>
+                <a href="https://motherskitchenalmere.com/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_uba.jpg" alt="UBA">
+                </div>
+                <a href="https://uba.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_kuttapayis_kitchen.jpg" alt="Kuttapayis Kitchen">
+                </div>
+                <a href="https://www.kuttapayiskitchen.com/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_kusaba.jpg" alt="Abacus at Kusaba">
+                </div>
+                <a href="https://abacusatkusaba.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_kosmos.png" alt="Kosmos">
+                </div>
+                <a href="#" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_grocery_hub.jpg" alt="Grocery Hub">
+                </div>
+                <a href="https://groceryhub.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_adept_view.png" alt="Adept View">
+                </div>
+                <a href="https://adept-view.com/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_cake_sprinkles.jpg" alt="Cakes & Sprinkles">
+                </div>
+                <a href="https://cakessprinkles.nl/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_guruscool.png" alt="Guruscool">
+                </div>
+                <a href="https://guruscool.com/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div class="sponsor-image-container">
+                    <img src="images/sponsor_markets_partners.jpg" alt="Markets & Partners">
+                </div>
+                <a href="https://www.markets-partners.com/" target="_blank" class="discover-btn">Discover</a>
+            </div>
+
+        </div>
+
+        <div class="sponsor-cta">
+            <h2>Become a Sponsor</h2>
+            <p>Partner with us to reach a vibrant community and support cultural integration in the Netherlands.</p>
+            <a href="contact.html" class="cta-button">Contact Us for Partnership</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Sponsors - Sanskriti & Sanskar', 'sponsors.html');
+    });
+</script>
+</body>
+</html>

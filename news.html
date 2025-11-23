@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Media - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (NEWS) --- */
+
+        /* HERO */
+        .page-hero { 
+            background-color: var(--secondary-color); 
+            color: var(--white); 
+            padding: 80px 5%; 
+            text-align: center; 
+        }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        /* GRID */
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; }
+        
+        .news-card {
+            background: var(--white); 
+            border-radius: 12px; 
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            transition: 0.3s;
+            display: flex; 
+            flex-direction: column; 
+            border: 1px solid #eee;
+        }
+        .news-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            border-color: var(--primary-color); 
+        }
+        
+        .news-image { height: 240px; background-color: #f0f0f0; overflow: hidden; position: relative; }
+        .news-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s; }
+        .news-card:hover .news-image img { transform: scale(1.05); }
+
+        .news-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-content h3 { color: var(--secondary-color); font-size: 1.2rem; margin-bottom: 15px; line-height: 1.4; }
+        
+        .read-more-btn { 
+            margin-top: auto; 
+            color: var(--secondary-color); 
+            font-weight: bold; 
+            border-top: 1px solid #eee; 
+            padding-top: 15px; 
+            display: block;
+        }
+        .read-more-btn:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>News Archive</h1>
+            <p>Press clippings, event reports, and community highlights</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="news-grid">
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news_conclave_main.jpeg" alt="Conclave">
+                </div>
+                <div class="news-content">
+                    <h3>'Bhartiya First' Conclave: Collaboration Foundations</h3>
+                    <a href="news-conclave.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/event_hoge_heem.jpg" alt="Hoge Heem">
+                </div>
+                <div class="news-content">
+                    <h3>Het Hoge Heem 'India Day' Event</h3>
+                    <a href="news-hoge.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news_hindi_article_1.png" alt="Hindi Diwas">
+                </div>
+                <div class="news-content">
+                    <h3>Hindi Diwas Celebrations in the Media</h3>
+                    <a href="news-hindi.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news_sss.png" alt="SSS Feature">
+                </div>
+                <div class="news-content">
+                    <h3>Sanskriti & Sanskar Feature: About Us</h3>
+                    <a href="news-sss.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news_holi.png" alt="Holi Article">
+                </div>
+                <div class="news-content">
+                    <h3>Colors of Joy: Holi Press Coverage</h3>
+                    <a href="news-holi.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news_community_card.jpg" alt="Community">
+                </div>
+                <div class="news-content">
+                    <h3>Community Gathering Highlights</h3>
+                    <a href="news-community.html" class="read-more-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('News & Media - Sanskriti & Sanskar', 'news.html');
+    });
+</script>
+</body>
+</html>

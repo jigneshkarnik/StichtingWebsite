@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sanskriti & Sanskar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES --- */
+        
+        .page-header {
+            /* LOCAL IMAGE REFERENCE */
+            background: linear-gradient(rgba(15, 62, 68, 0.8), rgba(15, 62, 68, 0.8)), url('images/hero_slide_1.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .page-header h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; }
+        .page-header p { font-size: 1.2rem; color: var(--accent-color); font-weight: bold; }
+
+        .section { padding: 60px 5%; background: var(--section-bg); margin-bottom: 20px; }
+        
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 10px; }
+        .section-title span { display: block; width: 60px; height: 4px; background-color: var(--primary-color); margin: 0 auto; }
+
+        .intro-container { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .intro-text { flex: 1; min-width: 300px; }
+        .intro-text h3 { color: var(--secondary-color); font-size: 1.8rem; margin-bottom: 20px; }
+        .intro-text p { margin-bottom: 20px; color: var(--text-light); font-size: 1.05rem; }
+        
+        .intro-image { flex: 1; min-width: 300px; text-align: center; }
+        .intro-image img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%; }
+
+        .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .mv-card { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+            text-align: center; 
+            border-top: 5px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+        .mv-card:hover { transform: translateY(-5px); }
+        .mv-icon { height: 180px; margin-bottom: 20px; object-fit: contain; }
+        .mv-card h3 { color: var(--secondary-color); margin-bottom: 15px; font-size: 1.5rem; }
+        .mv-card p { color: var(--text-light); font-size: 0.95rem; }
+
+        .stats-section { background-color: var(--secondary-color); color: var(--white); padding: 60px 5%; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .stat-item h2 { font-size: 3rem; color: var(--accent-color); margin-bottom: 5px; font-weight: 800; }
+        .stat-item p { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .team-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
+        .team-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+        
+        .team-img-wrapper { height: 300px; overflow: hidden; position: relative; }
+        .team-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: 0.5s; }
+        .team-card:hover .team-img-wrapper img { transform: scale(1.05); }
+        
+        .team-info { padding: 20px; text-align: center; }
+        .team-name { color: var(--secondary-color); font-size: 1.2rem; margin-bottom: 5px; font-weight: bold; }
+        .team-role { color: var(--primary-color); font-size: 0.85rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; }
+        .team-bio { font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px; text-align: left; }
+        
+        .cta-section { 
+            /* LOCAL IMAGE REFERENCE */
+            background: linear-gradient(rgba(23, 162, 184, 0.9), rgba(15, 62, 68, 0.9)), url('images/hero_cta_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 5%;
+            text-align: center;
+            color: var(--white);
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+        .cta-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-btn { 
+            background-color: var(--accent-color); 
+            color: var(--secondary-color); 
+            padding: 15px 35px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-btn:hover { background-color: #fff; color: var(--secondary-color); }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="page-header">
+        <h1>About Us</h1>
+        <p>India and Beyond!</p>
+    </div>
+
+    <section class="section">
+        <div class="intro-container">
+            <div class="intro-image">
+                <img src="images/about_intro.png" alt="Cultural Event">
+            </div>
+            <div class="intro-text">
+                <h3>Culture & Tradition - Here we come!</h3>
+                <p>
+                    The Foundation, registered in The Netherlands, aims to unite, revive, and help thrive the Culture, Heritage, Customs, and Traditions of India and The Netherlands.
+                </p>
+                <p>
+                    Our Foundation supports and promotes events which showcase Poetry (Literature), Music, Dance (Art), and the Spiritual outlook of both nations. We have envisioned encouraging the younger generation to learn the richness of Indian and Dutch culture, ask questions, and understand the prowess of million-year-old civilizations.
+                </p>
+                <p>
+                    <strong>We believe in:</strong> Connecting generations through art and stories, and creating a harmonious blend of traditions in modern times.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Our Purpose</h2>
+            <span></span>
+        </div>
+        <div class="mv-grid">
+            <div class="mv-card">
+                <img src="images/vision_icon.png" alt="Vision Icon" class="mv-icon">
+                <h3>Enlighten & Harmonize</h3>
+                <p>
+                    To harmonize and enlighten generations about the culture, customs, traditions, and heritage of India and Netherlands. We strive to be the bridge that connects the past with the future.
+                </p>
+            </div>
+            <div class="mv-card">
+                <img src="images/mission_icon.png" alt="Mission Icon" class="mv-icon">
+                <h3>Build & Promote</h3>
+                <p>
+                    • To provide a platform to organise, share, promote and celebrate ideas/events of Indian, Surinamese Indian and Dutch<br>
+                    • To promote literature and art forms<br>
+                    • To promote spiritual discourses and outcomes<br>
+                    • To build harmony between cultures<br>
+                    • To find the common thread of humanity<br>
+                    • To encourage younger generations learn more about culture, heritage and traditions<br>
+                    • To bring together the Indian diaspora in the Netherlands through fusion between Indian and Dutch cultures
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>6,000+</h2>
+                <p>Satisfied Participants</p>
+            </div>
+            <div class="stat-item">
+                <h2>100+</h2>
+                <p>Projects</p>
+            </div>
+            <div class="stat-item">
+                <h2>200+</h2>
+                <p>Awesome Volunteers/Sanskritik Sahyogi</p>
+            </div>
+            <div class="stat-item">
+                <h2>3+</h2>
+                <p>Years of Joy</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Exuberant Team</h2>
+            <span></span>
+            <p style="margin-top: 10px; color: #666;">Ready to help you</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_seema_sharma.png" alt="Seema Sharma">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Seema Sharma</div>
+                    <div class="team-role">Executive Founder Board Member & Director</div>
+                    <div class="team-bio">
+                        An erudite, extremely ardent, result-driven, culturally-sensitive Leader, Team player and a Strategist, Seema believes in possibilities and certainties! She has been one of the key driving force behind the Stichting's key mission and vision opportunities! She believes in an collaborative Community engagements and participation. Seema Sharma is deeply interested in Global History & Civilization, Animal Rights and Gender equality.
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_mahesh_pandey.jpg" alt="Mahesh Vallabh Pandey">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Mahesh Vallabh Pandey</div>
+                    <div class="team-role">Executive Founder Board Member & Director</div>
+                    <div class="team-bio">
+                        Brain behind the Stichting, the Chief Strategist, Visionary and Orchestrator of the Stichting's Objectives, an IT Professional, IIM-Calcutta Management Leader, IT Leader, Podcast Director & Producer, Radio Show Director & Producer, Podcaster, Program and Event Host, Writer, Published Author, Poet, Lyricist, Blogger, Ex-Journalist---Mahesh is extremely passionate about learning, promoting & cross-sharing multi-Culture, Traditions, Heritage, Customs and Values.
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_shilpam_chandra.png" alt="Shilpam Chandra">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Shilpam Chandra</div>
+                    <div class="team-role">Executive Co-Founder Board Member & Director</div>
+                    <div class="team-bio">
+                        A Spiritual student of Music from the ancient city of Kashi and one of the Founding Board Member of the Stichting. She holds a PhD and had been a Lecturer in Global Universities. A Singer and a Poet, she is part of organizing committees for cultural events. Her ambition is to create a platform for introducing new talents in Netherlands.
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_rakesh_pai.jpeg" alt="Rakesh Pai">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Rakesh Pai</div>
+                    <div class="team-role">Executive Management Team Board Member</div>
+                    <div class="team-bio">
+                        A ardent exponent & lover of Theatre, Poetry and Chess, Rakesh is a prolific Poet and a Writer in Hindi, English and Urdu languages; and also a Chess Coach to the kids. He is a firm believer in bringing harmony within Indian and Dutch diaspora and strives to make a difference through cultural and literary integration. He has hosted and led events and programs in literature, culture and performing arts.
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_alok_sharma.jpeg" alt="Alok Sharma">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Alok Sharma</div>
+                    <div class="team-role">Executive Management Team Board Member</div>
+                    <div class="team-bio">
+                        An Artifical Intelligence professional and an extraordinary literary figure, who has Literature on his finger tips. His love for Indian Literature is unparallel. His self-written Poetry and Precis are a treat to ears and eyes. Exceptional human being and a great philosophical thinker, Alok has an burning passion for Artificial Intelligence, Art, Culture and Literature.
+                    </div>
+                </div>
+            </div>
+
+             <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_jignesh_karnik.jpeg" alt="Jignesh Karnik">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Jignesh Karnik</div>
+                    <div class="team-role">Executive Management Team Board Member</div>
+                    <div class="team-bio">
+                        An IT Technology, Innovation and R&D Leader, Jignesh loves art in any form. Indian Classical Music, Poetery, Literature, Drawing and Painting are the ones that he ventures into the most. Meeting new people and having chats is one of his hobbies. He has hosted many professional and art programs and is a Public Speaker in professional events in Netherlands. Working in IT, he believes in "Future is Human" and the only way to flourish is when Sanskar, Technology and Art go hand in hand.
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="images/team_pooja_karnik.jpg" alt="Dr. Pooja Karnik">
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Dr. Pooja Karnik</div>
+                    <div class="team-role">Head: Women, Health & Social Initiatives</div>
+                    <div class="team-bio">
+                        Dr. Pooja Karnik is a Homeopathic Doctor, practicing Homeopathy since 2001, now registered with NVHK in the Netherlands. Through regular involvement in Dutch working groups for classical homeopathy, Dr. Pooja Karnik shares insights from her Indian background and experience, contributing to the wider dutch professional community. She organizes, plans & executes various initiatives related to women, healthcare, and Wellness at Het Hoge Heem and Uithoorn voor Elkaar.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>We’re here to cherish the dreams of many!</h2>
+            <p>Please feel free to join our Magnificent & Energetic Volunteer Network</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN5btpR4JMfwcpbL6ISdkwa1cW_j2_yWRSUBHirHSrgbuLsw/viewform?usp=sharing" target="_blank" class="cta-btn">JOIN WITH PRIDE!</a>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('About Us - Sanskriti & Sanskar', 'about.html');
+    });
+</script>
+</body>
+</html>

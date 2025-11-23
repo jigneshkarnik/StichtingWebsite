@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (DONATIONS) --- */
+        
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(rgba(15, 62, 68, 0.9), rgba(15, 62, 68, 0.9)), url('images/hero_donations_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* --- DONATION CONTENT --- */
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Left Side: Text */
+        .donation-text h2 { color: var(--secondary-color); font-size: 2rem; margin-bottom: 20px; }
+        .donation-text p { margin-bottom: 20px; font-size: 1.05rem; color: var(--text-light); }
+        
+        .bank-details-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+
+        .bank-details-card h3 { color: var(--secondary-color); font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .bank-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; }
+        .bank-label { font-weight: bold; color: var(--text-dark); }
+        .bank-value { color: var(--text-light); font-family: monospace; font-size: 1.1rem; }
+
+        /* Right Side: QR Code */
+        .qr-section {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .qr-section h3 { color: var(--secondary-color); margin-bottom: 10px; }
+        .qr-section p { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
+        
+        .qr-image-wrapper {
+            max-width: 300px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            border: 2px dashed var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .tikkie-badge {
+            background-color: var(--secondary-color); 
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .page-hero { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Make a Contribution</h1>
+            <p>Your support helps us preserve culture, heritage, and tradition.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <div class="donation-text">
+            <h2>Why Donate?</h2>
+            <p>At the heart of Stichting Sanskriti & Sanskar lies a profound commitment to nurture, preserve, and amplify the diverse tapestry of Culture, Heritage, Tradition, and Art.</p>
+            <p>We ardently champion the cause of literature and various art forms, while also giving prominence to spiritual discourses. Beyond mere promotion, there’s a deeper drive to weave harmony between distinct cultures.</p>
+            <p>Your generous donations of any amount help us continue our uninterrupted service to the community.</p>
+
+            <div class="bank-details-card">
+                <h3>Bank Transfer Details</h3>
+                <div class="bank-row">
+                    <span class="bank-label">Account Name:</span>
+                    <span class="bank-value">SANSKRITI SANSKAR</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">IBAN:</span>
+                    <span class="bank-value">NL96 ABNA 0126 5269 90</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">BIC:</span>
+                    <span class="bank-value">ABNANL2A</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Bank:</span>
+                    <span class="bank-value">ABN AMRO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <h3>Quick Donation</h3>
+            <p>Scan the QR code below with your camera or banking app to donate easily via Tikkie.</p>
+            
+            <div class="qr-image-wrapper">
+                <img src="images/qr_tikkie.jpg" alt="Tikkie Donation QR Code">
+            </div>
+
+            <span class="tikkie-badge">TIKKI€</span>
+            <p style="margin-top: 15px; font-size: 0.85rem;">Secure payment via Tikkie (ABN AMRO)</p>
+        </div>
+
+    </div>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Donate - Sanskriti & Sanskar', 'donations.html');
+    });
+</script>
+</body>
+</html>

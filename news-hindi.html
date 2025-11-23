@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Diwas - Sanskriti & Sanskar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (NEWS DETAIL) --- */
+        
+        .article-container { 
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 40px; 
+            background: var(--white); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        .article-header h1 { 
+            color: var(--secondary-color); 
+            font-size: 2.5rem; 
+            margin-bottom: 10px;
+        }
+        
+        .article-header .date-text {
+            display: block;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .article-body h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .news-img { 
+            width: 100%; 
+            height: auto;
+            border-radius: 10px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        .article-body p { 
+            line-height: 1.8; 
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        .btn-back { 
+            display: inline-block; 
+            margin-top: 30px; 
+            color: var(--primary-color); 
+            font-weight: bold; 
+            font-size: 1.1rem;
+        }
+        .btn-back:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .article-container { 
+                margin: 30px 5%;
+                padding: 20px;
+            }
+            .article-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="article-container">
+        <div class="article-header">
+            <h1>Hindi Diwas Coverage</h1>
+            <span class="date-text">Our efforts to promote Hindi language and literature were featured in the press.</span>
+        </div>
+        
+        <div class="article-body">
+            <h3>Article 1</h3>
+            <img class="news-img" src="https://sanskritiandsanskar.com/wp-content/uploads/2025/01/Hindi-Diwas_Article_1.png" alt="Hindi Diwas Article 1">
+            
+            <h3>Article 2</h3>
+            <img class="news-img" src="https://sanskritiandsanskar.com/wp-content/uploads/2025/01/Hindi-Diwas_Article_2.png" alt="Hindi Diwas Article 2">
+        </div>
+        
+        <a href="news.html" class="btn-back"><i class="fas fa-arrow-left"></i> Return to News Archive</a>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load common components: 'news.html' tells the script to set the News link as active.
+        loadComponents('Hindi Diwas - Sanskriti & Sanskar', 'news.html');
+    });
+</script>
+</body>
+</html>
