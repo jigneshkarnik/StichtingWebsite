@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate - Sanskriti & Sanskar</title>
-    <!-- Font Awesome is linked here for icons (if any) in the main content -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Link the external CSS file for common styles -->
     <link rel="stylesheet" href="style.css"> 
 
     <style>
@@ -68,12 +66,20 @@
         .qr-section p { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
         
         .qr-image-wrapper {
-            max-width: 300px;
+            max-width: 300px; /* Limits the container size */
             margin: 0 auto 20px;
             padding: 10px;
             border: 2px dashed var(--primary-color);
             border-radius: 10px;
         }
+        
+        /* FIX: This rule tells the image to scale down to the size of its parent wrapper */
+        .qr-image-wrapper img {
+            width: 100%; /* Ensures the image shrinks to fit the 300px max-width of the wrapper */
+            height: auto;
+            display: block;
+        }
+        /* END FIX */
 
         .tikkie-badge {
             background-color: var(--secondary-color); 
@@ -93,7 +99,6 @@
 </head>
 <body>
 
-<!-- 1. HEADER PLACEHOLDER -->
 <div id="header-placeholder"></div>
 
 <main>
@@ -148,15 +153,13 @@
     </div>
 </main>
 
-<!-- 2. FOOTER PLACEHOLDER -->
 <div id="footer-placeholder"></div>
 
-<!-- 3. INCLUDE JAVASCRIPT -->
 <script src="include.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        loadComponents('Donate - Sanskriti & Sanskar', 'donations.html');
-    });
+    // CRITICAL FIX: Calling loadComponents directly ensures the dynamic content loads immediately
+    // before DOMContentLoaded triggers.
+    loadComponents('Donate - Sanskriti & Sanskar', 'donations.html');
 </script>
 </body>
 </html>
