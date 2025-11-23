@@ -49,6 +49,23 @@ function loadComponents(pageTitle, activePage) {
                     
                     navLinksContainer.innerHTML = navHtml;
                 }
+                
+                // CRITICAL FIX: Initialize mobile menu logic immediately after header injection
+                const toggleButton = document.querySelector('.menu-toggle');
+                const navLinks = document.getElementById('main-nav-links');
+
+                if (toggleButton && navLinks) {
+                    toggleButton.addEventListener('click', () => {
+                        navLinks.classList.toggle('open');
+                        
+                        const isExpanded = navLinks.classList.contains('open');
+                        toggleButton.setAttribute('aria-expanded', isExpanded);
+
+                        const icon = toggleButton.querySelector('i');
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    });
+                }
             }
         })
         .catch(error => console.error('Error loading header. Please check the file path and local server setup:', error));
@@ -68,28 +85,3 @@ function loadComponents(pageTitle, activePage) {
         })
         .catch(error => console.error('Error loading footer. Please check the file path and local server setup:', error));
 }
-
-
-// Wait for the DOM to be fully loaded, including the dynamically inserted header
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle Logic
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.getElementById('main-nav-links');
-
-    // Check if the dynamically injected elements exist before adding the listener
-    if (toggleButton && navLinks) {
-        toggleButton.addEventListener('click', () => {
-            // 1. Toggle the 'open' class to make the menu visible/hidden
-            navLinks.classList.toggle('open');
-            
-            // 2. Toggle the accessibility attribute
-            const isExpanded = navLinks.classList.contains('open');
-            toggleButton.setAttribute('aria-expanded', isExpanded);
-
-            // 3. Toggle the icon for visual feedback (bars <-> X)
-            const icon = toggleButton.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-    }
-});

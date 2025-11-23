@@ -16,7 +16,7 @@ body {
 }
 
 /* ===================================================
-   TOP BAR STYLING
+   TOP BAR STYLING (Desktop)
    =================================================== */
 .top-bar {
     display: flex;
@@ -56,6 +56,8 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: relative;
     z-index: 10;
+    /* Add border to define the bottom of the header for mobile menu positioning */
+    border-bottom: 1px solid transparent; 
 }
 .logo {
     display: flex;
@@ -96,7 +98,7 @@ body {
 }
 
 /* ===================================================
-   MOBILE NAVIGATION FIX
+   MOBILE NAVIGATION FIX (Media Query)
    =================================================== */
 
 /* Hide the toggle button on desktop */
@@ -111,8 +113,9 @@ body {
 }
 
 @media (max-width: 900px) {
-    /* Top Bar adjustments */
+    /* --- TOP BAR FIX --- */
     .top-bar {
+        /* Force vertical stacking and centering for better mobile display */
         flex-direction: column;
         text-align: center;
         gap: 5px;
@@ -121,20 +124,27 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%; /* Take full width */
+        padding: 5px 0;
     }
     .top-info span {
-        margin: 2px 0;
+        margin: 2px 0; /* Add vertical spacing */
+        margin-right: 0; /* Clear horizontal margin */
+    }
+    .top-socials {
+        padding: 5px 0;
     }
 
-    /* Main Navbar adjustments */
+    /* --- MAIN NAVBAR FIX --- */
     .navbar {
-        flex-wrap: wrap;
+        /* Allow items to wrap and fill width */
+        flex-wrap: wrap; 
+        padding: 10px 5%; /* Maintain clean padding */
     }
-
+    
     /* 1. Show the toggle button */
     .menu-toggle {
         display: block;
-        /* Aligns the button to the right of the logo */
         margin-left: auto; 
     }
 
@@ -143,7 +153,7 @@ body {
         display: none; /* Hide menu by default */
         flex-direction: column;
         width: 100%;
-        /* Position the menu directly below the navbar */
+        /* FIX: Position the menu directly below the navbar */
         position: absolute;
         top: 100%; 
         left: 0;
@@ -166,7 +176,7 @@ body {
         text-align: left;
     }
     .btn-donate {
-        margin: 10px 20px; /* Ensure button padding */
+        margin: 10px 20px;
         text-align: center;
     }
 
