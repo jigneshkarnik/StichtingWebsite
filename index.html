@@ -139,7 +139,7 @@
 
 <div id="header-placeholder"></div>
 
-<main>
+<section class="main-content-wrapper">
     <section class="hero-slider">
         <div class="hero-slide active" style="background-image: url('images/hero_slide_1.png');">
             <div class="hero-overlay"></div>
@@ -245,14 +245,13 @@
             </div>
         </div>
     </div>
-</main>
+</section>
 
 <div id="footer-placeholder"></div>
 
 <script src="include.js"></script>
 <script>
-    // CRITICAL FIX: Ensure loadComponents is called after include.js is sourced
-    // and before the page-specific script runs.
+    // CRITICAL FIX: Call loadComponents AFTER include.js is sourced
     loadComponents('Home - Sanskriti & Sanskar', 'index.html');
     
     document.addEventListener('DOMContentLoaded', () => {
