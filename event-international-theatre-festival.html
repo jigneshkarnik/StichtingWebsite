@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +11,60 @@
   <meta property="og:image" content="/images/events_ITFPoster.jpg">
   <meta property="og:type" content="event">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Breadcrumb styles (lightweight, consistent with site) */
+    .breadcrumb {
+      background: #f7f7f7;
+      padding: 12px 5%;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+    .breadcrumb a { color: var(--secondary-color); text-decoration: none; font-weight:600; }
+    .breadcrumb span { color: var(--text-light); }
+    .breadcrumb .sep { color: #999; margin: 0 8px; }
+    /* Participants section */
+    .participants { margin-top: 36px; }
+    .participants h3 { margin-bottom: 8px; color: var(--secondary-color); }
+    .participants p.lead { color: var(--text-light); margin-bottom: 18px; }
+    .participants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .participant {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .participant:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.12); }
+    .participant-logo {
+      width: 64px; height: 64px; border-radius: 8px; background: #fafafa;
+      display:flex; align-items:center; justify-content:center; font-size:1.6rem; color: var(--secondary-color);
+      flex: 0 0 64px;
+    }
+    .participant-info h4 { margin: 0; font-size: 1rem; color: var(--secondary-color); }
+    .participant-info p { margin: 4px 0 0; font-size: 0.92rem; color: var(--text-light); }
+    .participant .external { margin-left: 8px; color: var(--primary-color); font-size: 0.95rem; }
+  </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
+  <!-- Breadcrumb (Home → Upcoming Events → This Event) -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span class="sep">›</span>
+    <a href="upcoming-events.html">Upcoming Events</a><span class="sep">›</span>
+    <span>International Theatre Festival</span>
+  </nav>
   <main style="padding:40px 5%; max-width:1000px; margin:0 auto;">
     <article>
       <h1 style="color:var(--secondary-color);">International Theatre Festival — Hoofddorp</h1>
@@ -40,6 +91,48 @@
         </aside>
       </div>
 
+          <section class="participants">
+            <h3>Participating Groups</h3>
+            <p class="lead">We are proud to host performances from the following theatre groups. Click a card to visit their site.</p>
+            <div class="participants-grid">
+              <a class="participant" href="https://www.natyadhaara.org/" target="_blank" rel="noopener noreferrer">
+                <div class="participant-logo"><i class="fas fa-theater-masks"></i></div>
+                <div class="participant-info">
+                  <h4>Natyadhare</h4>
+                  <p>Classical and contemporary theatre ensemble.</p>
+                </div>
+                <div class="external"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+
+              <a class="participant" href="https://majlishtheatre.nl/productions/" target="_blank" rel="noopener noreferrer">
+                <div class="participant-logo"><i class="fas fa-theater-masks"></i></div>
+                <div class="participant-info">
+                  <h4>Majlish</h4>
+                  <p>Contemporary productions with a community focus.</p>
+                </div>
+                <div class="external"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+
+              <a class="participant" href="https://gujaratisamaj.nl/introduction" target="_blank" rel="noopener noreferrer">
+                <div class="participant-logo"><i class="fas fa-theater-masks"></i></div>
+                <div class="participant-info">
+                  <h4>Abhivyakti</h4>
+                  <p>Performing arts group promoting Gujarati theatre.</p>
+                </div>
+                <div class="external"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+
+              <a class="participant" href="https://www.instagram.com/rocky_amaretto/?hl=en" target="_blank" rel="noopener noreferrer">
+                <div class="participant-logo"><i class="fab fa-instagram"></i></div>
+                <div class="participant-info">
+                  <h4>Rocky Amaretto</h4>
+                  <p>Independent theatre artist (Instagram).</p>
+                </div>
+                <div class="external"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </div>
+          </section>
+
     </article>
   </main>
 
@@ -62,6 +155,28 @@
     },
     "image": ["/images/events_ITFPoster.jpg"],
     "description": "International Theatre Festival — performances from national & international theatre groups. Tickets available via Eventix.",
+    "performer": [
+      {
+        "@type": "PerformingGroup",
+        "name": "Natyadhara",
+        "sameAs": "https://www.natyadhaara.org/"
+      },
+      {
+        "@type": "PerformingGroup",
+        "name": "Majlish",
+        "sameAs": "https://majlishtheatre.nl/productions/"
+      },
+      {
+        "@type": "PerformingGroup",
+        "name": "Abhivyakti",
+        "sameAs": "https://gujaratisamaj.nl/introduction"
+      },
+      {
+        "@type": "PerformingGroup",
+        "name": "Rocky Amaretto",
+        "sameAs": "https://www.instagram.com/rocky_amaretto/?hl=en"
+      }
+    ],
     "offers": {
       "@type": "Offer",
       "url": "https://eventix.shop/g3wv9xqj",
