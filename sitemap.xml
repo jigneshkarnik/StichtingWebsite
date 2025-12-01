@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sanskritiandsanskar.com/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/index.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/upcoming-events.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/event-international-theatre-festival.html</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/events.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/sponsors.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/contact.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://sanskritiandsanskar.com/donations.html</loc>
+    <priority>0.70</priority>
+  </url>
+</urlset>
