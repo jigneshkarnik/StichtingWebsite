@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES (UPCOMING EVENTS) --- */
+        
+        /* PAGE HEADER */
+        .page-header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* --- EVENTS GRID --- */
+        .events-container { padding: 60px 5%; max-width: 1400px; margin: 0 auto; }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+        }
+
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .event-card:hover .card-image img { transform: scale(1.05); }
+
+        .upcoming-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content h3 { 
+            color: var(--secondary-color); 
+            margin-bottom: 10px; 
+            font-size: 1.1rem; 
+            line-height: 1.4; 
+            min-height: 3em; 
+        }
+        .event-meta { margin-top: auto; color: var(--text-light); font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px; }
+        .event-meta div { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+
+        .ticket-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .ticket-btn:hover {
+            background-color: #0f3e44;
+        }
+
+        @media (max-width: 768px) {
+            .card-content h3 { min-height: unset; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="page-header">
+        <h1>Upcoming Events</h1>
+        <p>Join us for exciting cultural celebrations and community gatherings</p>
+    </div>
+
+    <section class="events-container">
+        <div class="events-grid">
+
+            <div class="event-card">
+                <div class="card-image">
+                    <span class="upcoming-badge">13 Dec 2025</span>
+                    <img src="images/UnityFestivalOfLight2025Poster.jpg" alt="Unity Festival of Lights 2025">
+                </div>
+                <div class="card-content">
+                    <h3>Unity Festival of Lights 2025</h3>
+                    <div class="event-meta">
+                        <div><i class="fas fa-calendar-alt"></i> December 13, 2025</div>
+                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                    </div>
+                    <a href="https://eventix.shop/fqasqx3m" target="_blank" class="ticket-btn">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="card-image">
+                    <span class="upcoming-badge">25 Jan 2026</span>
+                    <img src="images/events_ITFPoster.jpg" alt="International Theatre Festival">
+                </div>
+                <div class="card-content">
+                    <h3>International Theatre Festival</h3>
+                    <div class="event-meta">
+                        <div><i class="fas fa-calendar-alt"></i> January 25, 2026</div>
+                        <div><i class="fas fa-map-marker-alt"></i> Hoofddorp</div>
+                    </div>
+                    <a href="https://eventix.shop/g3wv9xqj" target="_blank" class="ticket-btn">Get Tickets</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Upcoming Events - Sanskriti & Sanskar', 'upcoming-events.html');
+    });
+</script>
+</body>
+</html>

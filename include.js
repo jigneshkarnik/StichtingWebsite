@@ -29,6 +29,7 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'Home', href: 'index.html' },
                         { text: 'About', href: 'about.html' },
                         { text: 'Event Archives', href: 'events.html' },
+                        { text: 'Upcoming Events', href: 'upcoming-events.html' },
                         { text: 'Donations', href: 'donations.html' },
                         { text: 'News', href: 'news.html' },
                         { text: 'Sponsors', href: 'sponsors.html' },
