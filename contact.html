@@ -147,7 +147,15 @@
             gap: 50px;
             align-items: center;
         }
-        .donation-img img { border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .donation-img img {
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 320px; /* limit QR/poster width so text remains readable */
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         .bank-details {
             background-color: var(--light-bg);
             padding: 30px;
