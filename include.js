@@ -28,7 +28,7 @@ function loadComponents(pageTitle, activePage) {
                     const links = [
                         { text: 'Home', href: 'index.html' },
                         { text: 'About', href: 'about.html' },
-                        { text: 'Events', href: 'events.html' },
+                        { text: 'Event Archives', href: 'events.html' },
                         { text: 'Donations', href: 'donations.html' },
                         { text: 'News', href: 'news.html' },
                         { text: 'Sponsors', href: 'sponsors.html' },
