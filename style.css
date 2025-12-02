@@ -374,6 +374,80 @@ footer {
 }
 
 /* ===================================================
+   PERFORMER CARDS GRID
+   =================================================== */
+.performers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.performer-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.performer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.performer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.performer-card-content {
+    padding: 18px;
+}
+
+.performer-card h4 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.performer-role {
+    margin: 0 0 10px;
+    font-size: 0.88rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.performer-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .performers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+    .performer-card img { height: 180px; }
+    .performer-card-content { padding: 14px; }
+    .performer-card h4 { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .performers-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .performer-card img { height: 160px; }
+}
+
+/* ===================================================
      PARTICIPANTS (Event cards) - moved from event page
      =================================================== */
 .participants { margin-top: 36px; }
