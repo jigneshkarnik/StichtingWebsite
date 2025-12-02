@@ -38,10 +38,6 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'Contact Us', href: 'contact.html' }
                     ];
 
-                    // mark nav as loading (hidden) until measurements complete to avoid layout flash
-                    navLinksContainer.classList.add('nav-loading');
-                    navLinksContainer.setAttribute('aria-hidden', 'true');
-
                     // Build list items for the nav
                     links.forEach(link => {
                         const li = document.createElement('li');
@@ -152,14 +148,6 @@ function loadComponents(pageTitle, activePage) {
                         } else {
                             more.style.display = 'block';
                         }
-
-                        // On the first successful redistribution, reveal the nav (prevent FOUC)
-                        try {
-                            if (nav.classList.contains('nav-loading')) {
-                                nav.classList.remove('nav-loading');
-                                nav.removeAttribute('aria-hidden');
-                            }
-                        } catch (e) {}
                     }
 
                     // Toggle more-list on click (desktop)

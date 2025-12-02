@@ -83,6 +83,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+/* Hide nav initially until JS redistribution completes (prevents flash) */
+.nav-links.initializing {
+    visibility: hidden;
+}
 .nav-links li a {
     display: block;
     padding: 10px 15px;
