@@ -580,22 +580,26 @@ footer {
 
 /* Mobile-friendly tab selector (shown on small screens) */
 .tab-select {
-    display: none; /* hidden by default, shown on small screens */
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #e6e6e6;
-    font-weight: 600;
-    color: var(--secondary-color);
-    background: #fff;
-    margin-bottom: 12px;
+    display: none; /* hidden - we'll use scrollable tabs instead */
 }
 
 @media (max-width: 600px) {
-    .tab-buttons { gap: 6px; }
-    .tab-buttons button { padding: 6px 8px; font-size: 0.95rem; }
+    /* Make tabs horizontally scrollable on mobile */
+    .tab-buttons { 
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        padding-bottom: 4px;
+    }
+    .tab-buttons button { 
+        padding: 8px 14px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
 
-    /* Hide the button-style tabs on very small screens and show a select */
-    .tab-buttons { display: none; }
-    .tab-select { display: block; }
+    /* Hide the select dropdown on mobile */
+    .tab-select { display: none; }
 }
