@@ -510,3 +510,37 @@ footer {
     .event-layout { grid-template-columns: 1fr; }
     .event-layout aside { order: 0; }
 }
+
+/* ===================================================
+   IN-PAGE TABS
+   =================================================== */
+.tabs { margin-top: 24px; }
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.tab-buttons button {
+    background: transparent;
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+.tab-buttons button.active,
+.tab-buttons button[aria-selected="true"] {
+    background: var(--secondary-color);
+    color: #fff;
+    border-color: var(--secondary-color);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.tab-panel ul { padding-left: 18px; }
+
+@media (max-width: 600px) {
+    .tab-buttons { gap: 6px; }
+    .tab-buttons button { padding: 6px 8px; font-size: 0.95rem; }
+}
