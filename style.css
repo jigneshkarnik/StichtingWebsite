@@ -293,6 +293,87 @@ footer {
 }
 
 /* ===================================================
+   DESKTOP: Keep header/nav on a single line
+   =================================================== */
+@media (min-width: 992px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        max-width: 220px;
+    }
+    .logo img { height: 46px; }
+
+    /* Center nav and prevent wrapping */
+    .nav-links {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: visible;
+        align-items: center;
+    }
+    .nav-links li { flex: 0 0 auto; }
+    .nav-links li a { white-space: nowrap; padding: 8px 12px; }
+
+    /* Ensure donate button doesn't push nav down */
+    .btn-donate {
+        flex: 0 0 auto;
+        margin-left: 12px;
+        padding: 8px 12px !important;
+    }
+
+    /* Hide mobile toggle on desktop */
+    .menu-toggle { display: none; }
+
+    /* Slightly reduce nav spacing for very long menus */
+    .nav-links.long-menu li a { padding: 6px 8px; }
+}
+
+/* Styles for the overflow 'more' menu */
+.nav-links { position: relative; }
+.nav-links .more { position: relative; display: none; }
+.nav-links .more .more-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+.nav-links .more .more-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: var(--white);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    list-style: none;
+    padding: 8px 6px;
+    min-width: 180px;
+    z-index: 50;
+}
+.nav-links .more .more-list.open { display: block; }
+.nav-links .more .more-list li { display: block; }
+.nav-links .more .more-list li a { display: block; padding: 8px 12px; color: var(--secondary-color); }
+
+/* Ensure donate button stays visible and not moved into more */
+.nav-links .donate-li { flex: 0 0 auto; }
+
+/* Hide the more-list on small screens (mobile uses full menu) */
+@media (max-width: 900px) {
+    .nav-links .more { display: none !important; }
+}
+
+/* ===================================================
      PARTICIPANTS (Event cards) - moved from event page
      =================================================== */
 .participants { margin-top: 36px; }

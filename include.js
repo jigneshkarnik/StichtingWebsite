@@ -25,30 +25,161 @@ function loadComponents(pageTitle, activePage) {
                 // Build and insert navigation links (needed after header is injected)
                 const navLinksContainer = document.getElementById('main-nav-links');
                 if (navLinksContainer) {
+                    // Ordered links per requested sequence (Donations removed from nav)
                     const links = [
                         { text: 'Home', href: 'index.html' },
-                        { text: 'About', href: 'about.html' },
                         { text: 'Event Archives', href: 'events.html' },
                         { text: 'Upcoming Events', href: 'upcoming-events.html' },
-                        { text: 'Donations', href: 'donations.html' },
                         { text: 'News', href: 'news.html' },
                         { text: 'Sponsors', href: 'sponsors.html' },
                         { text: 'The Tulips Lounge', href: 'tulip-lounge.html' },
                         { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
-                        { text: 'Contact Us', href: 'contact.html' },
+                        { text: 'About Us', href: 'about.html' },
+                        { text: 'Contact Us', href: 'contact.html' }
                     ];
 
-                    let navHtml = links.map(link => {
-                        // Check if the link matches the current page, or if the current page is the specific Bhartiya First page
-                        const isActive = (link.href === activePage) || (link.href === 'bhartiyafirst.html' && activePage === 'bhartiyafirst.html');
-                        const className = isActive ? 'active' : '';
-                        return `<li><a href="${link.href}" class="${className}">${link.text}</a></li>`;
-                    }).join('');
+                    // Build list items for the nav
+                    links.forEach(link => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = link.href;
+                        a.textContent = link.text;
+                        // active state
+                        if (link.href === activePage || (link.href === 'bhartiyafirst.html' && activePage === 'bhartiyafirst.html')) {
+                            a.classList.add('active');
+                        }
+                        li.appendChild(a);
+                        navLinksContainer.appendChild(li);
+                    });
 
-                    // Add Donate Button
-                    navHtml += '<li><a href="donations.html" class="btn-donate">Donate Now</a></li>';
-                    
-                    navLinksContainer.innerHTML = navHtml;
+                    // Add a 'more' dropdown container for overflow items (inserted before donate so donate stays visible)
+                    const moreLi = document.createElement('li');
+                    moreLi.className = 'more';
+                    moreLi.innerHTML = '<button class="more-toggle" aria-expanded="false"><i class="fa fa-bars"></i></button><ul class="more-list" aria-hidden="true"></ul>';
+                    navLinksContainer.appendChild(moreLi);
+
+                    // Add Donate Button as a standalone item (always visible)
+                    const donateLi = document.createElement('li');
+                    donateLi.innerHTML = '<a href="donations.html" class="btn-donate">Donate Now</a>';
+                    donateLi.classList.add('donate-li');
+                    navLinksContainer.appendChild(donateLi);
+
+                    // Function to redistribute items into the more-list when space is limited
+                    function redistributeMenu() {
+                        const nav = navLinksContainer;
+                        const more = nav.querySelector('.more');
+                        const moreList = more.querySelector('.more-list');
+                        const donate = nav.querySelector('.donate-li');
+                        const navbar = document.querySelector('.navbar');
+                        const logo = document.querySelector('.logo');
+                        if (!nav || !more || !navbar) return;
+
+                        // Move all items out of more-list back into nav before measuring
+                        while (moreList.firstChild) {
+                            nav.insertBefore(moreList.firstChild, more);
+                        }
+
+                        // Measure available space (navbar width minus logo and donate widths)
+                        const navbarWidth = navbar.clientWidth;
+                        const logoWidth = logo ? logo.offsetWidth : 0;
+                        const donateWidth = donate ? donate.offsetWidth : 0;
+                        const buffer = 72; // smaller breathing room
+                        const available = navbarWidth - (logoWidth + donateWidth + buffer);
+
+                        // Compute gap between items (CSS gap)
+                        let gap = 18; // default
+                        try {
+                            const cs = window.getComputedStyle(nav);
+                            const g = cs.getPropertyValue('gap') || cs.getPropertyValue('column-gap');
+                            if (g) gap = parseFloat(g);
+                        } catch (e) {}
+
+                        // Collect candidate items (exclude .more and .donate-li)
+                        let items = Array.from(nav.children).filter(ch => !ch.classList.contains('more') && !ch.classList.contains('donate-li'));
+
+                        // Calculate used width (sum of item widths + gaps)
+                        let used = items.reduce((sum, el) => sum + el.offsetWidth, 0);
+                        if (items.length > 1) used += gap * (items.length - 1);
+
+                        // If used space exceeds available, move items from right to left into moreList
+                        while (used > available && items.length > 0) {
+                            const last = items.pop();
+                            used -= last.offsetWidth;
+                            if (items.length >= 1) used -= gap; // removed one gap
+                            moreList.insertBefore(last, moreList.firstChild);
+                        }
+
+                        // If still not fitting (edge cases), ensure at least one visible item remains in nav (home)
+                        items = Array.from(nav.children).filter(ch => !ch.classList.contains('more') && !ch.classList.contains('donate-li'));
+                        if (items.length === 0 && moreList.children.length > 0) {
+                            // move the last item back out so nav isn't empty
+                            const firstFromMore = moreList.removeChild(moreList.firstChild);
+                            nav.insertBefore(firstFromMore, more);
+                        }
+
+                        // Show or hide the more button
+                        if (moreList.children.length === 0) {
+                            more.style.display = 'none';
+                        } else {
+                            more.style.display = 'block';
+                        }
+                    }
+
+                    // Toggle more-list on click (desktop)
+                    navLinksContainer.querySelector('.more-toggle').addEventListener('click', (e) => {
+                        const more = navLinksContainer.querySelector('.more');
+                        const moreList = more.querySelector('.more-list');
+                        const isOpen = moreList.classList.toggle('open');
+                        more.querySelector('.more-toggle').setAttribute('aria-expanded', isOpen);
+                        moreList.setAttribute('aria-hidden', !isOpen);
+                    });
+
+                    // Debounced resize to redistribute
+                    let _redistributeTimer = null;
+                    window.addEventListener('resize', () => {
+                        clearTimeout(_redistributeTimer);
+                        _redistributeTimer = setTimeout(redistributeMenu, 120);
+                    });
+
+                    // Initial run after short delay
+                    setTimeout(redistributeMenu, 250);
+                    // After inserting links, check if the menu is too long for the header space
+                    function checkLongMenu() {
+                        const nav = document.getElementById('main-nav-links');
+                        const navbar = document.querySelector('.navbar');
+                        const logo = document.querySelector('.logo');
+                        const donate = document.querySelector('.btn-donate');
+                        if (!nav || !navbar) return;
+
+                        // Available space for nav = navbar width minus logo and donate widths (with buffer)
+                        const navbarWidth = navbar.clientWidth;
+                        const logoWidth = logo ? logo.offsetWidth : 0;
+                        const donateWidth = donate ? donate.offsetWidth : 0;
+                        const buffer = 80; // breathing room for gaps/padding
+                        const available = navbarWidth - (logoWidth + donateWidth + buffer);
+
+                        // Total width of nav items
+                        let linksWidth = 0;
+                        Array.from(nav.children).forEach(li => {
+                            linksWidth += li.offsetWidth;
+                        });
+
+                        if (linksWidth > available) {
+                            nav.classList.add('long-menu');
+                        } else {
+                            nav.classList.remove('long-menu');
+                        }
+                    }
+
+                    // Debounced resize listener
+                    let _menuResizeTimer = null;
+                    window.addEventListener('resize', () => {
+                        clearTimeout(_menuResizeTimer);
+                        _menuResizeTimer = setTimeout(checkLongMenu, 120);
+                    });
+
+                    // Run check after a short delay to allow fonts/images to settle
+                    setTimeout(checkLongMenu, 200);
                 }
                 
                 // CRITICAL FIX: Initialize mobile menu logic immediately after header injection
