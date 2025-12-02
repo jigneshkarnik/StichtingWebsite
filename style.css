@@ -592,7 +592,21 @@ footer {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
         padding-bottom: 4px;
+        position: relative;
     }
+    
+    /* Add fade gradient on the right to indicate more tabs */
+    .tab-buttons::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 4px;
+        width: 40px;
+        background: linear-gradient(to right, transparent, white);
+        pointer-events: none;
+    }
+    
     .tab-buttons button { 
         padding: 8px 14px;
         font-size: 0.9rem;
