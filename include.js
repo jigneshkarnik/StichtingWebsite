@@ -38,6 +38,10 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'Contact Us', href: 'contact.html' }
                     ];
 
+                    // mark nav as loading (hidden) until measurements complete to avoid layout flash
+                    navLinksContainer.classList.add('nav-loading');
+                    navLinksContainer.setAttribute('aria-hidden', 'true');
+
                     // Build list items for the nav
                     links.forEach(link => {
                         const li = document.createElement('li');
@@ -58,10 +62,10 @@ function loadComponents(pageTitle, activePage) {
                     moreLi.innerHTML = '<button class="more-toggle" aria-expanded="false"><i class="fa fa-ellipsis-h"></i> <span class="more-count" aria-hidden="true"></span></button><ul class="more-list" aria-hidden="true"></ul>';
                     navLinksContainer.appendChild(moreLi);
 
-                    // Add Donate Button as a standalone item (always visible)
+                    // Add Donate Button as a nav item (always visible, will not be moved into More)
                     const donateLi = document.createElement('li');
-                    donateLi.innerHTML = '<a href="donations.html" class="btn-donate">Donate Now</a>';
-                    donateLi.classList.add('donate-li');
+                    donateLi.className = 'donate-li';
+                    donateLi.innerHTML = '<a href="donations.html" class="btn-donate" aria-label="Donate">Donate</a>';
                     navLinksContainer.appendChild(donateLi);
 
                     // Function to redistribute items into the more-list when space is limited
@@ -69,7 +73,8 @@ function loadComponents(pageTitle, activePage) {
                         const nav = navLinksContainer;
                         const more = nav.querySelector('.more');
                         const moreList = more.querySelector('.more-list');
-                        const donate = nav.querySelector('.donate-li');
+                        // donate is a nav item (.donate-li)
+                        const donate = nav.querySelector('.donate-li') || document.querySelector('.donate-li');
                         const navbar = document.querySelector('.navbar');
                         const logo = document.querySelector('.logo');
                         if (!nav || !more || !navbar) return;
@@ -84,6 +89,21 @@ function loadComponents(pageTitle, activePage) {
                         const logoWidth = logo ? logo.offsetWidth : 0;
                         const donateWidth = donate ? donate.offsetWidth : 0;
                         const buffer = 86; // breathing room to avoid edge-case wrapping
+
+                        // Ensure the centered nav reserves visible space for the donate button by
+                        // limiting the nav's max-width on wide screens. This prevents the centered
+                        // `.nav-links` from extending beneath the donate item and getting clipped.
+                        try {
+                            if (window.innerWidth >= 992 && donateWidth > 0) {
+                                // leave some extra breathing room (40px) beyond donate width
+                                const reserve = donateWidth + 40;
+                                // nav max width should be navbarWidth minus reserve (and account for logo)
+                                nav.style.maxWidth = (navbarWidth - reserve - logoWidth) + 'px';
+                            } else {
+                                nav.style.maxWidth = '';
+                            }
+                        } catch (e) {}
+
                         const available = navbarWidth - (logoWidth + donateWidth + buffer);
 
                         // Compute gap between items (CSS gap)
@@ -132,6 +152,14 @@ function loadComponents(pageTitle, activePage) {
                         } else {
                             more.style.display = 'block';
                         }
+
+                        // On the first successful redistribution, reveal the nav (prevent FOUC)
+                        try {
+                            if (nav.classList.contains('nav-loading')) {
+                                nav.classList.remove('nav-loading');
+                                nav.removeAttribute('aria-hidden');
+                            }
+                        } catch (e) {}
                     }
 
                     // Toggle more-list on click (desktop)

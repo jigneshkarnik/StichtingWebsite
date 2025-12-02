@@ -15,6 +15,11 @@ body {
     margin: 0;
 }
 
+/* Prevent accidental horizontal scrolling site-wide (keeps layout tidy) */
+html, body {
+    overflow-x: hidden;
+}
+
 /* ===================================================
    TOP BAR STYLING (Desktop)
    =================================================== */
@@ -57,6 +62,8 @@ body {
     position: relative;
     z-index: 10;
     border-bottom: 1px solid transparent; 
+    box-sizing: border-box;
+    width: 100%;
 }
 .logo {
     display: flex;
@@ -361,7 +368,8 @@ footer {
 .nav-links .more .more-list {
     display: none;
     position: absolute;
-    right: 0;
+    /* align dropdown inside the navbar padding so it doesn't force overflow */
+    right: 5%;
     top: calc(100% + 6px);
     background: var(--white);
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
@@ -376,11 +384,26 @@ footer {
 .nav-links .more .more-list li a { display: block; padding: 8px 12px; color: var(--secondary-color); }
 
 /* Ensure donate button stays visible and not moved into more */
-.nav-links .donate-li { flex: 0 0 auto; }
+/* Ensure donate button stays visible and not moved into more (nav item) */
+.nav-links .donate-li { flex: 0 0 auto; margin-left: 12px; }
+.nav-links .donate-li .btn-donate { padding: 8px 12px; }
 
 /* Hide the more-list on small screens (mobile uses full menu) */
 @media (max-width: 900px) {
     .nav-links .more { display: none !important; }
+}
+
+/* Mobile adjustments for donate as a nav item */
+@media (max-width: 900px) {
+    .nav-links .donate-li { order: 2; margin-left: 8px; }
+    .navbar { align-items: center; }
+}
+
+/* Desktop: ensure nav links take available space and donate sits to the right of the list */
+@media (min-width: 992px) {
+    .navbar { position: relative; }
+    .nav-links { flex: 1 1 auto; }
+    .nav-links .donate-li { margin-left: 12px; }
 }
 
 /* ===================================================
@@ -550,7 +573,24 @@ footer {
 .tab-panel.active { display: block; }
 .tab-panel ul { padding-left: 18px; }
 
+/* Mobile-friendly tab selector (shown on small screens) */
+.tab-select {
+    display: none; /* hidden by default, shown on small screens */
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background: #fff;
+    margin-bottom: 12px;
+}
+
 @media (max-width: 600px) {
     .tab-buttons { gap: 6px; }
     .tab-buttons button { padding: 6px 8px; font-size: 0.95rem; }
+
+    /* Hide the button-style tabs on very small screens and show a select */
+    .tab-buttons { display: none; }
+    .tab-select { display: block; }
 }
