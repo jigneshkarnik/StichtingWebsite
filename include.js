@@ -55,7 +55,7 @@ function loadComponents(pageTitle, activePage) {
                     // Add a 'more' dropdown container for overflow items (inserted before donate so donate stays visible)
                     const moreLi = document.createElement('li');
                     moreLi.className = 'more';
-                    moreLi.innerHTML = '<button class="more-toggle" aria-expanded="false"><i class="fa fa-bars"></i></button><ul class="more-list" aria-hidden="true"></ul>';
+                    moreLi.innerHTML = '<button class="more-toggle" aria-expanded="false"><i class="fa fa-ellipsis-h"></i> <span class="more-count" aria-hidden="true"></span></button><ul class="more-list" aria-hidden="true"></ul>';
                     navLinksContainer.appendChild(moreLi);
 
                     // Add Donate Button as a standalone item (always visible)
@@ -83,7 +83,7 @@ function loadComponents(pageTitle, activePage) {
                         const navbarWidth = navbar.clientWidth;
                         const logoWidth = logo ? logo.offsetWidth : 0;
                         const donateWidth = donate ? donate.offsetWidth : 0;
-                        const buffer = 72; // smaller breathing room
+                        const buffer = 86; // breathing room to avoid edge-case wrapping
                         const available = navbarWidth - (logoWidth + donateWidth + buffer);
 
                         // Compute gap between items (CSS gap)
@@ -117,22 +117,55 @@ function loadComponents(pageTitle, activePage) {
                             nav.insertBefore(firstFromMore, more);
                         }
 
-                        // Show or hide the more button
-                        if (moreList.children.length === 0) {
+                        // Update the more button count and visibility
+                        const moreToggle = more.querySelector('.more-toggle');
+                        const moreCount = moreToggle ? moreToggle.querySelector('.more-count') : null;
+                        const count = moreList.children.length;
+                        if (moreCount) moreCount.textContent = count > 0 ? `(${count})` : '';
+                        if (count === 0) {
                             more.style.display = 'none';
+                            if (moreList.classList.contains('open')) {
+                                moreList.classList.remove('open');
+                                moreToggle && moreToggle.setAttribute('aria-expanded', 'false');
+                                moreList.setAttribute('aria-hidden', 'true');
+                            }
                         } else {
                             more.style.display = 'block';
                         }
                     }
 
                     // Toggle more-list on click (desktop)
-                    navLinksContainer.querySelector('.more-toggle').addEventListener('click', (e) => {
-                        const more = navLinksContainer.querySelector('.more');
-                        const moreList = more.querySelector('.more-list');
-                        const isOpen = moreList.classList.toggle('open');
-                        more.querySelector('.more-toggle').setAttribute('aria-expanded', isOpen);
-                        moreList.setAttribute('aria-hidden', !isOpen);
-                    });
+                    // Toggle more-list on click (desktop) and support closing on outside click / Esc
+                    const moreToggleBtn = navLinksContainer.querySelector('.more-toggle');
+                    const moreContainer = navLinksContainer.querySelector('.more');
+                    const moreListEl = moreContainer ? moreContainer.querySelector('.more-list') : null;
+
+                    if (moreToggleBtn && moreListEl) {
+                        moreToggleBtn.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            const isOpen = moreListEl.classList.toggle('open');
+                            moreToggleBtn.setAttribute('aria-expanded', isOpen);
+                            moreListEl.setAttribute('aria-hidden', !isOpen);
+                        });
+
+                        // Close when clicking outside
+                        document.addEventListener('click', (ev) => {
+                            if (!moreContainer.contains(ev.target) && moreListEl.classList.contains('open')) {
+                                moreListEl.classList.remove('open');
+                                moreToggleBtn.setAttribute('aria-expanded', 'false');
+                                moreListEl.setAttribute('aria-hidden', 'true');
+                            }
+                        });
+
+                        // Close with Escape key
+                        document.addEventListener('keydown', (ev) => {
+                            if (ev.key === 'Escape' && moreListEl.classList.contains('open')) {
+                                moreListEl.classList.remove('open');
+                                moreToggleBtn.setAttribute('aria-expanded', 'false');
+                                moreListEl.setAttribute('aria-hidden', 'true');
+                            }
+                        });
+                    }
 
                     // Debounced resize to redistribute
                     let _redistributeTimer = null;
