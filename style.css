@@ -427,11 +427,22 @@ footer {
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    scroll-margin-top: 120px;
 }
 
 .performer-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.performer-card:target {
+    animation: highlight-performer 2s ease;
+    box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+@keyframes highlight-performer {
+    0%, 100% { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+    50% { box-shadow: 0 0 0 3px var(--accent-color), 0 12px 28px rgba(0,0,0,0.14); }
 }
 
 .performer-card img {

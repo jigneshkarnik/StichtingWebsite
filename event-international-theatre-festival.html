@@ -209,7 +209,7 @@
             <p class="lead">Get to know the talented individuals performing at the International Theatre Festival 2026. A diverse collective of artists bringing stories to life.</p>
             <div class="performers-grid">
               <!-- Performer 1: Jignesh Karnik -->
-              <div class="performer-card">
+              <div class="performer-card" id="JigneshKarnik">
                 <img src="images/ITF_Performer_Intro_Jignesh.jpg" alt="Jignesh Karnik">
                 <div class="performer-card-content">
                   <h4>Jignesh Karnik</h4>
@@ -218,7 +218,7 @@
                 </div>
               </div>
               <!-- Performer 2: Rakesh Pai -->
-              <div class="performer-card">
+              <div class="performer-card" id="RakeshPai">
                 <img src="images/ITF_Performer_RakeshPai.jpeg" alt="Rakesh Pai">
                 <div class="performer-card-content">
                   <h4>Rakesh Pai</h4>
@@ -405,10 +405,36 @@
         });
       }
 
+      // Handle direct links to performers (hash navigation)
+      function handlePerformerLinks() {
+        const hash = window.location.hash;
+        if (hash) {
+          setTimeout(() => {
+            const performerCard = document.querySelector(hash);
+            if (performerCard) {
+              // Open performers section first
+              const performersSection = document.getElementById('section-performers');
+              if (performersSection) {
+                const header = performersSection.querySelector('.accordion-header');
+                const content = performersSection.querySelector('.accordion-content');
+                header.setAttribute('aria-expanded', 'true');
+                content.style.display = 'block';
+                
+                // Scroll to specific performer
+                setTimeout(() => {
+                  performerCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 200);
+              }
+            }
+          }, 300);
+        }
+      }
+
       // Initialize after small delay
       setTimeout(() => {
         initAccordion();
         initQuickNav();
+        handlePerformerLinks();
       }, 200);
     });
   </script>
