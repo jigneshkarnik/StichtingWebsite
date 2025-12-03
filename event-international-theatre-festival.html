@@ -27,7 +27,7 @@
     .breadcrumb .sep { color: #999; margin: 0 8px; }
   </style>
 </head>
-<body>
+<body id="top">
   <div id="header-placeholder"></div>
   <!-- Breadcrumb (Home → Upcoming Events → This Event) -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -41,19 +41,27 @@
       <p style="color:var(--text-light); font-size:1.05rem;"><strong>Date:</strong> 25 January 2026 &nbsp; | &nbsp; <strong>Venue:</strong> Cpunt Theatre, Raadhuisplein 3, 2132 TZ Hoofddorp &nbsp; | &nbsp; <strong>Hosted by:</strong> Stichting Sanskriti & Sanskar</p>
       <p style="color:var(--text-light); margin:12px 0 0;">Premium international theatre performances featuring acclaimed theatre groups from across Europe.</p>
 
-      <!-- In-page Tabs -->
-      <div class="tabs">
-        <div class="tab-buttons" role="tablist" aria-label="Event sections">
-          <button data-tab="event" class="active" role="tab" aria-selected="true">Event</button>
-          <button data-tab="schedule" role="tab">Event Schedule & Pricing</button>
-          <button data-tab="faq" role="tab">FAQ</button>
-          <button data-tab="groups" role="tab">Performing Groups</button>
-          <button data-tab="performers" role="tab">Performers</button>
-          <button data-tab="detailed" role="tab">Detailed Event Schedule</button>
+      <!-- Quick Navigation -->
+      <nav class="quick-nav" aria-label="Quick navigation">
+        <p class="quick-nav-title"><i class="fas fa-list"></i> Quick Navigation:</p>
+        <div class="quick-nav-links">
+          <a href="#section-event">Event Overview</a>
+          <a href="#section-schedule">Schedule & Pricing</a>
+          <a href="#section-faq">FAQ</a>
+          <a href="#section-groups">Performing Groups</a>
+          <a href="#section-performers">Performers</a>
+          <a href="#section-detailed">Detailed Schedule</a>
         </div>
+      </nav>
 
-        <div class="tab-panels">
-          <div id="tab-event" class="tab-panel active" role="tabpanel">
+      <!-- Accordion Sections -->
+      <div class="accordion">
+        <div class="accordion-item" id="section-event">
+          <button class="accordion-header" aria-expanded="true">
+            <span><i class="fas fa-info-circle"></i> Event Overview</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content" style="display: block;">
             <section>
               <p><strong>Welcome to the International Theatre Festival 2026</strong> — the premier international theatre festival bringing together the finest theatre companies and performers from across Europe and beyond. Hosted in Hoofddorp (near Amsterdam), this international theatre festival features contemporary and classical theatre performances that celebrate the art of performing.</p>
               <p>The International Theatre Festival in the Netherlands showcases powerful storytelling, inventive staging, and a celebration of international performing arts. This festival is a must-attend for lovers of live theatre in and around Amsterdam.</p>
@@ -73,9 +81,16 @@
                 <p style="margin-top:12px;"><a href="https://eventix.shop/g3wv9xqj" target="_blank" rel="noopener noreferrer" class="btn-donate">Purchase Tickets</a></p>
               </aside>
             </div>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
+        </div>
 
-          <div id="tab-schedule" class="tab-panel" role="tabpanel">
+        <div class="accordion-item" id="section-schedule">
+          <button class="accordion-header" aria-expanded="false">
+            <span><i class="fas fa-calendar-alt"></i> Event Schedule & Pricing</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
             <h3>Event Schedule & Pricing</h3>
             <p><strong>Date & Time:</strong> 25 January 2026 | 12:30 PM – 7:00 PM (followed by dinner)</p>
             <p><strong>Tickets:</strong></p>
@@ -86,9 +101,16 @@
             <p><strong>Duration:</strong> Full day experience with performances, intermissions, and dinner included.</p>
             <h4>What to Expect</h4>
             <p>Spend a full day immersed in international theatre. The festival features world-class performances, opportunities to meet performers, and concludes with a communal dinner celebrating cultural diversity through food and conversation.</p>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
+        </div>
 
-          <div id="tab-faq" class="tab-panel" role="tabpanel">
+        <div class="accordion-item" id="section-faq">
+          <button class="accordion-header" aria-expanded="false">
+            <span><i class="fas fa-question-circle"></i> Frequently Asked Questions</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
             <h3>Frequently Asked Questions (FAQs)</h3>
             <div style="margin-top:20px; line-height:1.8;">
               <p><strong>Q: What time does the festival start and end?</strong><br>
@@ -115,9 +137,16 @@
               <p><strong>Q: Can I refund or reschedule my ticket?</strong><br>
               A: For refund and rescheduling policies, please visit the Eventix booking page or contact us directly.</p>
             </div>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
+        </div>
 
-          <div id="tab-groups" class="tab-panel" role="tabpanel">
+        <div class="accordion-item" id="section-groups">
+          <button class="accordion-header" aria-expanded="false">
+            <span><i class="fas fa-users"></i> Performing Groups</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
             <h3>About Our Performers</h3>
             <p>The International Theatre Festival brings together celebrated theatre groups and organizations from across Europe:</p>
             <div style="margin-top:20px; line-height:1.8;">
@@ -166,9 +195,16 @@
                 <div class="external"><i class="fas fa-external-link-alt"></i></div>
               </a>
             </div>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
+        </div>
 
-          <div id="tab-performers" class="tab-panel" role="tabpanel">
+        <div class="accordion-item" id="section-performers">
+          <button class="accordion-header" aria-expanded="false">
+            <span><i class="fas fa-star"></i> Meet the Performers</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
             <h3>Meet the Performers</h3>
             <p class="lead">Get to know the talented individuals performing at the International Theatre Festival 2026. A diverse collective of artists bringing stories to life.</p>
             <div class="performers-grid">
@@ -181,11 +217,27 @@
                   <p>You will see him in a Marathi Natak/Ekankika. Jignesh Karnik loves literature and art. Has done multiple drama, natak, storytelling, event hosting performances on stage.</p>
                 </div>
               </div>
-              <!-- Additional performers to be added here (Performer 2-50) -->
+              <!-- Performer 2: Rakesh Pai -->
+              <div class="performer-card">
+                <img src="images/ITF_Performer_RakeshPai.jpeg" alt="Rakesh Pai">
+                <div class="performer-card-content">
+                  <h4>Rakesh Pai</h4>
+                  <p class="performer-role">Hindi Drama</p>
+                  <p>Rakesh is passionate about theatre, script writing and direction. In ITF, Rakesh along with his talented performers is presenting an original Hindi drama which spreads about the satire of the prevalent societal issues.</p>
+                </div>
+              </div>
+              <!-- Additional performers to be added here (Performer 3-50) -->
             </div>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
+        </div>
 
-          <div id="tab-detailed" class="tab-panel" role="tabpanel">
+        <div class="accordion-item" id="section-detailed">
+          <button class="accordion-header" aria-expanded="false">
+            <span><i class="fas fa-clock"></i> Detailed Event Schedule</span>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
             <h3>Detailed Event Schedule</h3>
             <ul>
               <li><strong>12:00 – 13:00</strong> Arrival & Registration</li>
@@ -196,6 +248,7 @@
               <li><strong>19:00 – 20:30</strong> Community dinner and closing</li>
             </ul>
             <p>Detailed timings and artist lineup will be published closer to the event and shared with ticket holders.</p>
+            <p class="back-to-top"><a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
           </div>
         </div>
       </div>
@@ -298,69 +351,65 @@
     document.addEventListener('DOMContentLoaded', () => {
       loadComponents('International Theatre Festival - Sanskriti & Sanskar', 'event-international-theatre-festival.html');
 
-      function initTabs(){
-        const btns = document.querySelectorAll('.tab-buttons button');
-        const panels = document.querySelectorAll('.tab-panel');
-        if(!btns.length) return;
-
-        // Standard button-based tabs for desktop/tablet
-        btns.forEach(b => {
-          b.addEventListener('click', () => {
-            btns.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
-            panels.forEach(p => p.classList.remove('active'));
-            b.classList.add('active'); b.setAttribute('aria-selected','true');
-            const id = b.dataset.tab;
-            const panel = document.getElementById('tab-' + id);
-            if (panel) panel.classList.add('active');
-
-            // If a mobile select exists, keep it in sync
-            const tabsContainer = document.querySelector('.tabs');
-            const sel = tabsContainer ? tabsContainer.querySelector('.tab-select') : null;
-            if (sel) sel.value = id;
-          });
-        });
-
-        // Create a responsive <select> to replace tabs on small screens
-        (function createMobileSelect(){
-          const tabsContainer = document.querySelector('.tabs');
-          if (!tabsContainer) return;
-          let sel = tabsContainer.querySelector('.tab-select');
-          if (!sel) {
-            sel = document.createElement('select');
-            sel.className = 'tab-select';
-            sel.setAttribute('aria-label', 'Select section');
-            // add options
-            btns.forEach(b => {
-              const opt = document.createElement('option');
-              opt.value = b.dataset.tab;
-              opt.textContent = b.textContent;
-              if (b.classList.contains('active')) opt.selected = true;
-              sel.appendChild(opt);
-            });
-            // Insert select above panels
-            const panelsWrapper = tabsContainer.querySelector('.tab-panels');
-            tabsContainer.insertBefore(sel, panelsWrapper);
-          }
-
-          sel.addEventListener('change', () => {
-            const val = sel.value;
-            if (!val) return;
-            btns.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
-            panels.forEach(p => p.classList.remove('active'));
-            const btn = Array.from(btns).find(b => b.dataset.tab === val);
-            if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
-            const panel = document.getElementById('tab-' + val);
-            if (panel) {
-              panel.classList.add('active');
-              // On mobile, scroll the panel into view for better UX
-              panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Accordion functionality
+      function initAccordion() {
+        const headers = document.querySelectorAll('.accordion-header');
+        
+        headers.forEach(header => {
+          header.addEventListener('click', () => {
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            const content = header.nextElementSibling;
+            
+            // Toggle current section
+            header.setAttribute('aria-expanded', !isExpanded);
+            
+            if (!isExpanded) {
+              content.style.display = 'block';
+              // Smooth scroll to section
+              setTimeout(() => {
+                header.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }, 100);
+            } else {
+              content.style.display = 'none';
             }
           });
-        })();
+        });
       }
 
-      // Initialize after small delay to allow header/footer injection
-      setTimeout(initTabs, 200);
+      // Smooth scroll for quick nav links
+      function initQuickNav() {
+        const quickLinks = document.querySelectorAll('.quick-nav-links a');
+        
+        quickLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+              const header = targetSection.querySelector('.accordion-header');
+              const content = targetSection.querySelector('.accordion-content');
+              
+              // Expand the section if collapsed
+              if (header.getAttribute('aria-expanded') !== 'true') {
+                header.setAttribute('aria-expanded', 'true');
+                content.style.display = 'block';
+              }
+              
+              // Scroll to section
+              setTimeout(() => {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 100);
+            }
+          });
+        });
+      }
+
+      // Initialize after small delay
+      setTimeout(() => {
+        initAccordion();
+        initQuickNav();
+      }, 200);
     });
   </script>
 </body>
