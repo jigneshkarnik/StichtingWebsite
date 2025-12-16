@@ -56,9 +56,10 @@ body {
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: flex-start;
 }
 
 .gallery-item {
@@ -69,18 +70,8 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
-    /* Fallback for browsers that don't support aspect-ratio */
-    height: 0;
-    padding-bottom: 75%; /* 4:3 aspect ratio */
-}
-
-/* Use aspect-ratio for modern browsers */
-@supports (aspect-ratio: 4/3) {
-    .gallery-item {
-        height: auto;
-        padding-bottom: 0;
-        aspect-ratio: 4/3;
-    }
+    flex: 0 0 calc(25% - 12px);
+    max-width: calc(25% - 12px);
 }
 
 .gallery-item:hover {
@@ -89,8 +80,7 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
@@ -180,9 +170,20 @@ body {
 }
 
 /* Mobile responsive */
+@media (max-width: 1200px) {
+    .gallery-item {
+        flex: 0 0 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+    }
+}
+
 @media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+    
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 10px;
     }
     
@@ -194,5 +195,12 @@ body {
     .lightbox-next {
         font-size: 40px;
         padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
