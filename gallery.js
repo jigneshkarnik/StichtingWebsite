@@ -2,6 +2,19 @@
 const CLOUDINARY_CLOUD_NAME = 'du0lumtob';
 const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload`;
 
+// Format date from YYYY-MM-DD to MMM'YY
+function formatDate(dateStr) {
+    try {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const parts = dateStr.split('-');
+        const year = parts[0].slice(2); // Get last 2 digits of year
+        const monthIndex = parseInt(parts[1]) - 1;
+        return `${months[monthIndex]}'${year}`;
+    } catch (error) {
+        return dateStr;
+    }
+}
+
 // Event mapping data
 const EVENT_MAPPING = [
   {
@@ -2615,14 +2628,14 @@ const eventName = urlParams.get('name');
 const eventDate = urlParams.get('date');
 
 // Find event in mapping
-const eventData = EVENT_MAPPING.find(e => e. cloudinary_folder === folderName);
+const eventData = EVENT_MAPPING.find(e => e.cloudinary_folder === folderName);
 
-if (! eventData) {
+if (!eventData) {
     document.getElementById('gallery-grid').innerHTML = '<div class="loading">Event not found</div>';
 } else {
-    // Update header
+    // Update header with formatted date
     document.getElementById('event-title').textContent = eventData.event_name;
-    document.getElementById('event-date').textContent = `📅 ${eventData.event_date}`;
+    document.getElementById('event-date').textContent = `📅 ${formatDate(eventData.event_date)}`;
     document.getElementById('photo-count').textContent = `📷 ${eventData.photo_count} photos`;
     
     // Set page title
@@ -2633,11 +2646,10 @@ if (! eventData) {
     galleryGrid.innerHTML = '';
     
     eventData.cloudinary_urls.forEach((url, index) => {
-        // Create responsive thumbnail URL
-        // Desktop: 400px wide, Mobile: 300px wide
+        // Create responsive thumbnail URL with smart cropping (c_fill,g_auto)
         const thumbnailUrl = url.replace(
             '/upload/',
-            '/upload/w_400,h_300,c_fill,q_auto,f_auto,dpr_auto/'
+            '/upload/w_350,h_260,c_fill,g_auto,q_auto,f_auto/'
         );
         
         const item = document.createElement('div');
@@ -2664,16 +2676,16 @@ function openLightbox(index) {
 
 function closeLightbox() {
     lightbox.classList.remove('active');
-    document.body.style. overflow = 'auto';
+    document.body.style.overflow = 'auto';
 }
 
 function showImage(index) {
-    if (! eventData || index < 0 || index >= eventData.cloudinary_urls.length) return;
+    if (!eventData || index < 0 || index >= eventData.cloudinary_urls.length) return;
     
-    // Use high-quality version for lightbox
-    const fullUrl = eventData.cloudinary_urls[index]. replace(
+    // Use high-quality version for lightbox without any cropping
+    const fullUrl = eventData.cloudinary_urls[index].replace(
         '/upload/',
-        '/upload/w_1920,q_auto,f_auto/'
+        '/upload/w_1920,q_auto:good,f_auto/'
     );
     
     lightboxImg.src = fullUrl;
