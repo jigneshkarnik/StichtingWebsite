@@ -70,8 +70,8 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
-    flex: 0 0 calc(25% - 12px);
-    max-width: calc(25% - 12px);
+    flex: 0 0 calc(25% - 11.25px); /* 15px gap * 3 gaps / 4 items */
+    max-width: calc(25% - 11.25px);
 }
 
 .gallery-item:hover {
@@ -172,15 +172,15 @@ body {
 /* Mobile responsive */
 @media (max-width: 1200px) {
     .gallery-item {
-        flex: 0 0 calc(33.333% - 10px);
+        flex: 0 0 calc(33.333% - 10px); /* 15px gap * 2 gaps / 3 items */
         max-width: calc(33.333% - 10px);
     }
 }
 
 @media (max-width: 768px) {
     .gallery-item {
-        flex: 0 0 calc(50% - 8px);
-        max-width: calc(50% - 8px);
+        flex: 0 0 calc(50% - 5px); /* 10px gap * 1 gap / 2 items */
+        max-width: calc(50% - 5px);
     }
     
     .gallery-grid {
