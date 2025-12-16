@@ -70,7 +70,7 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
-    flex: 0 0 calc(25% - 11.25px); /* 15px gap * 3 gaps / 4 items */
+    flex: 0 0 calc(25% - 11.25px); /* 15px gap * 3 gaps / 4 items = 11.25px */
     max-width: calc(25% - 11.25px);
 }
 
@@ -172,14 +172,14 @@ body {
 /* Mobile responsive */
 @media (max-width: 1200px) {
     .gallery-item {
-        flex: 0 0 calc(33.333% - 10px); /* 15px gap * 2 gaps / 3 items */
+        flex: 0 0 calc(33.333% - 10px); /* 15px gap * 2 gaps / 3 items = 10px */
         max-width: calc(33.333% - 10px);
     }
 }
 
 @media (max-width: 768px) {
     .gallery-item {
-        flex: 0 0 calc(50% - 5px); /* 10px gap * 1 gap / 2 items */
+        flex: 0 0 calc(50% - 5px); /* 10px gap * 1 gap / 2 items = 5px */
         max-width: calc(50% - 5px);
     }
     
