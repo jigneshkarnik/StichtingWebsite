@@ -10,7 +10,7 @@ function formatDate(dateStr) {
         const year = parts[0].slice(2); // Get last 2 digits of year
         const monthIndex = parseInt(parts[1]) - 1;
         return `${months[monthIndex]}'${year}`;
-    } catch {
+    } catch (error) {
         return dateStr;
     }
 }

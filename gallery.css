@@ -69,7 +69,18 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
-    aspect-ratio: 4/3;
+    /* Fallback for browsers that don't support aspect-ratio */
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+/* Use aspect-ratio for modern browsers */
+@supports (aspect-ratio: 4/3) {
+    .gallery-item {
+        height: auto;
+        padding-bottom: 0;
+        aspect-ratio: 4/3;
+    }
 }
 
 .gallery-item:hover {

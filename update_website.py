@@ -19,7 +19,7 @@ def format_date(date_str):
     try:
         date_obj = datetime.strptime(date_str, '%Y-%m-%d')
         return date_obj.strftime("%b'%y")
-    except:
+    except (ValueError, TypeError):
         return date_str
 
 # Load mapping
@@ -331,7 +331,18 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
-    aspect-ratio: 4/3;
+    /* Fallback for browsers that don't support aspect-ratio */
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+/* Use aspect-ratio for modern browsers */
+@supports (aspect-ratio: 4/3) {
+    .gallery-item {
+        height: auto;
+        padding-bottom: 0;
+        aspect-ratio: 4/3;
+    }
 }
 
 .gallery-item:hover {
@@ -469,7 +480,7 @@ function formatDate(dateStr) {
         const year = parts[0].slice(2); // Get last 2 digits of year
         const monthIndex = parseInt(parts[1]) - 1;
         return `${months[monthIndex]}'${year}`;
-    } catch {
+    } catch (error) {
         return dateStr;
     }
 }
