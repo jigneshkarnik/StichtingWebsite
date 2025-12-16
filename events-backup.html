@@ -3,562 +3,907 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Archive - Sanskriti & Sanskar</title>
-    <!-- Font Awesome is linked here for icons (if any) in the main content -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Link the external CSS file for common styles -->
-    <link rel="stylesheet" href="style.css"> 
-
+    <title>Events Gallery - Sanskriti & Sanskar</title>
     <style>
-        /* --- PAGE SPECIFIC STYLES (EVENTS) --- */
-        
-        /* PAGE HEADER */
-        .page-header {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 60px 5%;
-            text-align: center;
+        * {
+            margin:  0;
+            padding: 0;
+            box-sizing:  border-box;
         }
-        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-
-        /* --- EVENTS GRID --- */
-        .events-container { padding: 60px 5%; max-width: 1400px; margin: 0 auto; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:  #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size:  2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size:  1.1em;
+        }
         
         .events-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
+            margin-bottom: 40px;
         }
-
+        
         .event-card {
-            background: var(--white);
+            background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-
-        .event-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-
-        .card-image {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .card-image img {
+        
+        .event-thumbnail {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            object-position: top;
-            transition: transform 0.5s ease;
+            background: #e0e0e0;
         }
-
-        .event-card:hover .card-image img { transform: scale(1.05); }
-
-        .date-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--white);
-            color: var(--secondary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        
+        .event-info {
+            padding: 20px;
         }
-
-        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-content h3 { 
-            color: var(--secondary-color); 
-            margin-bottom: 10px; 
-            font-size: 1.1rem; 
-            line-height: 1.4; 
-            min-height: 3em; 
+        
+        .event-title {
+            font-size:  1.2em;
+            font-weight:  600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
-        .event-meta { margin-top: auto; color: var(--text-light); font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px; }
-        .event-meta div { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
-
+        
+        . event-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 12px;
+        }
+        
+        .event-date {
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        
+        .photo-count {
+            background: #4ecdc4;
+            color: white;
+            padding: 4px 12px;
+            border-radius:  20px;
+            font-size:  0.85em;
+        }
+        
         @media (max-width: 768px) {
-            .card-content h3 { min-height: unset; }
+            .events-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
-
-<!-- 1. HEADER PLACEHOLDER -->
-<div id="header-placeholder"></div>
-
-<main>
-    <div class="page-header">
-        <h1>Events Archive</h1>
-        <p>A Visual Journey of Our Community Moments</p>
-    </div>
-
-    <section class="events-container">
+    <div class="container">
+        <h1>📸 Events Gallery</h1>
+        <p class="subtitle">Sanskriti & Sanskar - Celebrating Indian Culture in the Netherlands</p>
+        
         <div class="events-grid">
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 07</span>
-                    <img src="images/event_sahitya_chaupal.jpeg" alt="Sahitya Chaupal">
-                </div>
-                <div class="card-content">
-                    <h3>Sahitya Chaupal: Poetry for elderlies</h3>
+            <a href="gallery.html?folder=2025-06-Vrouwen-Middag-Uithoorn&name='Vrouwen Middag' @Uithoorn&date=2025-06-09" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765922000/archived-events/2025-06-Vrouwen-Middag-Uithoorn/498201731_667331359460654_1636778203481931396_n.jpg" 
+                    alt="'Vrouwen Middag' @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'Vrouwen Middag' @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 7</div>
+                        <span class="event-date">📅 2025-06-09</span>
+                        <span class="photo-count">📷 36 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 05</span>
-                    <img src="images/event_vrouwen_vrijdag.png" alt="Multicultural Vrouwen Vrijdag">
-                </div>
-                <div class="card-content">
-                    <h3>Multicultural Vrouwen Vrijdag</h3>
+            <a href="gallery.html?folder=Literary-Fest-2025-Almere&name=Literary Fest 2025 @Almere&date=2025-05-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912685/archived-events/Literary-Fest-2025-Almere/20250614_155658.jpg" 
+                    alt="Literary Fest 2025 @Almere"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Literary Fest 2025 @Almere</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 5</div>
+                        <span class="event-date">📅 2025-05-04</span>
+                        <span class="photo-count">📷 39 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 27</span>
-                    <img src="images/event_conclave_wassenaar.jpg" alt="Conclave Wassenaar">
-                </div>
-                <div class="card-content">
-                    <h3>‘Bhartiya First’ Conclave 2025 @Wassenaar</h3>
+            <a href="gallery.html?folder=The-Future-of-Eindhoven-Eindhoven&name='The Future of Eindhoven' @Eindhoven&date=2025-05-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912852/archived-events/The-Future-of-Eindhoven-Eindhoven/6db1eb5b-f237-4fff-bc38-c72685533c27-1.jpg" 
+                    alt="'The Future of Eindhoven' @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'The Future of Eindhoven' @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 27</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Wassenaar</div>
+                        <span class="event-date">📅 2025-05-04</span>
+                        <span class="photo-count">📷 21 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">May 27</span>
-                    <img src="images/event_vrouwen_middag_may.jpg" alt="Vrouwen Middag">
-                </div>
-                <div class="card-content">
-                    <h3>‘Vrouwen Middag’ @Uithoorn</h3>
+            <a href="gallery.html?folder=2025-05-Vrouwen-Middag-Uithoorn&name='Vrouwen Middag' @Uithoorn&date=2025-05-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765921977/archived-events/2025-05-Vrouwen-Middag-Uithoorn/491401220_646575848202872_5474214813678152852_n.jpg" 
+                    alt="'Vrouwen Middag' @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'Vrouwen Middag' @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> May 27</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2025-05-04</span>
+                        <span class="photo-count">📷 24 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jun 14</span>
-                    <img src="images/event_literary_fest.jpeg" alt="Literary Fest">
-                </div>
-                <div class="card-content">
-                    <h3>Literary Fest 2025 @Almere</h3>
+            <a href="gallery.html?folder=2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn&name='Bura Na Mano, Holi Hai' @Uithoorn&date=2025-01-23" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765922143/archived-events/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn/100.jpg" 
+                    alt="'Bura Na Mano, Holi Hai' @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'Bura Na Mano, Holi Hai' @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> June 14</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Almere</div>
+                        <span class="event-date">📅 2025-01-23</span>
+                        <span class="photo-count">📷 90 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 27</span>
-                    <img src="images/event_conclave_general.jpg" alt="Conclave General">
-                </div>
-                <div class="card-content">
-                    <h3>‘Bhartiya First’ Conclave 2025</h3>
+            <a href="gallery.html?folder=World-Hindi-Day-Eindhoven&name='World Hindi Day' @ Eindhoven&date=2025-01-14" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913493/archived-events/World-Hindi-Day-Eindhoven/1.jpg" 
+                    alt="'World Hindi Day' @ Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'World Hindi Day' @ Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 27</div>
+                        <span class="event-date">📅 2025-01-14</span>
+                        <span class="photo-count">📷 109 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Apr 18</span>
-                    <img src="images/event_future_eindhoven.jpg" alt="Future of Eindhoven">
-                </div>
-                <div class="card-content">
-                    <h3>‘The Future of Eindhoven’ @Eindhoven</h3>
+            <a href="gallery.html?folder=The-Rythms-of-India-Eindhoven&name='The Rythms of India' @Eindhoven&date=2024-12-12" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913001/archived-events/The-Rythms-of-India-Eindhoven/20241215_151409.jpg" 
+                    alt="'The Rythms of India' @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'The Rythms of India' @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> April 18</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-12-12</span>
+                        <span class="photo-count">📷 164 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Apr 29</span>
-                    <img src="images/event_vrouwen_middag_apr.jpg" alt="Vrouwen Middag April">
-                </div>
-                <div class="card-content">
-                    <h3>‘Vrouwen Middag’ @Uithoorn</h3>
+            <a href="gallery.html?folder=Unity-Festival-of-Lights-Eindhoven&name=Unity Festival of Lights @Eindhoven&date=2024-12-09" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913150/archived-events/Unity-Festival-of-Lights-Eindhoven/DSC04932.jpg" 
+                    alt="Unity Festival of Lights @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Unity Festival of Lights @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> April 29</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2024-12-09</span>
+                        <span class="photo-count">📷 148 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Mar 08</span>
-                    <img src="images/event_holi_mar8.jpg" alt="Holi March 8">
-                </div>
-                <div class="card-content">
-                    <h3>‘Bura Na Mano, Holi Hai’ @Uithoorn</h3>
+            <a href="gallery.html?folder=Consular-Camp-Eindhoven&name=Consular Camp @Eindhoven&date=2024-12-05" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911756/archived-events/Consular-Camp-Eindhoven/1a6461ca-0487-434d-a021-7c16354c06c6-1.jpg" 
+                    alt="Consular Camp @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Consular Camp @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> March 8</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2024-12-05</span>
+                        <span class="photo-count">📷 107 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jan 11</span>
-                    <img src="images/event_hindi_day_1.jpg" alt="World Hindi Day">
-                </div>
-                <div class="card-content">
-                    <h3>‘World Hindi Day’ @ Eindhoven</h3>
+            <a href="gallery.html?folder=Prasadam-distribution-TTD&name=Prasadam distribution @TTD&date=2024-12-05" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912744/archived-events/Prasadam-distribution-TTD/467397186_538803928980065_270277980308167114_n.jpg" 
+                    alt="Prasadam distribution @TTD"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Prasadam distribution @TTD</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> January 11</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-12-05</span>
+                        <span class="photo-count">📷 13 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jan 11</span>
-                    <img src="images/event_hindi_day_2.jpg" alt="Hindi Diwas">
-                </div>
-                <div class="card-content">
-                    <h3>World Hindi Diwas @Eindhoven</h3>
+            <a href="gallery.html?folder=Het-Hoge-Heem-Uithoorn&name=Het Hoge Heem @Uithoorn&date=2024-12-05" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912172/archived-events/Het-Hoge-Heem-Uithoorn/1a6461ca-0487-434d-a021-7c16354c06c6.jpg" 
+                    alt="Het Hoge Heem @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Het Hoge Heem @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> January 11</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-12-05</span>
+                        <span class="photo-count">📷 66 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Dec 15</span>
-                    <img src="images/event_rhythms_india.jpg" alt="Rhythms of India">
-                </div>
-                <div class="card-content">
-                    <h3>‘The Rythms of India’ @Eindhoven</h3>
+            <a href="gallery.html?folder=Women-Hormonal-Health-Session-Uithoorn&name=Women Hormonal Health Session @Uithoorn&date=2024-11-07" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913326/archived-events/Women-Hormonal-Health-Session-Uithoorn/465404855_530527493141042_6532125997675173468_n.jpg" 
+                    alt="Women Hormonal Health Session @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Women Hormonal Health Session @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> December 15, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-11-07</span>
+                        <span class="photo-count">📷 11 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Dec 07</span>
-                    <img src="images/event_unity_festival_1.jpg" alt="Unity Festival">
-                </div>
-                <div class="card-content">
-                    <h3>Unity Festival of Lights @Eindhoven</h3>
+            <a href="gallery.html?folder=Deepawali-in-Philips-Eindhoven&name=Deepawali in Philips @Eindhoven&date=2024-11-07" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911885/archived-events/Deepawali-in-Philips-Eindhoven/20241107_184328.jpg" 
+                    alt="Deepawali in Philips @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Deepawali in Philips @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> December 7, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-11-07</span>
+                        <span class="photo-count">📷 53 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Dec 01</span>
-                    <img src="images/event_consular_camp_dec1.jpg" alt="Consular Camp">
-                </div>
-                <div class="card-content">
-                    <h3>Consular Camp @Eindhoven</h3>
+            <a href="gallery.html?folder=2024-EU-UK-Indian-Poetry-Idol&name=2024 EU-UK Indian Poetry  Idol&date=2024-11-07" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911391/archived-events/2024-EU-UK-Indian-Poetry-Idol/112.jpg" 
+                    alt="2024 EU-UK Indian Poetry  Idol"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">2024 EU-UK Indian Poetry  Idol</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> December 1, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-11-07</span>
+                        <span class="photo-count">📷 78 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Nov 17</span>
-                    <img src="images/event_prasadam.jpg" alt="Prasadam">
-                </div>
-                <div class="card-content">
-                    <h3>Prasadam distribution @TTD</h3>
+            <a href="gallery.html?folder=Yoga-Day-Philips&name=Yoga Day @Philips&date=2024-11-07" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913518/archived-events/Yoga-Day-Philips/29a1f5e3-0e3b-40a7-b59d-698454535639.jpg" 
+                    alt="Yoga Day @Philips"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Yoga Day @Philips</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> November 17, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> TTD</div>
+                        <span class="event-date">📅 2024-11-07</span>
+                        <span class="photo-count">📷 34 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Nov 16</span>
-                    <img src="images/event_ambassador_meet.jpg" alt="Ambassador">
-                </div>
-                <div class="card-content">
-                    <h3>Meet & Greet with Ambassador of India</h3>
+            <a href="gallery.html?folder=Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India&name=Hindi Diwas @The Gandhi Centre (Embassy of India)&date=2024-09-13" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912238/archived-events/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India/459638311_928317295996154_2222041924057979313_n.jpg" 
+                    alt="Hindi Diwas @The Gandhi Centre (Embassy of India)"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Hindi Diwas @The Gandhi Centre (Embassy of India)</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> November 16, 2024</div>
+                        <span class="event-date">📅 2024-09-13</span>
+                        <span class="photo-count">📷 44 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Nov 23</span>
-                    <img src="images/event_hoge_heem.jpg" alt="Het Hoge Heem">
-                </div>
-                <div class="card-content">
-                    <h3>Het Hoge Heem @Uithoorn</h3>
+            <a href="gallery.html?folder=HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag&name=HE Mrs Reenat Sandhu, Ambassador's Farewell @Den Haag&date=2024-07-03" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912120/archived-events/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag/eb9e371e-b476-4474-a5fb-8ce4e816a275.jpg" 
+                    alt="HE Mrs Reenat Sandhu, Ambassador's Farewell @Den Haag"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">HE Mrs Reenat Sandhu, Ambassador's Farewell @Den Haag</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> November 23, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2024-07-03</span>
+                        <span class="photo-count">📷 9 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Dec 07</span>
-                    <img src="images/event_unity_festival_2.png" alt="Unity Festival Poster">
-                </div>
-                <div class="card-content">
-                    <h3>Unity Festival of Lights @Eindhoven</h3>
+            <a href="gallery.html?folder=International-Day-of-Yoga-Eindhoven&name=International Day of Yoga @Eindhoven&date=2024-07-03" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912520/archived-events/International-Day-of-Yoga-Eindhoven/012449dc-f8d5-4951-8023-dc89dc0fc9ea.jpg" 
+                    alt="International Day of Yoga @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">International Day of Yoga @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> December 7, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-07-03</span>
+                        <span class="photo-count">📷 18 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Nov 05</span>
-                    <img src="images/event_women_health.jpg" alt="Women Health">
-                </div>
-                <div class="card-content">
-                    <h3>Women Hormonal Health Session @Uithoorn</h3>
+            <a href="gallery.html?folder=Kalam-Mic-Muskurahat-Literary-Fest&name=Kalam, Mic & Muskurahat (Literary Fest)&date=2024-05-13" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912596/archived-events/Kalam-Mic-Muskurahat-Literary-Fest/10.jpg" 
+                    alt="Kalam, Mic & Muskurahat (Literary Fest)"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Kalam, Mic & Muskurahat (Literary Fest)</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> November 5, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2024-05-13</span>
+                        <span class="photo-count">📷 49 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Oct 29</span>
-                    <img src="images/event_deepawali.jpg" alt="Deepawali">
-                </div>
-                <div class="card-content">
-                    <h3>Deepawali in Philips @Eindhoven</h3>
+            <a href="gallery.html?folder=2024-03-Holi-Festival-2024-The-Gandhi-Centre&name=Holi Festival 2024 @The Gandhi Centre&date=2024-03-25" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765922194/archived-events/2024-03-Holi-Festival-2024-The-Gandhi-Centre/2b8ea283-ab95-48f7-856b-e5fe36ee1657.jpg" 
+                    alt="Holi Festival 2024 @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Holi Festival 2024 @The Gandhi Centre</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> October 29, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2024-03-25</span>
+                        <span class="photo-count">📷 96 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Oct 06</span>
-                    <img src="images/event_poetry_idol.jpg" alt="Poetry Idol">
-                </div>
-                <div class="card-content">
-                    <h3>2024 EU-UK Indian Poetry Idol</h3>
+            <a href="gallery.html?folder=Embassy-Consular-Camp-Eindhoven&name=Embassy Consular Camp @Eindhoven&date=2024-03-03" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911947/archived-events/Embassy-Consular-Camp-Eindhoven/d8b42fb1-dea1-48fa-8dd6-c7fe4a58da82.jpg" 
+                    alt="Embassy Consular Camp @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Embassy Consular Camp @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> October 6, 2024</div>
+                        <span class="event-date">📅 2024-03-03</span>
+                        <span class="photo-count">📷 36 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 24</span>
-                    <img src="images/event_yoga_day_philips.jpg" alt="Yoga Day Philips">
-                </div>
-                <div class="card-content">
-                    <h3>Yoga Day @Philips</h3>
+            <a href="gallery.html?folder=International-Womens-Day&name=International Women's Day&date=2024-03-03" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912534/archived-events/International-Womens-Day/17.png" 
+                    alt="International Women's Day"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">International Women's Day</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 24, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Philips</div>
+                        <span class="event-date">📅 2024-03-03</span>
+                        <span class="photo-count">📷 13 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Sep 21</span>
-                    <img src="images/event_hindi_diwas_sep21.jpg" alt="Hindi Diwas">
-                </div>
-                <div class="card-content">
-                    <h3>Hindi Diwas @The Gandhi Centre</h3>
+            <a href="gallery.html?folder=2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn&name='Bura Na Mano, 'HOLI' hai! @Uithoorn&date=2024-02-09" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765922283/archived-events/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn/136d7de5-0436-4a2f-a495-477a1822c637.jpg" 
+                    alt="'Bura Na Mano, 'HOLI' hai! @Uithoorn"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">'Bura Na Mano, 'HOLI' hai! @Uithoorn</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> September 21, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> The Gandhi Centre</div>
+                        <span class="event-date">📅 2024-02-09</span>
+                        <span class="photo-count">📷 150 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jun 23</span>
-                    <img src="images/event_ambassador_farewell.jpg" alt="Ambassador Farewell">
-                </div>
-                <div class="card-content">
-                    <h3>Ambassador’s Farewell @Den Haag</h3>
+            <a href="gallery.html?folder=Shri-Ram-Mandir-Pran-Prathistha-Den-Haag&name=Shri Ram Mandir 'Pran Prathistha' @Den Haag&date=2024-01-22" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912779/archived-events/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag/1d1c2954-eeac-465b-9e62-77915799cb4e.jpg" 
+                    alt="Shri Ram Mandir 'Pran Prathistha' @Den Haag"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Shri Ram Mandir 'Pran Prathistha' @Den Haag</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> June 23, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Den Haag</div>
+                        <span class="event-date">📅 2024-01-22</span>
+                        <span class="photo-count">📷 58 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jun 23</span>
-                    <img src="images/event_yoga_day_eindhoven.jpg" alt="Yoga Day Eindhoven">
-                </div>
-                <div class="card-content">
-                    <h3>International Day of Yoga @Eindhoven</h3>
+            <a href="gallery.html?folder=Gita-Mahotsav-2023-The-Gandhi-Centre&name=Gita Mahotsav 2023 @The Gandhi Centre&date=2023-12-02" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912063/archived-events/Gita-Mahotsav-2023-The-Gandhi-Centre/20231216_162510.jpg" 
+                    alt="Gita Mahotsav 2023 @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Gita Mahotsav 2023 @The Gandhi Centre</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> June 23, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2023-12-02</span>
+                        <span class="photo-count">📷 107 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Apr 13</span>
-                    <img src="images/event_literary_fest_apr13.jpeg" alt="Literary Fest">
-                </div>
-                <div class="card-content">
-                    <h3>Kalam, Mic & Muskurahat (Literary Fest)</h3>
+            <a href="gallery.html?folder=Indias-Independence-Day-The-India-House&name=India's Independence Day @The India House&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912512/archived-events/Indias-Independence-Day-The-India-House/962e7862-56bb-4b52-9d8b-f6736e1bd295.jpg" 
+                    alt="India's Independence Day @The India House"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">India's Independence Day @The India House</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> April 13, 2024</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 26 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Mar 24</span>
-                    <img src="images/event_holi_gandhi_centre.jpg" alt="Holi Gandhi Centre">
-                </div>
-                <div class="card-content">
-                    <h3>Holi Festival 2024 @The Gandhi Centre</h3>
+            <a href="gallery.html?folder=Lalaland-Event-The-Magic-of-India-Zaandam&name=Lalaland Event: The Magic of India @Zaandam&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912651/archived-events/Lalaland-Event-The-Magic-of-India-Zaandam/347438899_238157012378093_5176727651330189349_n.jpg" 
+                    alt="Lalaland Event: The Magic of India @Zaandam"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Lalaland Event: The Magic of India @Zaandam</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> March 24, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> The Gandhi Centre</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 35 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Mar 01</span>
-                    <img src="images/event_consular_camp_mar1.jpg" alt="Consular Camp">
-                </div>
-                <div class="card-content">
-                    <h3>Embassy Consular Camp @Eindhoven</h3>
+            <a href="gallery.html?folder=Malini-Awasthi-Ji-The-Gandhi-Centre&name=Malini Awasthi Ji @The Gandhi Centre&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912704/archived-events/Malini-Awasthi-Ji-The-Gandhi-Centre/5cd7c56d-52a3-4c5a-b885-651a2502f7c4.jpg" 
+                    alt="Malini Awasthi Ji @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Malini Awasthi Ji @The Gandhi Centre</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> March 1, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Eindhoven</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 13 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Mar 09</span>
-                    <img src="images/event_womens_day.png" alt="Women's Day">
-                </div>
-                <div class="card-content">
-                    <h3>International Women’s Day</h3>
+            <a href="gallery.html?folder=International-Yoga-Day-Eindhoven&name=International Yoga Day @Eindhoven&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912557/archived-events/International-Yoga-Day-Eindhoven/346079767_220566557470472_5026897058414864679_n.jpg" 
+                    alt="International Yoga Day @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">International Yoga Day @Eindhoven</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> March 9, 2024</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 38 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Mar 23</span>
-                    <img src="images/event_holi_uithoorn.jpg" alt="Holi Uithoorn">
-                </div>
-                <div class="card-content">
-                    <h3>‘Bura Na Mano, ‘HOLI’ hai! @Uithoorn</h3>
+            <a href="gallery.html?folder=India-Day-Zaanstad-Zaandam&name=India Day Zaanstad @Zaandam&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912463/archived-events/India-Day-Zaanstad-Zaandam/345048523_171005435939405_5129585299390620500_n.jpg" 
+                    alt="India Day Zaanstad @Zaandam"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">India Day Zaanstad @Zaandam</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> March 23, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Uithoorn</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 61 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Jan 22</span>
-                    <img src="images/event_ram_mandir.jpg" alt="Ram Mandir">
-                </div>
-                <div class="card-content">
-                    <h3>Shri Ram Mandir ‘Pran Prathistha’ @Den Haag</h3>
+            <a href="gallery.html?folder=2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre&name=Holi Milan Samaroh @The Gandhi Centre&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765922060/archived-events/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre/329367876_226371809845021_6977291878201370680_n.jpg" 
+                    alt="Holi Milan Samaroh @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Holi Milan Samaroh @The Gandhi Centre</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> January 22, 2024</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Den Haag</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 60 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="event-card">
-                <div class="card-image">
-                    <span class="date-badge">Dec 16</span>
-                    <img src="images/event_gita_mahotsav.jpg" alt="Gita Mahotsav">
-                </div>
-                <div class="card-content">
-                    <h3>Gita Mahotsav 2023 @The Gandhi Centre</h3>
+            <a href="gallery.html?folder=Sur-India-Utrecht&name=Sur India @Utrecht&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912844/archived-events/Sur-India-Utrecht/0d1ce5d8-da85-41ba-b331-3a9c6bb9bf0c.jpg" 
+                    alt="Sur India @Utrecht"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Sur India @Utrecht</div>
                     <div class="event-meta">
-                        <div><i class="fas fa-calendar-alt"></i> December 16, 2023</div>
-                        <div><i class="fas fa-map-marker-alt"></i> The Gandhi Centre</div>
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 33 photos</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
+            <a href="gallery.html?folder=Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre&name=Ek Shaam Dinkar ke Naam (Hindi Diwas) @The Gandhi Centre&date=2023-10-29" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911927/archived-events/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre/182f6adf-f8b5-433a-bad1-f3052d47a26f.jpg" 
+                    alt="Ek Shaam Dinkar ke Naam (Hindi Diwas) @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Ek Shaam Dinkar ke Naam (Hindi Diwas) @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-29</span>
+                        <span class="photo-count">📷 15 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Shivaji-Jayanti-Celebrations-The-Gandhi-Centre&name=Shivaji Jayanti Celebrations @The Gandhi Centre&date=2023-10-28" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912767/archived-events/Shivaji-Jayanti-Celebrations-The-Gandhi-Centre/150f5328-22f3-4e1d-bfc4-5e4e299b141a.jpg" 
+                    alt="Shivaji Jayanti Celebrations @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Shivaji Jayanti Celebrations @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-28</span>
+                        <span class="photo-count">📷 8 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=First-ever-Embassy-Counsellor-Camp-Eindhoven&name=First-ever Embassy Counsellor Camp @Eindhoven&date=2023-10-28" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911980/archived-events/First-ever-Embassy-Counsellor-Camp-Eindhoven/327115638_971993930444945_1877992544544745540_n.jpg" 
+                    alt="First-ever Embassy Counsellor Camp @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">First-ever Embassy Counsellor Camp @Eindhoven</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-28</span>
+                        <span class="photo-count">📷 12 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp&name=President of Suriname, Mr. Chan Santokhi @Hoofddorp&date=2023-10-28" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912748/archived-events/President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp/6C9E7063-1A29-4F5E-9206-2DF6B58F7EF3.jpg" 
+                    alt="President of Suriname, Mr. Chan Santokhi @Hoofddorp"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">President of Suriname, Mr. Chan Santokhi @Hoofddorp</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-28</span>
+                        <span class="photo-count">📷 13 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=World-Hindi-Day-The-Gandhi-Centre&name=World Hindi Day  @The Gandhi Centre&date=2023-10-28" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913505/archived-events/World-Hindi-Day-The-Gandhi-Centre/324555650_506618091553836_7759651884764348650_n.jpg" 
+                    alt="World Hindi Day  @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">World Hindi Day  @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-28</span>
+                        <span class="photo-count">📷 15 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=UP-CM-Indian-Diaspora-Amsterdam&name=UP CM & Indian Diaspora @Amsterdam&date=2023-10-28" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765913051/archived-events/UP-CM-Indian-Diaspora-Amsterdam/2023-10-28_22-50-41.png" 
+                    alt="UP CM & Indian Diaspora @Amsterdam"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">UP CM & Indian Diaspora @Amsterdam</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-28</span>
+                        <span class="photo-count">📷 6 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Remembering-Lachit-Borphukan-The-Gandhi-Centre&name=Remembering Lachit Borphukan @The Gandhi Centre&date=2023-10-26" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912757/archived-events/Remembering-Lachit-Borphukan-The-Gandhi-Centre/IMG_3536.jpg" 
+                    alt="Remembering Lachit Borphukan @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Remembering Lachit Borphukan @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-26</span>
+                        <span class="photo-count">📷 12 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Desi-Holland-Day-Eindhoven&name=Desi Holland Day @Eindhoven&date=2023-10-26" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911917/archived-events/Desi-Holland-Day-Eindhoven/IMG_1608.jpg" 
+                    alt="Desi Holland Day @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Desi Holland Day @Eindhoven</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-26</span>
+                        <span class="photo-count">📷 12 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre&name=Gandhi Jayanti Kavya Goshthi @The Gandhi Centre&date=2023-10-24" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911994/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0368.jpg" 
+                    alt="Gandhi Jayanti Kavya Goshthi @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Gandhi Jayanti Kavya Goshthi @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-24</span>
+                        <span class="photo-count">📷 43 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=National-Day-Almere&name=National Day @Almere&date=2023-10-24" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912722/archived-events/National-Day-Almere/331addf9-8e54-4c7b-bd08-f97398fcf64b.jpg" 
+                    alt="National Day @Almere"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">National Day @Almere</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-24</span>
+                        <span class="photo-count">📷 14 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=International-Indian-Diaspora-Conference-Wassenaar&name=International Indian Diaspora Conference @Wassenaar&date=2023-10-24" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912525/archived-events/International-Indian-Diaspora-Conference-Wassenaar/38802046-1ce9-440c-83e9-e357975ff391.jpg" 
+                    alt="International Indian Diaspora Conference @Wassenaar"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">International Indian Diaspora Conference @Wassenaar</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-24</span>
+                        <span class="photo-count">📷 6 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=India-Day-2023-Eindhoven&name=India Day 2023 @Eindhoven&date=2023-10-02" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912406/archived-events/India-Day-2023-Eindhoven/20231202_133854.jpg" 
+                    alt="India Day 2023 @Eindhoven"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">India Day 2023 @Eindhoven</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2023-10-02</span>
+                        <span class="photo-count">📷 45 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Indian-Women-Olympics-Hockey-Coach-Sjoerd-Marijne-Felicitation-Tilburg&name=Indian Women Olympics Hockey Coach, Sjoerd Marijne Felicitation @Tilburg&date=2021-03-17" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912486/archived-events/Indian-Women-Olympics-Hockey-Coach-Sjoerd-Marijne-Felicitation-Tilburg/20210926_162501.jpg" 
+                    alt="Indian Women Olympics Hockey Coach, Sjoerd Marijne Felicitation @Tilburg"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Indian Women Olympics Hockey Coach, Sjoerd Marijne Felicitation @Tilburg</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2021-03-17</span>
+                        <span class="photo-count">📷 11 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam&name=HE Ram Nath Kovind, President of India Visit @Amsterdam&date=2021-03-17" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912140/archived-events/HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam/20220406_172332.jpg" 
+                    alt="HE Ram Nath Kovind, President of India Visit @Amsterdam"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">HE Ram Nath Kovind, President of India Visit @Amsterdam</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2021-03-17</span>
+                        <span class="photo-count">📷 27 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam&name=Bollywood Musician, Singer Piyush Mishra’s @Amsterdam&date=2021-03-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911425/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/20220820_192332.jpg" 
+                    alt="Bollywood Musician, Singer Piyush Mishra’s @Amsterdam"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Bollywood Musician, Singer Piyush Mishra’s @Amsterdam</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2021-03-04</span>
+                        <span class="photo-count">📷 12 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre&name=Azadi ka Amrit Mahotsav Poetry @The Gandhi Centre&date=2021-03-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765911423/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/20220904_191610_Original.jpg" 
+                    alt="Azadi ka Amrit Mahotsav Poetry @The Gandhi Centre"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Azadi ka Amrit Mahotsav Poetry @The Gandhi Centre</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2021-03-04</span>
+                        <span class="photo-count">📷 8 photos</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="gallery.html?folder=Meet-Greet-Lok-Sabha-Speaker-Sh-Om-Birla-India-House&name=Meet & Greet, Lok Sabha Speaker, Sh. Om Birla @India House&date=2021-03-04" class="event-card">
+                <img 
+                    src="https://res.cloudinary.com/du0lumtob/image/upload/w_400,h_300,c_fill,q_auto,f_auto/v1765912713/archived-events/Meet-Greet-Lok-Sabha-Speaker-Sh-Om-Birla-India-House/0cf08cb4-e33b-4a7b-85e6-d0d372226b4b.jpg" 
+                    alt="Meet & Greet, Lok Sabha Speaker, Sh. Om Birla @India House"
+                    class="event-thumbnail"
+                    loading="lazy"
+                >
+                <div class="event-info">
+                    <div class="event-title">Meet & Greet, Lok Sabha Speaker, Sh. Om Birla @India House</div>
+                    <div class="event-meta">
+                        <span class="event-date">📅 2021-03-04</span>
+                        <span class="photo-count">📷 14 photos</span>
+                    </div>
+                </div>
+            </a>
 
         </div>
-    </section>
-</main>
-
-<!-- 2. FOOTER PLACEHOLDER -->
-<div id="footer-placeholder"></div>
-
-<!-- 3. INCLUDE JAVASCRIPT -->
-<script src="include.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        loadComponents('Events Archive - Sanskriti & Sanskar', 'events.html');
-    });
-</script>
+    </div>
 </body>
 </html>

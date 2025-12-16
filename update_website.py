@@ -1,6 +1,7 @@
 import json
 import shutil
 from pathlib import Path
+from datetime import datetime
 
 # Paths
 MAPPING_FILE = "cloudinary_event_mapping.json"
@@ -9,6 +10,17 @@ EVENTS_BACKUP = "events-backup.html"
 GALLERY_HTML = "gallery.html"
 GALLERY_CSS = "gallery.css"
 GALLERY_JS = "gallery.js"
+
+def format_date(date_str):
+    """
+    Convert date from YYYY-MM-DD to MMM'YY format
+    Example: 2025-06-09 -> Jun'25
+    """
+    try:
+        date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+        return date_obj.strftime("%b'%y")
+    except:
+        return date_str
 
 # Load mapping
 with open(MAPPING_FILE, 'r', encoding='utf-8') as f:
@@ -32,120 +44,108 @@ events_html = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Gallery - Sanskriti & Sanskar</title>
+    <title>Events Archive - Sanskriti & Sanskar</title>
+    <!-- Font Awesome is linked here for icons (if any) in the main content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link the external CSS file for common styles -->
+    <link rel="stylesheet" href="style.css"> 
+
     <style>
-        * {
-            margin:  0;
-            padding: 0;
-            box-sizing:  border-box;
-        }
+        /* --- PAGE SPECIFIC STYLES (EVENTS) --- */
         
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background:  #f5f5f5;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        h1 {
+        /* PAGE HEADER */
+        .page-header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 60px 5%;
             text-align: center;
-            color: #333;
-            margin-bottom: 10px;
-            font-size:  2.5em;
         }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-            font-size:  1.1em;
-        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* --- EVENTS GRID --- */
+        .events-container { padding: 60px 5%; max-width: 1400px; margin: 0 auto; }
         
         .events-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            gap: 30px;
         }
-        
+
         .event-card {
-            background: white;
+            background: var(--white);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             color: inherit;
-            display: block;
         }
-        
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+        .event-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
         }
-        
-        .event-thumbnail {
+
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            background: #e0e0e0;
+            object-position: top;
+            transition: transform 0.5s ease;
         }
-        
-        .event-info {
-            padding: 20px;
+
+        .event-card:hover .card-image img { transform: scale(1.05); }
+
+        .date-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--white);
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        
-        .event-title {
-            font-size:  1.2em;
-            font-weight:  600;
-            color: #333;
-            margin-bottom: 8px;
-            line-height: 1.3;
+
+        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content h3 { 
+            color: var(--secondary-color); 
+            margin-bottom: 10px; 
+            font-size: 1.1rem; 
+            line-height: 1.4; 
+            min-height: 3em; 
         }
-        
-        . event-meta {
-            display: flex;
-            justify-content: space-between;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 12px;
-        }
-        
-        .event-date {
-            color: #ff6b6b;
-            font-weight: 500;
-        }
-        
-        .photo-count {
-            background: #4ecdc4;
-            color: white;
-            padding: 4px 12px;
-            border-radius:  20px;
-            font-size:  0.85em;
-        }
-        
+        .event-meta { margin-top: auto; color: var(--text-light); font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px; }
+        .event-meta div { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+
         @media (max-width: 768px) {
-            .events-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 15px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
+            .card-content h3 { min-height: unset; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📸 Events Gallery</h1>
-        <p class="subtitle">Sanskriti & Sanskar - Celebrating Indian Culture in the Netherlands</p>
-        
+
+<!-- 1. HEADER PLACEHOLDER -->
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="page-header">
+        <h1>Events Archive</h1>
+        <p>A Visual Journey of Our Community Moments</p>
+    </div>
+
+    <section class="events-container">
         <div class="events-grid">
 """
 
@@ -157,28 +157,32 @@ for event in sorted_events:
         # Get first image URL and create thumbnail version
         first_image = event['cloudinary_urls'][0]
         
-        # Cloudinary transformation for thumbnail:  width=400, height=300, crop=fill, quality=auto
-        thumbnail_url = first_image. replace(
+        # Cloudinary transformation for thumbnail: width=400, height=300, crop=fit with white background to avoid cropping
+        thumbnail_url = first_image.replace(
             '/upload/',
-            '/upload/w_400,h_300,c_fill,q_auto,f_auto/'
+            '/upload/w_400,h_300,c_fit,q_auto,f_auto,b_white/'
         )
+        
+        # Format date to MMM'YY style
+        formatted_date = format_date(event['event_date'])
         
         # Create gallery link with URL parameters
         gallery_link = f"gallery.html?folder={event['cloudinary_folder']}&name={event['event_name']}&date={event['event_date']}"
         
         events_html += f"""
             <a href="{gallery_link}" class="event-card">
-                <img 
-                    src="{thumbnail_url}" 
-                    alt="{event['event_name']}"
-                    class="event-thumbnail"
-                    loading="lazy"
-                >
-                <div class="event-info">
-                    <div class="event-title">{event['event_name']}</div>
+                <div class="card-image">
+                    <span class="date-badge">{formatted_date}</span>
+                    <img 
+                        src="{thumbnail_url}" 
+                        alt="{event['event_name']}"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="card-content">
+                    <h3>{event['event_name']}</h3>
                     <div class="event-meta">
-                        <span class="event-date">📅 {event['event_date']}</span>
-                        <span class="photo-count">📷 {event['photo_count']} photos</span>
+                        <div><i class="fas fa-calendar-alt"></i> {event['photo_count']} photos</div>
                     </div>
                 </div>
             </a>
@@ -186,7 +190,19 @@ for event in sorted_events:
 
 events_html += """
         </div>
-    </div>
+    </section>
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Events Archive - Sanskriti & Sanskar', 'events.html');
+    });
+</script>
 </body>
 </html>
 """
@@ -266,7 +282,7 @@ body {
     margin-bottom: 30px;
     background: white;
     padding: 30px;
-    border-radius:  12px;
+    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -276,7 +292,7 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
-    text-decoration:  none;
+    text-decoration: none;
     margin-bottom: 20px;
     transition: background 0.3s ease;
 }
@@ -294,7 +310,7 @@ body {
 #event-date {
     color: #ff6b6b;
     font-size: 1.1em;
-    margin-bottom:  5px;
+    margin-bottom: 5px;
 }
 
 #photo-count {
@@ -303,8 +319,8 @@ body {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .gallery-item {
@@ -315,6 +331,7 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     background: white;
+    aspect-ratio: 4/3;
 }
 
 .gallery-item:hover {
@@ -323,14 +340,14 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
-    object-fit:  cover;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
 .loading {
     text-align: center;
-    padding:  40px;
+    padding: 40px;
     color: #666;
     font-size: 1.2em;
 }
@@ -341,7 +358,7 @@ body {
     position: fixed;
     z-index: 1000;
     top: 0;
-    left:  0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
@@ -356,7 +373,7 @@ body {
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
-    object-fit:  contain;
+    object-fit: contain;
 }
 
 .lightbox-close {
@@ -378,22 +395,22 @@ body {
 .lightbox-next {
     position: absolute;
     top: 50%;
-    transform:  translateY(-50%);
+    transform: translateY(-50%);
     color: white;
     font-size: 60px;
-    font-weight:  bold;
+    font-weight: bold;
     cursor: pointer;
     padding: 20px;
     user-select: none;
     z-index: 1001;
 }
 
-.lightbox-prev: hover,
+.lightbox-prev:hover,
 .lightbox-next:hover {
     color: #4ecdc4;
 }
 
-. lightbox-prev {
+.lightbox-prev {
     left: 20px;
 }
 
@@ -420,15 +437,11 @@ body {
         gap: 10px;
     }
     
-    .gallery-item img {
-        height: 150px;
-    }
-    
     #event-title {
         font-size: 1.5em;
     }
     
-    . lightbox-prev,
+    .lightbox-prev,
     .lightbox-next {
         font-size: 40px;
         padding: 10px;
@@ -448,6 +461,19 @@ gallery_js = """// Cloudinary configuration
 const CLOUDINARY_CLOUD_NAME = 'du0lumtob';
 const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload`;
 
+// Format date from YYYY-MM-DD to MMM'YY
+function formatDate(dateStr) {
+    try {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const parts = dateStr.split('-');
+        const year = parts[0].slice(2); // Get last 2 digits of year
+        const monthIndex = parseInt(parts[1]) - 1;
+        return `${months[monthIndex]}'${year}`;
+    } catch {
+        return dateStr;
+    }
+}
+
 // Event mapping data
 const EVENT_MAPPING = """ + json.dumps(events, indent=2) + """;
 
@@ -458,14 +484,14 @@ const eventName = urlParams.get('name');
 const eventDate = urlParams.get('date');
 
 // Find event in mapping
-const eventData = EVENT_MAPPING.find(e => e. cloudinary_folder === folderName);
+const eventData = EVENT_MAPPING.find(e => e.cloudinary_folder === folderName);
 
-if (! eventData) {
+if (!eventData) {
     document.getElementById('gallery-grid').innerHTML = '<div class="loading">Event not found</div>';
 } else {
-    // Update header
+    // Update header with formatted date
     document.getElementById('event-title').textContent = eventData.event_name;
-    document.getElementById('event-date').textContent = `📅 ${eventData.event_date}`;
+    document.getElementById('event-date').textContent = `📅 ${formatDate(eventData.event_date)}`;
     document.getElementById('photo-count').textContent = `📷 ${eventData.photo_count} photos`;
     
     // Set page title
@@ -476,11 +502,10 @@ if (! eventData) {
     galleryGrid.innerHTML = '';
     
     eventData.cloudinary_urls.forEach((url, index) => {
-        // Create responsive thumbnail URL
-        // Desktop: 400px wide, Mobile: 300px wide
+        // Create responsive thumbnail URL with smart cropping (c_fill,g_auto)
         const thumbnailUrl = url.replace(
             '/upload/',
-            '/upload/w_400,h_300,c_fill,q_auto,f_auto,dpr_auto/'
+            '/upload/w_350,h_260,c_fill,g_auto,q_auto,f_auto/'
         );
         
         const item = document.createElement('div');
@@ -507,16 +532,16 @@ function openLightbox(index) {
 
 function closeLightbox() {
     lightbox.classList.remove('active');
-    document.body.style. overflow = 'auto';
+    document.body.style.overflow = 'auto';
 }
 
 function showImage(index) {
-    if (! eventData || index < 0 || index >= eventData.cloudinary_urls.length) return;
+    if (!eventData || index < 0 || index >= eventData.cloudinary_urls.length) return;
     
-    // Use high-quality version for lightbox
-    const fullUrl = eventData.cloudinary_urls[index]. replace(
+    // Use high-quality version for lightbox without any cropping
+    const fullUrl = eventData.cloudinary_urls[index].replace(
         '/upload/',
-        '/upload/w_1920,q_auto,f_auto/'
+        '/upload/w_1920,q_auto:good,f_auto/'
     );
     
     lightboxImg.src = fullUrl;
