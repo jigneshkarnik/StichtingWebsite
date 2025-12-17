@@ -1,0 +1,104 @@
+name: Add New Event
+description: Add a new event to the gallery with photos from Cloudinary
+title: "[Event]: "
+labels: ["new-event"]
+assignees:
+  - jigneshkarnik
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add New Event to Gallery
+        Fill out this form to automatically add a new event to the website gallery. The automation will fetch photos from Cloudinary and update the website.
+
+  - type: input
+    id: event-name
+    attributes:
+      label: Event Name
+      description: Full name of the event (e.g., 'Vrouwen Middag' @Uithoorn)
+      placeholder: "Event Name @Location"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City or venue where the event took place
+      placeholder: Amsterdam
+    validations:
+      required: true
+
+  - type: input
+    id: event-date
+    attributes:
+      label: Event Date
+      description: Date in YYYY-MM-DD format
+      placeholder: "2025-06-09"
+    validations:
+      required: true
+
+  - type: textarea
+    id: thumbnail
+    attributes:
+      label: Thumbnail Image
+      description: Upload or provide a link to the event thumbnail image. This will be the cover image for the event card.
+      placeholder: Drag and drop an image here or paste an image URL
+    validations:
+      required: true
+
+  - type: input
+    id: cloudinary-folder
+    attributes:
+      label: Cloudinary Folder Name
+      description: Name of the folder in Cloudinary containing event photos (WITHOUT 'archived-events/' prefix)
+      placeholder: "2025-06-Vrouwen-Middag-Uithoorn"
+    validations:
+      required: true
+
+  - type: input
+    id: photo-count
+    attributes:
+      label: Number of Photos
+      description: Approximate number of photos in the Cloudinary folder (optional - will be auto-detected)
+      placeholder: "24"
+    validations:
+      required: false
+
+  - type: textarea
+    id: video-links
+    attributes:
+      label: Video Links (Optional)
+      description: YouTube or Vimeo video links related to this event (one per line)
+      placeholder: |
+        https://youtu.be/abc123
+        https://vimeo.com/123456789
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: completion-checklist
+    attributes:
+      label: Completion Checklist
+      description: Check these items to ensure everything is ready
+      options:
+        - label: Photos are uploaded to Cloudinary in the specified folder
+          required: true
+        - label: Cloudinary folder name is correct
+          required: true
+        - label: Event date is in YYYY-MM-DD format
+          required: true
+        - label: Thumbnail image is provided
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        1. When you apply the `new-event` label, the automation will trigger
+        2. The script will fetch photos from your Cloudinary folder
+        3. A Pull Request will be created automatically with the changes
+        4. Review and merge the PR to publish the event to the website
+        
+        **Note:** Make sure you have uploaded all photos to Cloudinary before creating this issue!
