@@ -15,7 +15,7 @@ import cloudinary
 import cloudinary.api
 
 # Configuration
-CLOUDINARY_CLOUD_NAME = "du0lumtob"
+CLOUDINARY_CLOUD_NAME = os.environ.get('CLOUDINARY_CLOUD_NAME', 'du0lumtob')
 MAPPING_FILE = "cloudinary_event_mapping.json"
 GALLERY_JS_FILE = "gallery.js"
 
