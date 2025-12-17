@@ -1,0 +1,91 @@
+name: Add Event from Issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  add-event:
+    # Only run when the 'new-event' label is added
+    if: github.event.label.name == 'new-event'
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install cloudinary
+      
+      - name: Run event automation script
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          CLOUDINARY_CLOUD_NAME: du0lumtob
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: |
+          python scripts/add_event_from_issue.py
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            Add event from issue #${{ github.event.issue.number }}
+            
+            Automated event addition from GitHub issue.
+          branch: event/${{ github.event.issue.number }}-add-event
+          delete-branch: true
+          title: 'Add Event: ${{ github.event.issue.title }}'
+          body: |
+            ## Event Added from Issue #${{ github.event.issue.number }}
+            
+            This PR was automatically created by the event automation workflow.
+            
+            ### Changes
+            - ✅ Updated `cloudinary_event_mapping.json` with new event
+            - ✅ Updated `gallery.js` with new event mapping
+            
+            ### Review Checklist
+            - [ ] Event details are correct
+            - [ ] Photos loaded successfully from Cloudinary
+            - [ ] Event appears correctly on the website
+            
+            ### Next Steps
+            1. Review the changes in this PR
+            2. Test locally if needed
+            3. Merge to publish the event to the website
+            4. Close issue #${{ github.event.issue.number }}
+            
+            ---
+            **Automated by:** GitHub Actions
+            **Related Issue:** #${{ github.event.issue.number }}
+          labels: |
+            automated
+            event
+          assignees: jigneshkarnik
+      
+      - name: Comment on Issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Event automation completed! A pull request has been created with the changes. Please review and merge to publish the event.'
+            })
