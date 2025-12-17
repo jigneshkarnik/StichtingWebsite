@@ -201,6 +201,7 @@ def update_mapping_file(new_event):
     events.append(new_event)
     
     # Sort events by date (newest first)
+    # Note: Dates are in YYYY-MM-DD format which sorts correctly as strings
     events.sort(key=lambda x: x['event_date'], reverse=True)
     print(f"   ✅ Events sorted by date (newest first)")
     
@@ -212,7 +213,11 @@ def update_mapping_file(new_event):
 
 
 def update_gallery_js(events):
-    """Update gallery.js with the new event mapping."""
+    """Update gallery.js with the new event mapping.
+    
+    This function finds the EVENT_MAPPING constant and replaces its value.
+    The pattern expects: const EVENT_MAPPING = [...];
+    """
     print(f"\n⚡ Updating {GALLERY_JS_FILE}...")
     
     try:
@@ -223,7 +228,8 @@ def update_gallery_js(events):
         sys.exit(1)
     
     # Find the EVENT_MAPPING constant and replace its value
-    # Pattern to match: const EVENT_MAPPING = [...];
+    # Pattern matches: const EVENT_MAPPING = [...];
+    # Note: This assumes the constant is declared in this exact format
     pattern = r'(const EVENT_MAPPING = )\[.*?\];'
     
     # Create the new mapping value
