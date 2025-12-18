@@ -66,6 +66,8 @@ function loadComponents(pageTitle, activePage) {
 
                     // Function to redistribute items into the more-list when space is limited
                     function redistributeMenu() {
+                        // Skip redistribution on mobile (max-width 900px) since menu is dropdown
+                        if (window.innerWidth <= 900) return;
                         const nav = navLinksContainer;
                         const more = nav.querySelector('.more');
                         const moreList = more.querySelector('.more-list');

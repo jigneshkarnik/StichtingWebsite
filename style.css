@@ -277,7 +277,12 @@ footer {
     /* 1. Show the toggle button */
     .menu-toggle {
         display: block;
-        margin-left: auto; 
+        margin-left: auto;
+        background-color: var(--secondary-color);
+        color: var(--white);
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 4px;
+        padding: 8px 12px;
     }
 
     /* 2. Collapse the navigation links */
@@ -305,6 +310,16 @@ footer {
     .nav-links li a {
         padding: 15px 20px;
         text-align: left;
+        color: var(--secondary-color); /* Dark text for white background */
+    }
+    .nav-links li a:hover {
+        color: var(--success-color); /* Green shade for hover */
+        background: rgba(16, 185, 129, 0.05); /* Light green background */
+    }
+    .nav-links li a.active {
+        color: var(--success-color); /* Green shade for active link */
+        background: rgba(16, 185, 129, 0.1); /* Light green background */
+        font-weight: bold;
     }
     .btn-donate {
         margin: 10px 20px;
@@ -431,7 +446,7 @@ footer {
 
 /* Hide the more-list on small screens (mobile uses full menu) */
 @media (max-width: 900px) {
-    .nav-links .more { display: none !important; }
+    .nav-links .more { display: block; } /* Show more on mobile */
 }
 
 /* Mobile adjustments for donate as a nav item */
