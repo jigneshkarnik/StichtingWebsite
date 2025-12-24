@@ -35,7 +35,9 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'The Tulips Lounge', href: 'tulip-lounge.html' },
                         { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
                         { text: 'About Us', href: 'about.html' },
-                        { text: 'Contact Us', href: 'contact.html' }
+                        { text: 'Contact Us', href: 'contact.html' },
+                        { text: 'Admin', href: 'admin.html' }
+
                     ];
 
                     // Build list items for the nav
