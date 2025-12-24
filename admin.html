@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stichting Admin Redirect</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f7f6; }
+    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .btn { background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Stichting Admin Portal</h2>
+    <p>Redirecting you to the secure portal...</p>
+    <p><i>If you see an "Access Denied" error, click below:</i></p>
+    <br>
+    <a href="https://accounts.google.com/AccountChooser?continue=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" class="btn">
+      Switch Google Account / Login
+    </a>
+  </div>
+  <script>
+    // Try to redirect automatically after 2 seconds
+    setTimeout(function(){
+      window.location.href = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+    }, 2000);
+  </script>
+</body>
+</html>
