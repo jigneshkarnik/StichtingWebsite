@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhartiya First Parenting Guide - Sanskriti & Sanskar</title>
+    <meta name="description" content="Bhartiya First Parenting Guide - Strategies to help your children embrace their Indian identity.">
+    <link rel="canonical" href="https://sanskritiandsanskar.com/BFParentingGuide.html">
+
+    <meta property="og:title" content="Bhartiya First Parenting Guide">
+    <meta property="og:description" content="Strategies to help your children embrace their Indian identity while living abroad.">
+    <meta property="og:url" content="https://sanskritiandsanskar.com/BFParentingGuide.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bhartiya First Parenting Guide">
+    <meta name="twitter:description" content="Strategies to help your children embrace their Indian identity while living abroad.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- PARENTING GUIDE SPECIFIC STYLES --- */
+        :root {
+            --saffron: #FF9933;
+            --pg-white: #FFFFFF;
+            --pg-green: #138808;
+            --pg-blue: #000080;
+            --cream: #FFF5E1;
+            --dark-text: #2c3e50;
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 62, 68, 0.85), rgba(15, 62, 68, 0.85)), 
+                        linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 10px; 
+            text-transform: uppercase; 
+        }
+        .page-header p { 
+            font-size: 1.2rem; 
+            color: var(--accent-color); 
+            font-weight: bold; 
+        }
+
+        /* App Container */
+        .guide-section {
+            padding: 40px 5%;
+            background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #app-frame {
+            width: 100%;
+            max-width: 550px;
+            background-color: var(--pg-white);
+            border-radius: 25px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            border: 6px solid var(--pg-white);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--pg-blue);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .pg-logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .level-badge {
+            background: var(--saffron);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Card Area */
+        #card-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out;
+            border-bottom: 5px solid var(--saffron);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card-image-box {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 3s ease;
+        }
+        
+        .card:hover .card-image-box img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .strategy-tag {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--pg-green);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .card-content h2 {
+            margin: 0 0 10px 0;
+            color: var(--pg-blue);
+            font-family: 'Fredoka One', cursive;
+            line-height: 1.2;
+            font-size: 1.5rem;
+        }
+
+        .concept-text {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .action-box {
+            background: var(--cream);
+            border-left: 4px solid var(--saffron);
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .action-title {
+            font-weight: bold;
+            color: var(--saffron);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .action-script {
+            font-style: italic;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            padding: 20px;
+            background: white;
+            display: flex;
+            gap: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-bar button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .btn-back {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .btn-next {
+            background: var(--pg-blue);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 128, 0.3);
+        }
+
+        .btn-next:active {
+            transform: scale(0.98);
+        }
+
+        /* Progress Bar */
+        .progress-track {
+            height: 6px;
+            background: #eee;
+            width: 100%;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--saffron), var(--pg-white), var(--pg-green));
+            width: 0%;
+            transition: width 0.4s;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 60px 5%;
+            background: var(--section-bg);
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        .intro-section .highlight {
+            background: linear-gradient(120deg, #FF993333 0%, #13880833 100%);
+            padding: 20px 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            border-left: 4px solid var(--saffron);
+        }
+
+        .intro-section .highlight p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.8rem; }
+            #app-frame { border-radius: 15px; border: 3px solid var(--pg-white); }
+            .card-content h2 { font-size: 1.3rem; }
+            .pg-logo { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+    <div class="page-header">
+        <h1>🇮🇳 Bhartiya First Parenting Guide</h1>
+        <p>Empowering Parents to Nurture Indian Identity</p>
+    </div>
+
+    <section class="intro-section">
+        <h2>Welcome to the Parent's Guide</h2>
+        <p>
+            Raising children abroad while keeping them connected to their Indian roots can be challenging. 
+            This interactive guide offers 10 practical strategies to help you nurture a strong sense of 
+            "Bharatiya" identity in your children—celebrating diversity while fostering unity.
+        </p>
+        <div class="highlight">
+            <p>🌟 Swipe through the cards below to discover actionable strategies you can use tonight!</p>
+        </div>
+    </section>
+
+    <section class="guide-section">
+        <div id="app-frame">
+            <div class="top-bar">
+                <div class="pg-logo">🇮🇳 Parenting Guide</div>
+                <div class="level-badge" id="step-counter">1 / 11</div>
+            </div>
+            
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div id="card-container">
+            </div>
+
+            <div class="nav-bar">
+                <button class="btn-back" id="btn-prev" onclick="changePage(-1)">Back</button>
+                <button class="btn-next" id="btn-next" onclick="changePage(1)">Next Strategy</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="include.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Bhartiya First Parenting Guide - Sanskriti & Sanskar', 'BFParentingGuide.html');
+    });
+</script>
+
+<script>
+    // --- DATA OBJECTS (Parent Perspective) ---
+    const strategies = [
+        {
+            tag: "Strategy 1: Storytelling",
+            title: "Use Stories, Not Lectures",
+            imageKeyword: "india,story,book",
+            concept: "Children connect with narratives. Instead of teaching dry facts, share the magic of our different states.",
+            actionTitle: "Try this tonight:",
+            script: "\"Did you know in Kerala they have races with boats as long as snakes? But in Kashmir, they live on boats! See, we look different, but we are all Indian.\"",
+            color: "#FF9933"
+        },
+        {
+            tag: "Strategy 2: Immersion",
+            title: "Mini 'India Days' at Home",
+            imageKeyword: "indian,food,thali",
+            concept: "Dedicate one dinner a month to a specific state. Use food, music, and fun facts to make diversity tasty.",
+            actionTitle: "Activity:",
+            script: "Cook a dish from a state you aren't from. Play a folk song. Tell your child: \"We are tasting a new part of our big family today!\"",
+            color: "#138808"
+        },
+        {
+            tag: "Strategy 3: Structure",
+            title: "The Identity Pyramid",
+            imageKeyword: "pyramid,toy,blocks",
+            concept: "Give them a mental model. They don't have to choose between their region and the country.",
+            actionTitle: "Explain it like this:",
+            script: "\"Your language and food make you special. But being INDIAN is the big hug that holds all of us together, no matter where we live.\"",
+            color: "#000080"
+        },
+        {
+            tag: "Strategy 4: Context",
+            title: "Connect Values to Here",
+            imageKeyword: "amsterdam,bicycle,tulip",
+            concept: "Show how Indian values (like respect) make them better citizens in the Netherlands.",
+            actionTitle: "Say this:",
+            script: "\"Being Indian teaches us unity in diversity. That is exactly why we fit in so well in the Netherlands, because they love harmony too!\"",
+            color: "#FF9933"
+        },
+        {
+            tag: "Strategy 5: History",
+            title: "Family History w/o Bias",
+            imageKeyword: "grandparents,indian,family",
+            concept: "Share your childhood memories, but ensure you frame regional differences as variations of one culture.",
+            actionTitle: "The Mantra:",
+            script: "Always end your childhood stories with: \"Different region... same Bharat.\" This prevents hidden stereotypes.",
+            color: "#138808"
+        },
+        {
+            tag: "Strategy 6: The Bigger Picture",
+            title: "India as a Whole",
+            imageKeyword: "isro,rocket,cricket",
+            concept: "Discuss achievements that belong to the nation, not just a state. ISRO, Cricket, Army, Startups.",
+            actionTitle: "Dinner Conversation:",
+            script: "\"Look at these heroes (scientists/athletes). They don't represent just one city; they represent Bharat. And so do you.\"",
+            color: "#000080"
+        },
+        {
+            tag: "Strategy 7: Linguistics",
+            title: "Pride in Languages",
+            imageKeyword: "letters,devnagiri,tamil,gujrati,marathi",
+            concept: "Celebrate multilingualism. Never let them think one Indian language is superior to another.",
+            actionTitle: "Challenge:",
+            script: "Teach them one word (like 'Friend') in a language you don't speak. Show them that every Indian sound is beautiful.",
+            color: "#FF9933"
+        },
+        {
+            tag: "Strategy 8: Vocabulary",
+            title: "Neutral Phrases",
+            imageKeyword: "india,map,colors",
+            concept: "Kids mirror your tone. Avoid saying 'Our state is better.' Shift to inclusive language.",
+            actionTitle: "Swap your words:",
+            script: "Instead of 'We are different', say: 'Every state adds a new color to Bharat. We are proud of where we come from, and proud to be Indian.'",
+            color: "#138808"
+        },
+        {
+            tag: "Strategy 9: Global View",
+            title: "A Global Superpower",
+            imageKeyword: "globe,children,holding,hands",
+            concept: "Explain that their background helps them navigate a multicultural world comfortably.",
+            actionTitle: "Confidence Booster:",
+            script: "\"Because you know Indian culture, you know how to be a friend to people from all over the world. It's your superpower.\"",
+            color: "#000080"
+        },
+        {
+            tag: "Strategy 10: Rituals",
+            title: "Symbolic Habits",
+            imageKeyword: "indian,flag,tricolor",
+            concept: "Small physical acts create deep emotional memories. Flags, anthems, or standing tall.",
+            actionTitle: "Do this:",
+            script: "Keep a small Tricolor at home. Tell them: \"Whenever we see this, we remember that we are part of a very large, brave family.\"",
+            color: "#FF9933"
+        },
+        {
+            tag: "Final Thought",
+            title: "The Dinner Table Prompt",
+            imageKeyword: "India,family,dinner",
+            concept: "You are ready! Here is a script you can use tonight to bring it all together.",
+            actionTitle: "Read this to them:",
+            script: "\"Beta, we come from different states—each with special food and culture. But whenever we look at them together, they form one beautiful country: Bharat. We are Bharatiya first.\"",
+            color: "#FFD700"
+        }
+    ];
+
+    // --- STATE & LOGIC ---
+    let currentIndex = 0;
+    const container = document.getElementById('card-container');
+    const counter = document.getElementById('step-counter');
+    const progressBar = document.getElementById('progress-fill');
+    const btnNext = document.getElementById('btn-next');
+    const btnPrev = document.getElementById('btn-prev');
+
+    function renderCard() {
+        const data = strategies[currentIndex];
+        
+        // Generate a random image URL based on keywords + index
+        const imgUrl = `https://loremflickr.com/500/300/${data.imageKeyword}?lock=${currentIndex}`;
+
+        container.innerHTML = `
+            <div class="card">
+                <div class="card-image-box">
+                    <img src="${imgUrl}" alt="${data.imageKeyword}" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="strategy-tag" style="color:${data.color}">${data.tag}</span>
+                    <h2>${data.title}</h2>
+                    <p class="concept-text">${data.concept}</p>
+                    
+                    <div class="action-box" style="border-left-color:${data.color}">
+                        <div class="action-title" style="color:${data.color}">
+                            ⚡ ${data.actionTitle}
+                        </div>
+                        <div class="action-script">
+                            ${data.script}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Update UI Stats
+        counter.innerText = `${currentIndex + 1} / ${strategies.length}`;
+        const percentage = ((currentIndex + 1) / strategies.length) * 100;
+        progressBar.style.width = `${percentage}%`;
+
+        // Button States
+        btnPrev.disabled = currentIndex === 0;
+        btnPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
+
+        if (currentIndex === strategies.length - 1) {
+            btnNext.innerText = "Finish Guide";
+        } else {
+            btnNext.innerText = "Next Strategy";
+        }
+    }
+
+    function changePage(dir) {
+        if (dir === 1 && currentIndex < strategies.length - 1) {
+            currentIndex++;
+            renderCard();
+        } else if (dir === -1 && currentIndex > 0) {
+            currentIndex--;
+            renderCard();
+        } else if (dir === 1 && currentIndex === strategies.length - 1) {
+            alert("You are ready to inspire your kids! Jai Hind! 🇮🇳");
+        }
+    }
+
+    // Initialize
+    renderCard();
+</script>
+
+</body>
+</html>
