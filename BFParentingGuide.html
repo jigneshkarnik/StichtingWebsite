@@ -564,21 +564,21 @@
         if (dir === 1 && currentIndex < strategies.length - 1) {
             currentIndex++;
             renderCard();
-            // Scroll to top of card container
-            const container = document.getElementById('card-container');
+            // Scroll to top of app frame (includes status bar)
+            const container = document.getElementById('app-frame');
             container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else if (dir === -1 && currentIndex > 0) {
             currentIndex--;
             renderCard();
-            // Scroll to top of card container
-            const container = document.getElementById('card-container');
+            // Scroll to top of app frame (includes status bar)
+            const container = document.getElementById('app-frame');
             container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else if (dir === 1 && currentIndex === strategies.length - 1) {
             // Start over instead of finishing
             currentIndex = 0;
             renderCard();
-            // Scroll to top of card container
-            const container = document.getElementById('card-container');
+            // Scroll to top of app frame (includes status bar)
+            const container = document.getElementById('app-frame');
             container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
