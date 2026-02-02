@@ -554,7 +554,7 @@
         btnPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
 
         if (currentIndex === strategies.length - 1) {
-            btnNext.innerText = "Finish Guide";
+            btnNext.innerText = "Start Over";
         } else {
             btnNext.innerText = "Next Strategy";
         }
@@ -564,11 +564,22 @@
         if (dir === 1 && currentIndex < strategies.length - 1) {
             currentIndex++;
             renderCard();
+            // Scroll to top of card container
+            const container = document.getElementById('card-container');
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else if (dir === -1 && currentIndex > 0) {
             currentIndex--;
             renderCard();
+            // Scroll to top of card container
+            const container = document.getElementById('card-container');
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else if (dir === 1 && currentIndex === strategies.length - 1) {
-            alert("You are ready to inspire your kids! Jai Hind! 🇮🇳");
+            // Start over instead of finishing
+            currentIndex = 0;
+            renderCard();
+            // Scroll to top of card container
+            const container = document.getElementById('card-container');
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
