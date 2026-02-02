@@ -287,10 +287,85 @@
         }
 
         @media (max-width: 600px) {
-            .page-header h1 { font-size: 1.8rem; }
-            #app-frame { border-radius: 15px; border: 3px solid var(--pg-white); }
-            .card-content h2 { font-size: 1.3rem; }
-            .pg-logo { font-size: 1rem; }
+            .page-header { 
+                padding: 40px 5% 20px; 
+            }
+            .page-header h1 { 
+                font-size: 1.8rem; 
+                margin-bottom: 5px;
+            }
+            .page-header p { 
+                font-size: 1rem; 
+            }
+            .intro-section {
+                padding: 30px 5%;
+            }
+            .intro-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .intro-section p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            .intro-section .highlight {
+                padding: 15px 20px;
+                margin: 0 auto;
+            }
+            .guide-section {
+                padding: 20px 5%;
+                min-height: 70vh;
+            }
+            #app-frame { 
+                border-radius: 15px; 
+                border: 3px solid var(--pg-white);
+                max-width: 100%;
+            }
+            .card-image-box {
+                height: 150px;
+            }
+            .card-content {
+                padding: 15px;
+            }
+            .card-content h2 { 
+                font-size: 1.3rem; 
+                margin-bottom: 8px;
+            }
+            .concept-text {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+                line-height: 1.4;
+            }
+            .action-box {
+                padding: 12px;
+            }
+            .action-title {
+                font-size: 0.85rem;
+                margin-bottom: 4px;
+            }
+            .action-script {
+                font-size: 0.9rem;
+            }
+            .pg-logo { 
+                font-size: 1rem; 
+            }
+            .nav-bar {
+                padding: 15px;
+            }
+            .nav-bar button {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablet and small desktop adjustments */
+        @media (max-width: 768px) {
+            .card-image-box {
+                height: 180px;
+            }
+            .guide-section {
+                padding: 30px 5%;
+            }
         }
     </style>
 </head>
