@@ -410,7 +410,7 @@
         {
             tag: "Strategy 1: Storytelling",
             title: "Use Stories, Not Lectures",
-            imageKeyword: "india,story,book",
+            image: "images/BF-Parenting-Guide-Storyetelling.png",
             concept: "Children connect with narratives. Instead of teaching dry facts, share the magic of our different states.",
             actionTitle: "Try this tonight:",
             script: "\"Did you know in Kerala they have races with boats as long as snakes? But in Kashmir, they live on boats! See, we look different, but we are all Indian.\"",
@@ -419,7 +419,7 @@
         {
             tag: "Strategy 2: Immersion",
             title: "Mini 'India Days' at Home",
-            imageKeyword: "indian,food,thali",
+            image: "images/event_deepawali.jpg",
             concept: "Dedicate one dinner a month to a specific state. Use food, music, and fun facts to make diversity tasty.",
             actionTitle: "Activity:",
             script: "Cook a dish from a state you aren't from. Play a folk song. Tell your child: \"We are tasting a new part of our big family today!\"",
@@ -428,7 +428,7 @@
         {
             tag: "Strategy 3: Structure",
             title: "The Identity Pyramid",
-            imageKeyword: "pyramid,toy,blocks",
+            image: "images/mission_icon.png",
             concept: "Give them a mental model. They don't have to choose between their region and the country.",
             actionTitle: "Explain it like this:",
             script: "\"Your language and food make you special. But being INDIAN is the big hug that holds all of us together, no matter where we live.\"",
@@ -437,7 +437,7 @@
         {
             tag: "Strategy 4: Context",
             title: "Connect Values to Here",
-            imageKeyword: "amsterdam,bicycle,tulip",
+            image: "images/event_unity_festival_1.jpg",
             concept: "Show how Indian values (like respect) make them better citizens in the Netherlands.",
             actionTitle: "Say this:",
             script: "\"Being Indian teaches us unity in diversity. That is exactly why we fit in so well in the Netherlands, because they love harmony too!\"",
@@ -446,7 +446,7 @@
         {
             tag: "Strategy 5: History",
             title: "Family History w/o Bias",
-            imageKeyword: "grandparents,indian,family",
+            image: "images/team_jignesh_karnik.jpeg",
             concept: "Share your childhood memories, but ensure you frame regional differences as variations of one culture.",
             actionTitle: "The Mantra:",
             script: "Always end your childhood stories with: \"Different region... same Bharat.\" This prevents hidden stereotypes.",
@@ -455,7 +455,7 @@
         {
             tag: "Strategy 6: The Bigger Picture",
             title: "India as a Whole",
-            imageKeyword: "isro,rocket,cricket",
+            image: "images/event_ram_mandir.jpg",
             concept: "Discuss achievements that belong to the nation, not just a state. ISRO, Cricket, Army, Startups.",
             actionTitle: "Dinner Conversation:",
             script: "\"Look at these heroes (scientists/athletes). They don't represent just one city; they represent Bharat. And so do you.\"",
@@ -464,7 +464,7 @@
         {
             tag: "Strategy 7: Linguistics",
             title: "Pride in Languages",
-            imageKeyword: "letters,devnagiri,tamil,gujrati,marathi",
+            image: "images/BF-Parenting-Guide-letters.png",
             concept: "Celebrate multilingualism. Never let them think one Indian language is superior to another.",
             actionTitle: "Challenge:",
             script: "Teach them one word (like 'Friend') in a language you don't speak. Show them that every Indian sound is beautiful.",
@@ -473,7 +473,7 @@
         {
             tag: "Strategy 8: Vocabulary",
             title: "Neutral Phrases",
-            imageKeyword: "india,map,colors",
+            image: "images/hero_slide_1.png",
             concept: "Kids mirror your tone. Avoid saying 'Our state is better.' Shift to inclusive language.",
             actionTitle: "Swap your words:",
             script: "Instead of 'We are different', say: 'Every state adds a new color to Bharat. We are proud of where we come from, and proud to be Indian.'",
@@ -482,7 +482,7 @@
         {
             tag: "Strategy 9: Global View",
             title: "A Global Superpower",
-            imageKeyword: "globe,children,holding,hands",
+            image: "images/event_yoga_day_eindhoven.jpg",
             concept: "Explain that their background helps them navigate a multicultural world comfortably.",
             actionTitle: "Confidence Booster:",
             script: "\"Because you know Indian culture, you know how to be a friend to people from all over the world. It's your superpower.\"",
@@ -491,7 +491,7 @@
         {
             tag: "Strategy 10: Rituals",
             title: "Symbolic Habits",
-            imageKeyword: "indian,flag,tricolor",
+            image: "images/event_holi_gandhi_centre.jpg",
             concept: "Small physical acts create deep emotional memories. Flags, anthems, or standing tall.",
             actionTitle: "Do this:",
             script: "Keep a small Tricolor at home. Tell them: \"Whenever we see this, we remember that we are part of a very large, brave family.\"",
@@ -500,7 +500,7 @@
         {
             tag: "Final Thought",
             title: "The Dinner Table Prompt",
-            imageKeyword: "India,family,dinner",
+            image: "images/bhartiyafirstguide.jpg",
             concept: "You are ready! Here is a script you can use tonight to bring it all together.",
             actionTitle: "Read this to them:",
             script: "\"Beta, we come from different states—each with special food and culture. But whenever we look at them together, they form one beautiful country: Bharat. We are Bharatiya first.\"",
@@ -519,13 +519,13 @@
     function renderCard() {
         const data = strategies[currentIndex];
         
-        // Generate a random image URL based on keywords + index
-        const imgUrl = `https://loremflickr.com/500/300/${data.imageKeyword}?lock=${currentIndex}`;
+        // Use local image
+        const imgUrl = data.image;
 
         container.innerHTML = `
             <div class="card">
                 <div class="card-image-box">
-                    <img src="${imgUrl}" alt="${data.imageKeyword}" loading="lazy">
+                    <img src="${imgUrl}" alt="${data.title}" loading="lazy">
                 </div>
                 <div class="card-content">
                     <span class="strategy-tag" style="color:${data.color}">${data.tag}</span>
