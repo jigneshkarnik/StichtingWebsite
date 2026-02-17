@@ -111,7 +111,6 @@
 
         .card-image-box {
             width: 100%;
-            height: 200px;
             background-color: #eee;
             position: relative;
             overflow: hidden;
@@ -119,8 +118,9 @@
 
         .card-image-box img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
+            object-fit: contain;
             transition: transform 3s ease;
         }
         
@@ -306,7 +306,7 @@
                 max-width: 100%;
             }
             .card-image-box {
-                height: 150px;
+                /* auto height for full image display */
             }
             .card-content {
                 padding: 15px;
@@ -345,7 +345,7 @@
         /* Tablet and small desktop adjustments */
         @media (max-width: 768px) {
             .card-image-box {
-                height: 180px;
+                /* auto height for full image display */
             }
             .guide-section {
                 padding: 30px 5%;
@@ -360,23 +360,23 @@
 <main>
     <section class="intro-section">
         <div class="intro-image">
-            <img src="images/bhartiyafirstguide.jpg" alt="Bhartiya First Parenting Guide" style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
+            <img src="images/bhartiyafirstguide.png" alt="'Bhartiya First' Parenting Guide" style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
         </div>
-        <h2>Welcome to the Parent's Guide</h2>
+        <h2>'Bhartiya First' Collective</h2>
         <p>
             Raising children abroad while keeping them connected to their Indian roots can be challenging. 
-            This interactive guide offers 10 practical strategies to help you nurture a strong sense of 
-            "Bharatiya" identity in your children—celebrating diversity while fostering unity.
+            This interactive collective offers some practical strategies to help you nurture a strong sense of 
+            'Bhartiya First' identity in your children—celebrating diversity while fostering unity.
         </p>
         <div class="highlight">
-            <p>🌟 Swipe through the cards below to discover actionable strategies you can use tonight!</p>
+            <p>🌟 Swipe through the cards below to discover actionable collectives you can apply over  dinner table or during bedtime stories -tonight!</p>
         </div>
     </section>
 
     <section class="guide-section">
         <div id="app-frame">
             <div class="app-top-bar">
-                <div class="pg-logo">🇮🇳 Parenting Guide</div>
+                <div class="pg-logo">🇮🇳 Parenting Collective</div>
                 <div class="level-badge" id="step-counter">1 / 11</div>
             </div>
             
@@ -389,7 +389,7 @@
 
             <div class="nav-bar">
                 <button class="btn-back" id="btn-prev" onclick="changePage(-1)">Back</button>
-                <button class="btn-next" id="btn-next" onclick="changePage(1)">Next Strategy</button>
+                <button class="btn-next" id="btn-next" onclick="changePage(1)">Next Collective</button>
             </div>
         </div>
     </section>
@@ -408,25 +408,25 @@
     // --- DATA OBJECTS (Parent Perspective) ---
     const strategies = [
         {
-            tag: "Strategy 1: Storytelling",
+            tag: "Collective 1: Storytelling",
             title: "Use Stories, Not Lectures",
             image: "images/BF-Parenting-Guide-Storyetelling.png",
-            concept: "Children connect with narratives. Instead of teaching dry facts, share the magic of our different states.",
+            concept: "Children connect with narratives. Instead of teaching dry facts, share the magic of our different Indian States.",
             actionTitle: "Try this tonight:",
             script: "\"Did you know in Kerala they have races with boats as long as snakes? But in Kashmir, they live on boats! See, we look different, but we are all Indian.\"",
             color: "#FF9933"
         },
         {
-            tag: "Strategy 2: Immersion",
+            tag: "Collective 2: Immersion",
             title: "Mini 'India Days' at Home",
-            image: "images/event_deepawali.jpg",
+            image: "images/BF-Parenting-Guide-MiniIndiaDay.png",
             concept: "Dedicate one dinner a month to a specific state. Use food, music, and fun facts to make diversity tasty.",
             actionTitle: "Activity:",
             script: "Cook a dish from a state you aren't from. Play a folk song. Tell your child: \"We are tasting a new part of our big family today!\"",
             color: "#138808"
         },
         {
-            tag: "Strategy 3: Structure",
+            tag: "Collective 3: Structure",
             title: "The Identity Pyramid",
             image: "images/mission_icon.png",
             concept: "Give them a mental model. They don't have to choose between their region and the country.",
@@ -435,7 +435,7 @@
             color: "#000080"
         },
         {
-            tag: "Strategy 4: Context",
+            tag: "Collective 4: Context",
             title: "Connect Values to Here",
             image: "images/event_unity_festival_1.jpg",
             concept: "Show how Indian values (like respect) make them better citizens in the Netherlands.",
@@ -444,7 +444,7 @@
             color: "#FF9933"
         },
         {
-            tag: "Strategy 5: History",
+            tag: "Collective 5: History",
             title: "Family History w/o Bias",
             image: "images/team_jignesh_karnik.jpeg",
             concept: "Share your childhood memories, but ensure you frame regional differences as variations of one culture.",
@@ -453,7 +453,7 @@
             color: "#138808"
         },
         {
-            tag: "Strategy 6: The Bigger Picture",
+            tag: "Collective 6: The Bigger Picture",
             title: "India as a Whole",
             image: "images/event_ram_mandir.jpg",
             concept: "Discuss achievements that belong to the nation, not just a state. ISRO, Cricket, Army, Startups.",
@@ -462,7 +462,7 @@
             color: "#000080"
         },
         {
-            tag: "Strategy 7: Linguistics",
+            tag: "Collective 7: Linguistics",
             title: "Pride in Languages",
             image: "images/BF-Parenting-Guide-letters.png",
             concept: "Celebrate multilingualism. Never let them think one Indian language is superior to another.",
@@ -471,7 +471,7 @@
             color: "#FF9933"
         },
         {
-            tag: "Strategy 8: Vocabulary",
+            tag: "Collective 8: Vocabulary",
             title: "Neutral Phrases",
             image: "images/hero_slide_1.png",
             concept: "Kids mirror your tone. Avoid saying 'Our state is better.' Shift to inclusive language.",
@@ -480,7 +480,7 @@
             color: "#138808"
         },
         {
-            tag: "Strategy 9: Global View",
+            tag: "Collective 9: Global View",
             title: "A Global Superpower",
             image: "images/event_yoga_day_eindhoven.jpg",
             concept: "Explain that their background helps them navigate a multicultural world comfortably.",
@@ -489,7 +489,7 @@
             color: "#000080"
         },
         {
-            tag: "Strategy 10: Rituals",
+            tag: "Collective 10: Rituals",
             title: "Symbolic Habits",
             image: "images/event_holi_gandhi_centre.jpg",
             concept: "Small physical acts create deep emotional memories. Flags, anthems, or standing tall.",
@@ -556,7 +556,7 @@
         if (currentIndex === strategies.length - 1) {
             btnNext.innerText = "Start Over";
         } else {
-            btnNext.innerText = "Next Strategy";
+            btnNext.innerText = "Next Collective";
         }
     }
 
