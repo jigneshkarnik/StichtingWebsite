@@ -34,6 +34,7 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'Sponsors', href: 'sponsors.html' },
                         { text: 'The Tulips Lounge', href: 'tulip-lounge.html' },
                         { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
+                        { text: 'BF Parenting Guide', href: 'BFCollective.html' },
                         { text: 'About Us', href: 'about.html' },
                         { text: 'Contact Us', href: 'contact.html' },
                         { text: 'Admin', href: 'admin.html' }
