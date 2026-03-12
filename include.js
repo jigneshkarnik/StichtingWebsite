@@ -33,8 +33,10 @@ function loadComponents(pageTitle, activePage) {
                         { text: 'News', href: 'news.html' },
                         { text: 'Sponsors', href: 'sponsors.html' },
                         { text: 'The Tulips Lounge', href: 'tulip-lounge.html' },
-                        { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
-                        { text: 'Bhartiya First Collective', href: 'BFCollective.html' },
+                        { text: 'Bhartiya First', href: 'bhartiyafirst.html', children: [
+                            { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
+                            { text: 'Bhartiya First Collective', href: 'BFCollective.html' }
+                        ]},
                         { text: 'About Us', href: 'about.html' },
                         { text: 'Contact Us', href: 'contact.html' },
                         { text: 'Admin', href: 'admin.html' }
@@ -44,14 +46,44 @@ function loadComponents(pageTitle, activePage) {
                     // Build list items for the nav
                     links.forEach(link => {
                         const li = document.createElement('li');
-                        const a = document.createElement('a');
-                        a.href = link.href;
-                        a.textContent = link.text;
-                        // active state
-                        if (link.href === activePage || (link.href === 'bhartiyafirst.html' && activePage === 'bhartiyafirst.html') || (link.href === 'BFCollective.html' && activePage === 'BFCollective.html')) {
-                            a.classList.add('active');
+                        
+                        // Check if link has children (dropdown)
+                        if (link.children && link.children.length > 0) {
+                            li.className = 'has-dropdown';
+                            const a = document.createElement('a');
+                            a.href = link.href;
+                            a.textContent = link.text;
+                            // Mark parent as active if any child page is active
+                            if (link.href === activePage || link.children.some(child => child.href === activePage)) {
+                                a.classList.add('active');
+                            }
+                            li.appendChild(a);
+                            
+                            // Create dropdown
+                            const dropdown = document.createElement('ul');
+                            dropdown.className = 'dropdown-menu';
+                            link.children.forEach(child => {
+                                const childLi = document.createElement('li');
+                                const childA = document.createElement('a');
+                                childA.href = child.href;
+                                childA.textContent = child.text;
+                                if (child.href === activePage) {
+                                    childA.classList.add('active');
+                                }
+                                childLi.appendChild(childA);
+                                dropdown.appendChild(childLi);
+                            });
+                            li.appendChild(dropdown);
+                        } else {
+                            const a = document.createElement('a');
+                            a.href = link.href;
+                            a.textContent = link.text;
+                            // active state
+                            if (link.href === activePage) {
+                                a.classList.add('active');
+                            }
+                            li.appendChild(a);
                         }
-                        li.appendChild(a);
                         navLinksContainer.appendChild(li);
                     });
 
