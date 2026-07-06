@@ -18,6 +18,20 @@ function formatDate(dateStr) {
 // Event mapping data
 const EVENT_MAPPING = [
   {
+    "event_id": "1783350420",
+    "event_name": "Stichting Photobook",
+    "event_date": "2026-07-06",
+    "cloudinary_folder": "AA",
+    "photo_count": 1,
+    "cloudinary_urls": [
+      "https://img.youtube.com/vi/HASf8L2RHNQ/hqdefault.jpg"
+    ],
+    "folder_url": "https://res.cloudinary.com/du0lumtob/image/upload/archived-events/AA/",
+    "video_links": [
+      "https://www.youtube.com/watch?v=HASf8L2RHNQ"
+    ]
+  },
+  {
     "event_id": "6124",
     "event_name": "'Vrouwen Middag' @Uithoorn",
     "event_date": "2025-06-09",
