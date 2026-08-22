@@ -57,12 +57,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765922020/archived-events/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre/331569835_244459757908540_7285801202575019801_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Holi Celebration (Embassy collaboration)",
-      "date": 1677628800000,
-      "year": 2023,
-      "venue": "Den Haag",
-      "description": "A vibrant festival of colours celebrated with cultural performances, music, and community togetherness."
+    "event_details": {
+      "name": "Holi: ‘Bura Na Mano, Holi Hai’",
+      "date": 1709251200000,
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+      "match_score": 0.35
     }
   },
   {
@@ -72,12 +73,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2023-6-EU_UK Poetry Idol August",
-    "reference_event": {
-      "name": "2023-6-EU_UK Poetry Idol August",
-      "date": "",
+    "event_details": {
+      "name": "EU-UK Indian Poetry 'IDOL'",
+      "date": "Jul-2023",
       "year": 2023,
-      "venue": "",
-      "description": ""
+      "venue": "Online",
+      "description": "A Europe-wide online poetry competition connecting diaspora poets across countries through creative expression.",
+      "match_score": 0.59
     }
   },
   {
@@ -87,12 +89,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024 Consular Camp",
-    "reference_event": {
-      "name": "2024 Consular Camp",
-      "date": "",
-      "year": 2024,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Consular Camp (Embassy collaboration)",
+      "date": 1690848000000,
+      "year": 2023,
+      "venue": "Eindhoven",
+      "description": "A consular outreach camp providing essential embassy services and support to the Indian diaspora.",
+      "match_score": 0.54
     }
   },
   {
@@ -102,12 +105,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024 Philips Yoga Day",
-    "reference_event": {
-      "name": "2024 Philips Yoga Day",
-      "date": "",
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
       "year": 2024,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.41
     }
   },
   {
@@ -168,12 +172,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765922337/archived-events/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn/Image_206.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn",
-    "reference_event": {
+    "event_details": {
       "name": "Holi: ‘Bura Na Mano, Holi Hai’",
       "date": 1709251200000,
       "year": 2024,
       "venue": "Uithoorn",
-      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding."
+      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+      "match_score": 0.52
     }
   },
   {
@@ -234,12 +239,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765922209/archived-events/2024-03-Holi-Festival-2024-The-Gandhi-Centre/IMG_0309.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-03-Holi-Festival-2024-The-Gandhi-Centre",
-    "reference_event": {
+    "event_details": {
       "name": "Holi Celebration (Embassy collaboration)",
-      "date": 1709251200000,
-      "year": 2024,
+      "date": 1677628800000,
+      "year": 2023,
       "venue": "Den Haag",
-      "description": "A grand Holi celebration featuring songs, dances, poetry, regional performances, and cultural togetherness."
+      "description": "A vibrant festival of colours celebrated with cultural performances, music, and community togetherness.",
+      "match_score": 0.36
     }
   },
   {
@@ -249,12 +255,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-18-Nov-prasadam distribution",
-    "reference_event": {
-      "name": "2024-18-Nov-prasadam distribution",
-      "date": "",
+    "event_details": {
+      "name": "Prasadam Distribution @ TTD",
+      "date": 1730419200000,
       "year": 2024,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "As a sacred tradition, prasadam was lovingly distributed to all devotees and guests, symbolizing blessings, gratitude, and the spirit of togetherness that marked the auspicious Kalyanam celebration.",
+      "match_score": 0.53
     }
   },
   {
@@ -264,12 +271,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-25-Aug- Connecting culture",
-    "reference_event": {
-      "name": "2024-25-Aug- Connecting culture",
-      "date": "",
-      "year": 2024,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Connecting Cultures",
+      "date": 1743465600000,
+      "year": 2025,
+      "venue": "Eindhoven",
+      "description": "A vibrant event that brought together people from diverse backgrounds to celebrate cultural heritage, foster mutual understanding, and strengthened community bonds through shared experiences and dialogue. It served as a platform for promoting inclusivity, friendship, and cross-cultural exchange.",
+      "match_score": 0.54
     }
   },
   {
@@ -279,12 +287,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-29- Diwali Philpis October",
-    "reference_event": {
-      "name": "2024-29- Diwali Philpis October",
-      "date": "",
+    "event_details": {
+      "name": "Diwali Celebration at Philips",
+      "date": 1727740800000,
       "year": 2024,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "The Diwali celebration at Philips brought colleagues together to embrace the spirit of the Festival of Lights through cultural performances, traditional festivities, and shared joy, fostering diversity and a sense of community in the workplace.",
+      "match_score": 0.46
     }
   },
   {
@@ -345,12 +354,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911387/archived-events/2024-EU-UK-Indian-Poetry-Idol/Screenshot_20241006-150704_Meet.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-EU-UK-Indian-Poetry-Idol",
-    "reference_event": {
+    "event_details": {
       "name": "EU-UK Indian Poetry 'IDOL'",
-      "date": 1727740800000,
-      "year": 2024,
+      "date": "Jul-2023",
+      "year": 2023,
       "venue": "Online",
-      "description": "An annual poetry competition connecting EU–UK diaspora poets through creativity, recitation, and cultural exchange."
+      "description": "A Europe-wide online poetry competition connecting diaspora poets across countries through creative expression.",
+      "match_score": 0.75
     }
   },
   {
@@ -360,12 +370,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024-International-Day-of-Yoga-Eindhoven",
-    "reference_event": {
-      "name": "2024-International-Day-of-Yoga-Eindhoven",
-      "date": "",
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
       "year": 2024,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.62
     }
   },
   {
@@ -375,12 +386,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2024, 2025, 2026 Sahitya Chaupal",
-    "reference_event": {
-      "name": "2024, 2025, 2026 Sahitya Chaupal",
-      "date": "",
-      "year": 2024,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Sahitya Chaupal (4 instances)",
+      "date": 1730419200000,
+      "year": null,
+      "venue": "Online",
+      "description": "An online literary forum enabling poets and writers to share, discuss, and celebrate literature together.",
+      "match_score": 0.44
     }
   },
   {
@@ -390,12 +402,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025 August Janamastami",
-    "reference_event": {
-      "name": "2025 August Janamastami",
-      "date": "",
+    "event_details": {
+      "name": "Janmashtami Celebration",
+      "date": 1754006400000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "A joyful celebration marked the birth of Lord Krishna, filled with devotional prayers, bhajans, cultural performances, and festivities that bring families and communities together in a spirit of faith and happiness.",
+      "match_score": 0.3
     }
   },
   {
@@ -405,12 +418,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025 international Yoga Day",
-    "reference_event": {
-      "name": "2025 international Yoga Day",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.64
     }
   },
   {
@@ -471,12 +485,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765922110/archived-events/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn/32-1.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
-    "reference_event": {
+    "event_details": {
       "name": "Holi: ‘Bura Na Mano, Holi Hai’",
-      "date": 1740787200000,
-      "year": 2025,
+      "date": 1709251200000,
+      "year": 2024,
       "venue": "Uithoorn",
-      "description": "A colourful Holi celebration bringing communities together through music, dance, and festive cultural activities."
+      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+      "match_score": 0.52
     }
   },
   {
@@ -486,12 +501,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-05-Vrouwen-Middag Menopause in women",
-    "reference_event": {
-      "name": "2025-05-Vrouwen-Middag Menopause in women",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural Vrouwen Middag: Multicultural International Women’s Day",
+      "date": 1740787200000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Uithoorn",
+      "description": "A multicultural celebration of women’s empowerment, unity, and community participation.",
+      "match_score": 0.48
     }
   },
   {
@@ -536,12 +552,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765921984/archived-events/2025-06-Vrouwen-Middag-Uithoorn/IMG-20250527-WA0044.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-06-Vrouwen-Middag-Uithoorn",
-    "reference_event": {
-      "name": "Multicultural Vrouwen Middag: One Stroke Painting Workshop",
-      "date": 1746057600000,
-      "year": 2025,
+    "event_details": {
+      "name": "Uithoorn Desk",
+      "date": 1780272000000,
+      "year": 2026,
       "venue": "Uithoorn",
-      "description": "A creative women’s workshop where participants explore art through one-stroke painting techniques."
+      "description": "A Community support initiative, the 'Uithoorn Desk', for Uithoorn and De Kwakel cities, in collaboration with Gemeente Uithoorn. ",
+      "match_score": 0.43
     }
   },
   {
@@ -551,12 +568,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-12-September Vrouwen Middag Garba Workshop",
-    "reference_event": {
-      "name": "2025-12-September Vrouwen Middag Garba Workshop",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural Vrouwen Middag: Garba Workshop",
+      "date": 1756684800000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Uithoorn",
+      "description": "A dedicated Garba workshop for ladies and girls (12+), celebrating folk dance, fitness, and festive culture.",
+      "match_score": 0.51
     }
   },
   {
@@ -566,12 +584,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-17-September Hindi Diwas Denhaag",
-    "reference_event": {
-      "name": "2025-17-September Hindi Diwas Denhaag",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Hindi Diwas (Embassy collaboration)",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Den Haag",
+      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+      "match_score": 0.39
     }
   },
   {
@@ -581,12 +600,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-24-June Vrouwen Middag session on health issue",
-    "reference_event": {
-      "name": "2025-24-June Vrouwen Middag session on health issue",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Multicultural Vrouwen Middag: Women Hormonal Health Session",
+      "date": "Nov-2024",
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "An informative wellness session focused on women’s hormonal health and awareness.",
+      "match_score": 0.39
     }
   },
   {
@@ -596,12 +616,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-28-Diwali Philips October",
-    "reference_event": {
-      "name": "2025-28-Diwali Philips October",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Diwali Celebration at Philips",
+      "date": 1727740800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "The Diwali celebration at Philips brought colleagues together to embrace the spirit of the Festival of Lights through cultural performances, traditional festivities, and shared joy, fostering diversity and a sense of community in the workplace.",
+      "match_score": 0.54
     }
   },
   {
@@ -611,12 +632,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-28-Vrouwen Vrijdag painting workshop November",
-    "reference_event": {
-      "name": "2025-28-Vrouwen Vrijdag painting workshop November",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural Vrouwen Vrijdag: Madhubani Painting Workshop",
+      "date": "Nov-2025",
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "A women’s art workshop celebrating Madhubani painting traditions, welcoming ladies and girls above 12 years.",
+      "match_score": 0.44
     }
   },
   {
@@ -626,12 +648,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-29-April Vrouwen-Middag Hormonal problems in women",
-    "reference_event": {
-      "name": "2025-29-April Vrouwen-Middag Hormonal problems in women",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Multicultural Vrouwen Middag: Women Hormonal Health Session",
+      "date": "Nov-2024",
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "An informative wellness session focused on women’s hormonal health and awareness.",
+      "match_score": 0.51
     }
   },
   {
@@ -641,12 +664,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-31-october Vrouwen-Middag zumba workshop",
-    "reference_event": {
-      "name": "2025-31-october Vrouwen-Middag zumba workshop",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural  Vrouwen Middag: Zumba Workshop",
+      "date": 1759276800000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Uithoorn",
+      "description": "An energising Zumba workshop where fitness meets fun, encouraging healthy lifestyle and joyful movement.",
+      "match_score": 0.53
     }
   },
   {
@@ -656,12 +680,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-5-April Vrouwen Vrijdag Poetic Fairytale",
-    "reference_event": {
-      "name": "2025-5-April Vrouwen Vrijdag Poetic Fairytale",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Multicultural Vrouwen Vrijdag: Lyrical Theatre",
+      "date": 1775001600000,
+      "year": 2026,
+      "venue": "Eindhoven",
+      "description": "A Friday evening celebrated creativity and expression through a captivating Lyrical Theatrical theme, where poetry, music, and dramatic performances came together to create an inspiring and memorable evening.",
+      "match_score": 0.38
     }
   },
   {
@@ -671,12 +696,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-5-September Vrouwen Vrijdag Teachers Day",
-    "reference_event": {
-      "name": "2025-5-September Vrouwen Vrijdag Teachers Day",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural Vrouwen Vrijdag: Teacher’s Day Special (with Brahma Kumaris)",
+      "date": 1756684800000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Eindhoven",
+      "description": "A special Teacher’s Day edition celebrating educators and women’s community engagement in collaboration with Brahma Kumaris.",
+      "match_score": 0.38
     }
   },
   {
@@ -686,12 +712,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-7--May Vouwen-Mmiddag Brain Jamming",
-    "reference_event": {
-      "name": "2025-7--May Vouwen-Mmiddag Brain Jamming",
-      "date": "",
+    "event_details": {
+      "name": "Multicultural Vrouwen Middag: Brain Jamming session",
+      "date": 1746057600000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Uithoorn",
+      "description": "An engaging afternoon event where women came together to exchange ideas, spark creativity, and enjoy meaningful discussions in a relaxed and inspiring atmosphere. It offered a platform for learning, networking, and collaborative thinking.",
+      "match_score": 0.47
     }
   },
   {
@@ -701,12 +728,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-BhartiyaFirst",
-    "reference_event": {
-      "name": "2025-BhartiyaFirst",
-      "date": "",
+    "event_details": {
+      "name": "Bhartiya First: Bharat outside Bharat",
+      "date": 1756684800000,
       "year": 2025,
-      "venue": "",
-      "description": ""
+      "venue": "Den Haag",
+      "description": "A community cultural initiative celebrating Indian identity, heritage, and togetherness.",
+      "match_score": 0.34
     }
   },
   {
@@ -716,12 +744,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-November-Sahitya Chaupal",
-    "reference_event": {
-      "name": "2025-November-Sahitya Chaupal",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Sahitya Chaupal (4 instances)",
+      "date": 1730419200000,
+      "year": null,
+      "venue": "Online",
+      "description": "An online literary forum enabling poets and writers to share, discuss, and celebrate literature together.",
+      "match_score": 0.54
     }
   },
   {
@@ -731,12 +760,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2025-September-Sahitya Chaupal",
-    "reference_event": {
-      "name": "2025-September-Sahitya Chaupal",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Sahitya Chaupal (4 instances)",
+      "date": 1730419200000,
+      "year": null,
+      "venue": "Online",
+      "description": "An online literary forum enabling poets and writers to share, discuss, and celebrate literature together.",
+      "match_score": 0.53
     }
   },
   {
@@ -746,12 +776,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026 DE OPENING",
-    "reference_event": {
-      "name": "2026 DE OPENING",
-      "date": "",
+    "event_details": {
+      "name": "DE OPENING",
+      "date": 1785542400000,
       "year": 2026,
-      "venue": "",
-      "description": ""
+      "venue": "https://res.cloudinary.com/du0lumtob/image/upload/v1787226296/3ace1138-97bb-45fc-bf61-8c45a8cffeea_frnvve.jpg",
+      "description": "A afternoon of Indian-Dutch Pop and Indian Classical performances depicting Kashmir, Punjab and North India",
+      "match_score": 0.56
     }
   },
   {
@@ -761,12 +792,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-10- Hindi Diwas January",
-    "reference_event": {
-      "name": "2026-10- Hindi Diwas January",
-      "date": "",
-      "year": 2026,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Hindi Diwas (Embassy collaboration)",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Den Haag",
+      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+      "match_score": 0.48
     }
   },
   {
@@ -776,12 +808,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-21- International Yoga Day",
-    "reference_event": {
-      "name": "2026-21- International Yoga Day",
-      "date": "",
-      "year": 2026,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.63
     }
   },
   {
@@ -791,12 +824,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-Holi",
-    "reference_event": {
-      "name": "2026-Holi",
-      "date": "",
-      "year": 2026,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Holi: ‘Bura Na Mano, Holi Hai’",
+      "date": 1709251200000,
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+      "match_score": 0.31
     }
   },
   {
@@ -806,12 +840,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-InternationalYogaDay",
-    "reference_event": {
-      "name": "2026-InternationalYogaDay",
-      "date": "",
-      "year": 2026,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.62
     }
   },
   {
@@ -821,12 +856,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-ITF",
-    "reference_event": {
+    "event_details": {
       "name": "2026-ITF",
       "date": "",
       "year": 2026,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -836,12 +872,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/2026-LiteraryFest",
-    "reference_event": {
+    "event_details": {
       "name": "2026-LiteraryFest",
       "date": "",
       "year": 2026,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -851,12 +888,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/25 August 2027 Ramnavami",
-    "reference_event": {
+    "event_details": {
       "name": "25 August 2027 Ramnavami",
       "date": "",
       "year": 2027,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -866,12 +904,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/April-2024-Ramnavami",
-    "reference_event": {
+    "event_details": {
       "name": "April-2024-Ramnavami",
       "date": "",
       "year": 2024,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -890,12 +929,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911418/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/event-2.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Hindi Diwas: Azdi ka Amrit Mahotasav (Embassy collaboration)",
-      "date": 1656633600000,
-      "year": 2022,
-      "venue": "Den Haag",
-      "description": "The first Pravasi Kavya Sangh literary gathering at the Indian Embassy, celebrating Hindi language and diaspora poetry."
+    "event_details": {
+      "name": "Radio Poetry",
+      "date": 1675209600000,
+      "year": 2023,
+      "venue": "Netherlands",
+      "description": "A Radio medium, where Poets and Writers of EU, Netherlands, UK, & India publish their Poetry and Prose",
+      "match_score": 0.56
     }
   },
   {
@@ -905,12 +945,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Bharat Dutch Times_July 2026",
-    "reference_event": {
-      "name": "Bharat Dutch Times_July 2026",
-      "date": "",
+    "event_details": {
+      "name": "Bharat Dutch Times",
+      "date": 1780272000000,
       "year": 2026,
-      "venue": "",
-      "description": ""
+      "venue": "Netherlands",
+      "description": "A digital community publication launched in June 2026  to serve as a cultural bridge for the Indian diaspora in the Netherlands.",
+      "match_score": 0.56
     }
   },
   {
@@ -920,12 +961,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Bharat Dutch Times_June 2026",
-    "reference_event": {
-      "name": "Bharat Dutch Times_June 2026",
-      "date": "",
+    "event_details": {
+      "name": "Bharat Dutch Times",
+      "date": 1780272000000,
       "year": 2026,
-      "venue": "",
-      "description": ""
+      "venue": "Netherlands",
+      "description": "A digital community publication launched in June 2026  to serve as a cultural bridge for the Indian diaspora in the Netherlands.",
+      "match_score": 0.56
     }
   },
   {
@@ -948,12 +990,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911425/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/20220820_192332.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
-    "reference_event": {
+    "event_details": {
       "name": "Bollywood-Musician-Singer (Piyush Mishra Amsterdam)",
       "date": 1660953600000,
       "year": 2022,
       "venue": "Amsterdam",
-      "description": "EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter."
+      "description": "EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter.",
+      "match_score": 0.97
     }
   },
   {
@@ -1010,12 +1053,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765927469/archived-events/Consular-Camp-Eindhoven/IMG_4306.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Consular-Camp-Eindhoven",
-    "reference_event": {
+    "event_details": {
       "name": "Consular Camp (Embassy collaboration)",
-      "date": "Dec-2024",
-      "year": 2024,
+      "date": 1690848000000,
+      "year": 2023,
       "venue": "Eindhoven",
-      "description": "Supporting the Indian diaspora with essential consular services."
+      "description": "A consular outreach camp providing essential embassy services and support to the Indian diaspora.",
+      "match_score": 0.57
     }
   },
   {
@@ -1038,12 +1082,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911913/archived-events/Desi-Holland-Day-Eindhoven/IMG_1650.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Desi-Holland-Day-Eindhoven",
-    "reference_event": {
-      "name": "Desi-Holland-Day-Eindhoven",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "LaLaLand Cultural Event",
+      "date": "Jul-2023",
+      "year": 2023,
+      "venue": "Amsterdam",
+      "description": "A multicultural collaboration event showcasing creative performances and community participation.",
+      "match_score": 0.3
     }
   },
   {
@@ -1069,12 +1114,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911925/archived-events/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre/5fc8ee16-9588-429e-8e3b-2d952bd03350.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
-    "reference_event": {
+    "event_details": {
       "name": "Hindi Diwas: Ek Shaam Dinkar Ke Naam (Embassy collaboration)",
       "date": 1693526400000,
       "year": 2023,
       "venue": "Den Haag",
-      "description": "A formal Hindi Diwas celebration honouring the Hindi language and literature under the aegis of the Indian Embassy."
+      "description": "A formal Hindi Diwas celebration honouring the Hindi language and literature under the aegis of the Indian Embassy.",
+      "match_score": 0.62
     }
   },
   {
@@ -1121,12 +1167,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911937/archived-events/Embassy-Consular-Camp-Eindhoven/IMG_9186.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Embassy-Consular-Camp-Eindhoven",
-    "reference_event": {
-      "name": "Consular Camp (Embassy collaboration)",
-      "date": 1709251200000,
+    "event_details": {
+      "name": "Embassy Consular Camp  (EMBASSY COLLABORATION)",
+      "date": 1714521600000,
       "year": 2024,
       "venue": "Eindhoven",
-      "description": "An embassy-supported consular camp facilitating key documentation and consular services for the Indian community."
+      "description": "A consular services desk organised for the Indian diaspora in collaboration with the Embassy of India and VFS Global.",
+      "match_score": 0.63
     }
   },
   {
@@ -1149,12 +1196,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911973/archived-events/First-ever-Embassy-Counsellor-Camp-Eindhoven/327549040_862645728276751_7068645486726457221_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/First-ever-Embassy-Counsellor-Camp-Eindhoven",
-    "reference_event": {
-      "name": "Consular Camp (Embassy collaboration)",
-      "date": 1690848000000,
-      "year": 2023,
+    "event_details": {
+      "name": "Embassy Consular Camp  (EMBASSY COLLABORATION)",
+      "date": 1714521600000,
+      "year": 2024,
       "venue": "Eindhoven",
-      "description": "A consular outreach camp providing essential embassy services and support to the Indian diaspora."
+      "description": "A consular services desk organised for the Indian diaspora in collaboration with the Embassy of India and VFS Global.",
+      "match_score": 0.49
     }
   },
   {
@@ -1208,12 +1256,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765911983/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0391.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Kavya Gosthi (Embassy collaboration)",
-      "date": 1664582400000,
-      "year": 2022,
-      "venue": "Den Haag",
-      "description": "A literary gathering where poets and poetry enthusiasts came together to recite, share, and appreciate poems, fostering creativity, cultural expression, and meaningful dialogue through the beauty of words."
+    "event_details": {
+      "name": "Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
+      "date": "",
+      "year": null,
+      "venue": "",
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -1274,12 +1323,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912072/archived-events/Gita-Mahotsav-2023-The-Gandhi-Centre/IMG_6745.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Gita-Mahotsav-2023-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Gita Mahotasav (Embassy collaboration)",
-      "date": 1702857600000,
+    "event_details": {
+      "name": "Gita-Mahotsav-2023-The-Gandhi-Centre",
+      "date": "",
       "year": 2023,
-      "venue": "Den Haag",
-      "description": "A celebration dedicated to the timeless wisdom of the Bhagavad Gita, brought people together through discourses, cultural programs, and spiritual activities that inspired values of peace, duty, and self-realization."
+      "venue": "",
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -1299,12 +1349,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912116/archived-events/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag/IMG_4926.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
-    "reference_event": {
+    "event_details": {
       "name": "H.E. Mrs Reenat Sandhu: Ambassador’s Farewell",
       "date": "Jul-2024",
       "year": 2024,
       "venue": "Utrecht",
-      "description": "A heartfelt farewell honouring the Indian Ambassador’s service and connection with the community."
+      "description": "A heartfelt farewell honouring the Indian Ambassador’s service and connection with the community.",
+      "match_score": 0.6
     }
   },
   {
@@ -1342,12 +1393,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912124/archived-events/HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam/a0c9af34-33e6-4a73-bfcd-0076f47d4ea7.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam",
-    "reference_event": {
-      "name": "HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Bollywood-Musician-Singer (Piyush Mishra Amsterdam)",
+      "date": 1660953600000,
+      "year": 2022,
+      "venue": "Amsterdam",
+      "description": "EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter.",
+      "match_score": 0.51
     }
   },
   {
@@ -1408,12 +1460,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765927399/archived-events/Het-Hoge-Heem-Uithoorn/IMG_9468.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Het-Hoge-Heem-Uithoorn",
-    "reference_event": {
-      "name": "India Day: Old Age Home (Het Hoge Heem)",
-      "date": 1730419200000,
-      "year": 2024,
+    "event_details": {
+      "name": "Uithoorn Desk",
+      "date": 1780272000000,
+      "year": 2026,
       "venue": "Uithoorn",
-      "description": "A cultural outreach programme bringing music, joy, and Indian traditions to senior citizens in an old age home setting."
+      "description": "A Community support initiative, the 'Uithoorn Desk', for Uithoorn and De Kwakel cities, in collaboration with Gemeente Uithoorn. ",
+      "match_score": 0.65
     }
   },
   {
@@ -1468,12 +1521,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912234/archived-events/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India/460477859_497105899816535_5939053402499139433_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
-    "reference_event": {
+    "event_details": {
       "name": "Hindi Diwas (Embassy collaboration)",
       "date": 1725148800000,
       "year": 2024,
       "venue": "Den Haag",
-      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language."
+      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+      "match_score": 0.69
     }
   },
   {
@@ -1534,12 +1588,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912308/archived-events/Holi-Festival-2024-The-Gandhi-Centre/IMG_0309.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Holi-Festival-2024-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Holi-Festival-2024-The-Gandhi-Centre",
-      "date": "",
-      "year": 2024,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Holi Celebration (Embassy collaboration)",
+      "date": 1677628800000,
+      "year": 2023,
+      "venue": "Den Haag",
+      "description": "A vibrant festival of colours celebrated with cultural performances, music, and community togetherness.",
+      "match_score": 0.37
     }
   },
   {
@@ -1600,12 +1655,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912364/archived-events/Holi-Milan-Samaroh-The-Gandhi-Centre/331569835_244459757908540_7285801202575019801_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Holi-Milan-Samaroh-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Holi-Milan-Samaroh-The-Gandhi-Centre",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Holi: ‘Bura Na Mano, Holi Hai’",
+      "date": 1709251200000,
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+      "match_score": 0.52
     }
   },
   {
@@ -1661,12 +1717,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912401/archived-events/India-Day-2023-Eindhoven/facebook_1701729041147_7137568924201352103.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/India-Day-2023-Eindhoven",
-    "reference_event": {
-      "name": "India Day: Muziekgebouw",
-      "date": 1701388800000,
-      "year": 2023,
+    "event_details": {
+      "name": "Eindhoven-Dialog (The Future of Eindhoven)",
+      "date": 1743465600000,
+      "year": 2025,
       "venue": "Eindhoven",
-      "description": "A large-scale cultural showcase celebrating India’s traditions, customs, and diversity for the wider Dutch community."
+      "description": "A Eindhoven Gemeente-driven event that brought together residents, experts, and city leaders to exchange ideas and shape Eindhoven's future. Through open discussions, participants explored themes such as innovation, sustainability, mobility, housing, and social cohesion to help define the city's long-term vision.",
+      "match_score": 0.36
     }
   },
   {
@@ -1727,12 +1784,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912441/archived-events/India-Day-Zaanstad-Zaandam/350457292_1016718243038699_3863900632578509395_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/India-Day-Zaanstad-Zaandam",
-    "reference_event": {
+    "event_details": {
       "name": "India-Day-Zaanstad-Zaandam",
       "date": "",
-      "year": "",
+      "year": null,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -1769,12 +1827,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912487/archived-events/Indias-Independence-Day-The-India-House/IMG_2763.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Indias-Independence-Day-The-India-House",
-    "reference_event": {
-      "name": "Indias-Independence-Day-The-India-House",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Sur India: Celebrating Suriname-India Bond",
+      "date": 1675209600000,
+      "year": 2023,
+      "venue": "Utrecht",
+      "description": "A cultural collaboration strengthening Indo–Surinamese community ties through arts, music, and shared heritage.",
+      "match_score": 0.3
     }
   },
   {
@@ -1791,12 +1850,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912525/archived-events/International-Indian-Diaspora-Conference-Wassenaar/38802046-1ce9-440c-83e9-e357975ff391.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/International-Indian-Diaspora-Conference-Wassenaar",
-    "reference_event": {
-      "name": "International-Indian-Diaspora-Conference-Wassenaar",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Theatre Festival (ITF)",
+      "date": 1767225600000,
+      "year": 2026,
+      "venue": "Hoofddorp",
+      "description": "A theatre event presenting cultural storytelling through performance and artistic expression.",
+      "match_score": 0.61
     }
   },
   {
@@ -1820,12 +1880,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912530/archived-events/International-Womens-Day/Womens-Day-Prose-Poetry.png"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/International-Womens-Day",
-    "reference_event": {
+    "event_details": {
       "name": "International Women's Day (2 instances)",
       "date": 1709251200000,
       "year": 2024,
       "venue": "Online",
-      "description": "Daily engagement sessions introducing participants and building momentum towards the International Women’s Day celebration."
+      "description": "Daily engagement sessions introducing participants and building momentum towards the International Women’s Day celebration.",
+      "match_score": 0.83
     }
   },
   {
@@ -1874,12 +1935,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912543/archived-events/International-Yoga-Day-Eindhoven/346833296_220566324137162_4950772759554259621_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/International-Yoga-Day-Eindhoven",
-    "reference_event": {
-      "name": "International Day of Yoga (Embassy collaboration)",
-      "date": 1685577600000,
-      "year": 2023,
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
       "venue": "Eindhoven",
-      "description": "A community wellness celebration promoting yoga, mindfulness, and holistic health in collaboration with the Indian Embassy."
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.61
     }
   },
   {
@@ -1939,12 +2001,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912573/archived-events/Kalam-Mic-Muskurahat-Literary-Fest/20240413_194212.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Kalam-Mic-Muskurahat-Literary-Fest",
-    "reference_event": {
+    "event_details": {
       "name": "Literary Fest: Kalam, Zindagi Aur Muskurahat",
       "date": 1711929600000,
       "year": 2024,
       "venue": "Uithoorn",
-      "description": "An annual literary festival celebrating words, humour, poetry, and creative expression in a joyful community setting."
+      "description": "An annual literary festival celebrating words, humour, poetry, and creative expression in a joyful community setting.",
+      "match_score": 0.31
     }
   },
   {
@@ -1990,12 +2053,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912614/archived-events/Lalaland-Event-The-Magic-of-India-Zaandam/347587485_238153355711792_2383107514375703005_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Lalaland-Event-The-Magic-of-India-Zaandam",
-    "reference_event": {
+    "event_details": {
       "name": "LaLaLand Cultural Event",
       "date": "Jul-2023",
       "year": 2023,
       "venue": "Amsterdam",
-      "description": "A multicultural collaboration event showcasing creative performances and community participation."
+      "description": "A multicultural collaboration event showcasing creative performances and community participation.",
+      "match_score": 0.31
     }
   },
   {
@@ -2045,12 +2109,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912655/archived-events/Literary-Fest-2025-Almere/20250614_163634.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Literary-Fest-2025-Almere",
-    "reference_event": {
+    "event_details": {
       "name": "Literary Fest: Kalam, Zindagi Aur Muskurahat",
-      "date": 1748736000000,
-      "year": 2025,
-      "venue": "Almere",
-      "description": "An annual literary festival celebrating words, wisdom, and wonder through poetry, stories, and performances."
+      "date": 1711929600000,
+      "year": 2024,
+      "venue": "Uithoorn",
+      "description": "An annual literary festival celebrating words, humour, poetry, and creative expression in a joyful community setting.",
+      "match_score": 0.35
     }
   },
   {
@@ -2074,12 +2139,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912699/archived-events/Malini-Awasthi-Ji-The-Gandhi-Centre/IMG_0549.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Malini-Awasthi-Ji-The-Gandhi-Centre",
-    "reference_event": {
+    "event_details": {
       "name": "Malini-Awasthi-Ji-The-Gandhi-Centre",
       "date": "",
-      "year": "",
+      "year": null,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -2104,12 +2170,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912711/archived-events/Meet-Greet-Lok-Sabha-Speaker-Sh-Om-Birla-India-House/IMG_1041.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Meet-Greet-Lok-Sabha-Speaker-Sh-Om-Birla-India-House",
-    "reference_event": {
+    "event_details": {
       "name": "Meet-Greet-Lok-Sabha-Speaker-Sh-Om-Birla-India-House",
       "date": "",
-      "year": "",
+      "year": null,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -2134,12 +2201,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912722/archived-events/National-Day-Almere/331addf9-8e54-4c7b-bd08-f97398fcf64b.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/National-Day-Almere",
-    "reference_event": {
-      "name": "National-Day-Almere",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.36
     }
   },
   {
@@ -2149,12 +2217,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Prasadam-April-2025",
-    "reference_event": {
-      "name": "Prasadam-April-2025",
-      "date": "",
-      "year": 2025,
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Prasadam Distribution @ TTD",
+      "date": 1730419200000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "As a sacred tradition, prasadam was lovingly distributed to all devotees and guests, symbolizing blessings, gratitude, and the spirit of togetherness that marked the auspicious Kalyanam celebration.",
+      "match_score": 0.33
     }
   },
   {
@@ -2178,12 +2247,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912734/archived-events/Prasadam-distribution-TTD/467425510_538803775646747_3751612088455197287_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Prasadam-distribution-TTD",
-    "reference_event": {
+    "event_details": {
       "name": "Prasadam Distribution @ TTD",
       "date": 1730419200000,
       "year": 2024,
       "venue": "Eindhoven",
-      "description": "As a sacred tradition, prasadam was lovingly distributed to all devotees and guests, symbolizing blessings, gratitude, and the spirit of togetherness that marked the auspicious Kalyanam celebration."
+      "description": "As a sacred tradition, prasadam was lovingly distributed to all devotees and guests, symbolizing blessings, gratitude, and the spirit of togetherness that marked the auspicious Kalyanam celebration.",
+      "match_score": 0.67
     }
   },
   {
@@ -2207,12 +2277,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912746/archived-events/President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp/DSC_5246_Original.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp",
-    "reference_event": {
-      "name": "President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Sur India: Celebrating Suriname-India Bond",
+      "date": 1675209600000,
+      "year": 2023,
+      "venue": "Utrecht",
+      "description": "A cultural collaboration strengthening Indo–Surinamese community ties through arts, music, and shared heritage.",
+      "match_score": 0.56
     }
   },
   {
@@ -2222,12 +2293,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Radio Poetry",
-    "reference_event": {
+    "event_details": {
       "name": "Radio Poetry",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+      "date": 1675209600000,
+      "year": 2023,
+      "venue": "Netherlands",
+      "description": "A Radio medium, where Poets and Writers of EU, Netherlands, UK, & India publish their Poetry and Prose",
+      "match_score": 1.0
     }
   },
   {
@@ -2250,12 +2322,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912757/archived-events/Remembering-Lachit-Borphukan-The-Gandhi-Centre/IMG_3536.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Remembering-Lachit-Borphukan-The-Gandhi-Centre",
-    "reference_event": {
+    "event_details": {
       "name": "Remembering-Lachit-Borphukan-The-Gandhi-Centre",
       "date": "",
-      "year": "",
+      "year": null,
       "venue": "",
-      "description": ""
+      "description": "",
+      "match_score": 0
     }
   },
   {
@@ -2274,12 +2347,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912764/archived-events/Shivaji-Jayanti-Celebrations-The-Gandhi-Centre/IMG_6128.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Shivaji-Jayanti-Celebrations-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "Shivaji-Jayanti-Celebrations-The-Gandhi-Centre",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Diwali Celebration at Philips",
+      "date": 1727740800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "The Diwali celebration at Philips brought colleagues together to embrace the spirit of the Festival of Lights through cultural performances, traditional festivities, and shared joy, fostering diversity and a sense of community in the workplace.",
+      "match_score": 0.34
     }
   },
   {
@@ -2340,12 +2414,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912778/archived-events/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag/IMG_8301.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
-    "reference_event": {
+    "event_details": {
       "name": "Shri Ram Mandir 'Pran Prathistha'",
       "date": 1704067200000,
       "year": 2024,
       "venue": "Den Haag",
-      "description": "A historic spiritual gathering celebrating the consecration of Shri Ram Mandir."
+      "description": "A historic spiritual gathering celebrating the consecration of Shri Ram Mandir.",
+      "match_score": 0.58
     }
   },
   {
@@ -2389,12 +2464,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912828/archived-events/Sur-India-Utrecht/IMG_6465.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Sur-India-Utrecht",
-    "reference_event": {
-      "name": "Sur India: Celebrating Suriname-India Bond",
-      "date": 1675209600000,
-      "year": 2023,
-      "venue": "Utrecht",
-      "description": "A cultural collaboration strengthening Indo–Surinamese community ties through arts, music, and shared heritage."
+    "event_details": {
+      "name": "Shri Ram Mandir 'Pran Prathistha'",
+      "date": 1704067200000,
+      "year": 2024,
+      "venue": "Den Haag",
+      "description": "A historic spiritual gathering celebrating the consecration of Shri Ram Mandir.",
+      "match_score": 0.3
     }
   },
   {
@@ -2404,12 +2480,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/The Tulips Lounge",
-    "reference_event": {
+    "event_details": {
       "name": "The Tulips Lounge",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+      "date": "Jul-2024",
+      "year": 2024,
+      "venue": "Netherlands",
+      "description": "A Podcast featuring accomplished people who are contributing incredibly towards the global community in Netherlands",
+      "match_score": 0.7
     }
   },
   {
@@ -2433,12 +2510,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912851/archived-events/The-Future-of-Eindhoven-Eindhoven/IMG_2978.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/The-Future-of-Eindhoven-Eindhoven",
-    "reference_event": {
+    "event_details": {
       "name": "Eindhoven-Dialog (The Future of Eindhoven)",
       "date": 1743465600000,
       "year": 2025,
       "venue": "Eindhoven",
-      "description": "A Eindhoven Gemeente-driven event that brought together residents, experts, and city leaders to exchange ideas and shape Eindhoven's future. Through open discussions, participants explored themes such as innovation, sustainability, mobility, housing, and social cohesion to help define the city's long-term vision."
+      "description": "A Eindhoven Gemeente-driven event that brought together residents, experts, and city leaders to exchange ideas and shape Eindhoven's future. Through open discussions, participants explored themes such as innovation, sustainability, mobility, housing, and social cohesion to help define the city's long-term vision.",
+      "match_score": 0.67
     }
   },
   {
@@ -2499,12 +2577,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765912993/archived-events/The-Rythms-of-India-Eindhoven/IMG_0251.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/The-Rythms-of-India-Eindhoven",
-    "reference_event": {
+    "event_details": {
       "name": "The Rhythms of India",
       "date": 1733011200000,
       "year": 2024,
       "venue": "Eindhoven",
-      "description": "A year-end cultural programme celebrating India’s rhythms and traditions with music and community participation."
+      "description": "A year-end cultural programme celebrating India’s rhythms and traditions with music and community participation.",
+      "match_score": 0.5
     }
   },
   {
@@ -2514,12 +2593,13 @@
     "image_count": 0,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Uithoorn Desk",
-    "reference_event": {
+    "event_details": {
       "name": "Uithoorn Desk",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+      "date": 1780272000000,
+      "year": 2026,
+      "venue": "Uithoorn",
+      "description": "A Community support initiative, the 'Uithoorn Desk', for Uithoorn and De Kwakel cities, in collaboration with Gemeente Uithoorn. ",
+      "match_score": 1.0
     }
   },
   {
@@ -2580,12 +2660,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913217/archived-events/Unity-Festival-of-Lights-Eindhoven/DSC05826.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Unity-Festival-of-Lights-Eindhoven",
-    "reference_event": {
+    "event_details": {
       "name": "Unity Festival of Lights",
       "date": 1730419200000,
       "year": 2024,
       "venue": "Eindhoven",
-      "description": "A celebration of unity, light, and cultural harmony within the community."
+      "description": "A celebration of unity, light, and cultural harmony within the community.",
+      "match_score": 0.54
     }
   },
   {
@@ -2646,12 +2727,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1766574431/archived-events/UnityFestivalOfLights2025/IMG_7913.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/UnityFestivalOfLights2025",
-    "reference_event": {
+    "event_details": {
       "name": "Unity Festival of Lights",
-      "date": "Dec-2025",
-      "year": 2025,
+      "date": 1730419200000,
+      "year": 2024,
       "venue": "Eindhoven",
-      "description": "A festive light celebration promoting multicultural harmony and community togetherness."
+      "description": "A celebration of unity, light, and cultural harmony within the community.",
+      "match_score": 0.6
     }
   },
   {
@@ -2668,12 +2750,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913048/archived-events/UP-CM-Indian-Diaspora-Amsterdam/e8219a65-fbb3-4a73-b547-0c7f60c83076.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/UP-CM-Indian-Diaspora-Amsterdam",
-    "reference_event": {
-      "name": "UP-CM-Indian-Diaspora-Amsterdam",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Bollywood-Musician-Singer (Piyush Mishra Amsterdam)",
+      "date": 1660953600000,
+      "year": 2022,
+      "venue": "Amsterdam",
+      "description": "EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter.",
+      "match_score": 0.64
     }
   },
   {
@@ -2695,12 +2778,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913322/archived-events/Women-Hormonal-Health-Session-Uithoorn/465907361_530598356467289_1302132857888901521_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Women-Hormonal-Health-Session-Uithoorn",
-    "reference_event": {
+    "event_details": {
       "name": "Multicultural Vrouwen Middag: Women Hormonal Health Session",
       "date": "Nov-2024",
       "year": 2024,
       "venue": "Uithoorn",
-      "description": "An informative wellness session focused on women’s hormonal health and awareness."
+      "description": "An informative wellness session focused on women’s hormonal health and awareness.",
+      "match_score": 0.55
     }
   },
   {
@@ -2761,12 +2845,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913424/archived-events/World-Hindi-Day-Eindhoven/26.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/World-Hindi-Day-Eindhoven",
-    "reference_event": {
+    "event_details": {
       "name": "Hindi Diwas (Embassy collaboration)",
-      "date": 1735689600000,
-      "year": 2025,
-      "venue": "Eindhoven",
-      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language."
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Den Haag",
+      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+      "match_score": 0.4
     }
   },
   {
@@ -2792,12 +2877,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913502/archived-events/World-Hindi-Day-The-Gandhi-Centre/325296369_854899412295508_8916393894632957826_n.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/World-Hindi-Day-The-Gandhi-Centre",
-    "reference_event": {
-      "name": "World-Hindi-Day-The-Gandhi-Centre",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "Hindi Diwas (Embassy collaboration)",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Den Haag",
+      "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+      "match_score": 0.53
     }
   },
   {
@@ -2842,12 +2928,13 @@
       "https://res.cloudinary.com/du0lumtob/image/upload/v1765913517/archived-events/Yoga-Day-Philips/7e8b386a-2179-403d-a65c-087a2ad041ac.jpg"
     ],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/Yoga-Day-Philips",
-    "reference_event": {
-      "name": "Yoga-Day-Philips",
-      "date": "",
-      "year": "",
-      "venue": "",
-      "description": ""
+    "event_details": {
+      "name": "International Day of Yoga @Philips",
+      "date": 1725148800000,
+      "year": 2024,
+      "venue": "Eindhoven",
+      "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+      "match_score": 0.53
     }
   }
 ]
