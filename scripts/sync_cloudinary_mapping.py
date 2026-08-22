@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+commi#!/usr/bin/env python3
 """
 Sync Cloudinary Event Mapping
 
