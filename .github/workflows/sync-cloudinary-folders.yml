@@ -1,0 +1,129 @@
+name: Sync New Cloudinary Folders
+
+# ── Triggers ──────────────────────────────────────────────────────────────────
+on:
+  # Run manually from the Actions tab with one click
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — list new folders without writing changes'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+  # Optional: run automatically every Monday at 08:00 UTC
+  # schedule:
+  #   - cron: '0 8 * * 1'
+
+jobs:
+  sync-folders:
+    name: Detect & add new Cloudinary folders
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 2. Python setup ──────────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ── 3. Run detect_new_folders.py ─────────────────────────────────────────
+      - name: Detect new Cloudinary folders
+        id: detect
+        env:
+          CLOUDINARY_CLOUD_NAME: du0lumtob
+          CLOUDINARY_API_KEY:    ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          DRY_RUN:               ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "🔍 DRY RUN — listing new folders only (no changes written)"
+            python3 scripts/detect_new_folders.py --dry-run 2>&1 | tee detect_output.txt
+          else
+            python3 scripts/detect_new_folders.py 2>&1 | tee detect_output.txt
+          fi
+
+          # Capture whether any new folders were found
+          if grep -q "No new folders detected" detect_output.txt; then
+            echo "new_folders=false" >> $GITHUB_OUTPUT
+          else
+            echo "new_folders=true" >> $GITHUB_OUTPUT
+          fi
+
+      # ── 4. Update events.html (only when new folders found) ──────────────────
+      - name: Update events.html with new JSON
+        if: steps.detect.outputs.new_folders == 'true' && github.event.inputs.dry_run != 'true'
+        run: python3 scripts/update_events_html.py
+
+      # ── 5. Open a PR so you can review + add metadata before merging ─────────
+      - name: Create Pull Request
+        if: steps.detect.outputs.new_folders == 'true' && github.event.inputs.dry_run != 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync/cloudinary-new-folders-${{ github.run_number }}
+          delete-branch: true
+          commit-message: |
+            chore: add new Cloudinary folders to event mapping
+
+            Automated sync — new folders detected and skeleton entries created.
+            ⚠️  Metadata (event_name_ref, event_date, venue, description) still
+            needs to be filled in for new entries in cloudinary_event_mapping.json.
+          title: '🆕 New Cloudinary folders detected — metadata needed'
+          body: |
+            ## New Cloudinary Folders Detected
+
+            This PR was automatically created by the **Sync New Cloudinary Folders**
+            workflow. New folder(s) have been added as skeleton entries to
+            `cloudinary_event_mapping.json` and `events.html`.
+
+            ### ⚠️ Before merging, fill in metadata for each new entry
+
+            Open `cloudinary_event_mapping.json` and for every entry where
+            `event_name_ref`, `event_date`, `venue` or `description` is empty, fill
+            them in:
+
+            ```json
+            {
+              "event_name_ref": "Holi Celebration @Eindhoven",
+              "event_date":     "2025-03-15",
+              "venue":          "Eindhoven",
+              "description":    "A vibrant Holi festival ..."
+            }
+            ```
+
+            Then run:
+            ```bash
+            python3 scripts/update_events_html.py
+            git add -A && git commit -m "Fill event metadata" && git push
+            ```
+
+            ### Checklist
+            - [ ] Metadata filled in for all new entries
+            - [ ] `events.html` regenerated (`update_events_html.py`)
+            - [ ] Tested locally — cards render correctly
+            - [ ] Merge and verify on production
+
+            ---
+            *Automated by GitHub Actions*
+          labels: |
+            automated
+            needs-metadata
+          assignees: jigneshkarnik
+
+      # ── 6. Summary ───────────────────────────────────────────────────────────
+      - name: Print summary
+        run: |
+          echo "## Sync Summary" >> $GITHUB_STEP_SUMMARY
+          cat detect_output.txt >> $GITHUB_STEP_SUMMARY
