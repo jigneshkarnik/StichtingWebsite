@@ -34,6 +34,7 @@ from datetime import datetime
 BASE_DIR          = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EVENTS_REF_PATH   = os.path.join(BASE_DIR, "events_data_23Aug2026_v3.json")
 MAPPING_PATH      = os.path.join(BASE_DIR, "cloudinary_event_mapping.json")
+ENHANCED_PATH     = os.path.join(BASE_DIR, "cloudinary_event_mapping_enhanced.json")
 MAPPING_OUT_PATH  = MAPPING_PATH   # overwrite in-place
 
 
@@ -128,6 +129,18 @@ def main() -> None:
     with open(MAPPING_PATH, encoding="utf-8") as f:
         mapping: list[dict] = json.load(f)
 
+    # Load enhanced file for full gallery URL lists
+    enhanced_by_folder: dict[str, list[str]] = {}
+    if os.path.exists(ENHANCED_PATH):
+        with open(ENHANCED_PATH, encoding="utf-8") as f:
+            enhanced = json.load(f)
+        for e in enhanced:
+            folder = e.get("cloudinary_folder", "")
+            urls   = e.get("cloudinary_urls", [])
+            if folder and urls:
+                enhanced_by_folder[folder] = urls
+        print(f"  📂 Loaded enhanced URLs for {len(enhanced_by_folder)} folders\n")
+
     # index by folder name for O(1) lookup
     mapping_by_folder: dict[str, dict] = {
         e["cloudinary_folder"]: e for e in mapping
@@ -179,27 +192,54 @@ def main() -> None:
         if name_val:
             cm_entry["event_name_ref"] = name_val  # human-readable name; keep original too
 
-        # ── first image: prepend img1 so cloudinary_urls[0] is the hero img ─
+        # ── build full URL list ────────────────────────────────────────────
+        # Start with full gallery from enhanced file (if available)
+        # Then ensure img1 from reference data is pinned as the first image.
+        # For events with no enhanced gallery, fall back to img1/img2/img3.
         img1 = ref.get("img1", "")
-        current_urls: list[str] = cm_entry.get("cloudinary_urls", [])
-        if img1 and is_cloudinary_url(img1):
-            current_urls = [u for u in current_urls if u != img1]
-            cm_entry["cloudinary_urls"] = [img1] + current_urls
+        img2 = ref.get("img2", "")
+        img3 = ref.get("img3", "")
+        full_urls: list[str] = list(enhanced_by_folder.get(folder, []))
+
+        if full_urls:
+            # Enhanced gallery available: just pin img1 at position 0
+            if img1 and is_cloudinary_url(img1):
+                full_urls = [u for u in full_urls if u != img1]
+                full_urls = [img1] + full_urls
         else:
-            cm_entry["cloudinary_urls"] = current_urls
+            # No enhanced gallery: build from img1/img2/img3, deduped
+            seen: set[str] = set()
+            for url in [img1, img2, img3]:
+                if url and is_cloudinary_url(url) and url not in seen:
+                    full_urls.append(url)
+                    seen.add(url)
+            # If still nothing, keep whatever was in mapping before
+            if not full_urls:
+                full_urls = cm_entry.get("cloudinary_urls", [])
+
+        cm_entry["cloudinary_urls"] = full_urls
+        cm_entry["photo_count"]     = len(full_urls)
 
         ordered_output.append(cm_entry)
         source = "img" if extract_folder_from_url(ref.get("img1","")) or \
                           extract_folder_from_url(ref.get("img2","")) or \
                           extract_folder_from_url(ref.get("img3","")) else "manual"
-        print(f"  ✅  Sno {sno:>3} [{source}]: matched → [{folder}]")
+        print(f"  ✅  Sno {sno:>3} [{source}]: {len(full_urls):>3} photos → [{folder}]")
 
     # ── append unmatched cloudinary entries at the end ─────────────────────
+    # Also copy any enhanced URLs they may have
     unmatched = [e for e in mapping if e["cloudinary_folder"] not in matched_folders]
     if unmatched:
         print(f"\n  ℹ️  {len(unmatched)} cloudinary entries had no match (appended at end):")
         for e in unmatched:
-            print(f"       • {e['cloudinary_folder']}")
+            folder = e["cloudinary_folder"]
+            enhanced_urls = enhanced_by_folder.get(folder, [])
+            if enhanced_urls:
+                e["cloudinary_urls"] = enhanced_urls
+                e["photo_count"]     = len(enhanced_urls)
+                print(f"       • {folder}  ({len(enhanced_urls)} photos from enhanced)")
+            else:
+                print(f"       • {folder}  (no photos)")
     ordered_output.extend(unmatched)
 
     with open(MAPPING_OUT_PATH, "w", encoding="utf-8") as f:
