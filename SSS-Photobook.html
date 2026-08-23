@@ -1,4 +1,714 @@
-[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stichting Sanskriti and Sanskar - Sample Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #17a2b8;
+            --secondary-color: #0f3e44;
+            --accent-color: #ffc107;
+            --white: #ffffff;
+            --text-dark: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #555;
+            font-family: 'Lato', sans-serif;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            body { background-color: #ffffff; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; }
+        }
+
+        .page {
+            width: 297mm;
+            height: 210mm;
+            background-color: var(--white);
+            margin: 10mm auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            overflow: hidden;
+            page-break-after: always;
+        }
+
+        /* ============ COVER PAGE ============ */
+        .cover-page {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a5a63 100%);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .logo-badge {
+            background: white;
+            padding: 0;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            width: 180px; height: 180px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .logo-badge img { 
+            position: absolute;
+            top: 54%; /* Nudge down */
+            left: 53%; /* Nudge left */
+            transform: translate(-50%, -50%) scale(1.85);
+            width: 100%;
+            height: auto;
+        }
+        /* Website URL shown at the top of every page */
+        .site-url {
+            position: absolute;
+            top: 4mm;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 11pt;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--primary-color);
+            z-index: 6;
+        }
+
+        .cover-page .site-url,
+        .back-cover .site-url {
+            color: var(--accent-color);
+        }
+
+        .cover-page h1 {
+            color: var(--accent-color);
+            font-size: 52pt;
+            font-weight: 900;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cover-page .divider {
+            width: 140px;
+            height: 5px;
+            background: var(--accent-color);
+            margin: 20px auto;
+        }
+
+        .cover-page .tagline {
+            font-size: 20pt;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--accent-color);
+        }
+
+        .cover-page .subtitle {
+            font-size: 14pt;
+            opacity: 0.95;
+        }
+
+        /* ============ HEADER ============ */
+        .header {
+            padding: 10mm 15mm;
+            border-bottom: 4px solid var(--accent-color);
+            background: linear-gradient(to bottom, rgba(15, 62, 68, 0.08), transparent);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            color: var(--secondary-color);
+            font-size: 24pt;
+            font-weight: 900;
+            margin: 0 0 3mm 0;
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+        }
+
+        .header-info {
+            color: var(--primary-color);
+            font-size: 10pt;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* ============ EVENT HEADER - COMPACT, BADGES NEXT TO TITLE ============ */
+        .event-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8mm;
+            padding: 6mm 15mm;
+            border-bottom: 4px solid var(--accent-color);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .event-title-block {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .event-title-block h1 {
+            color: var(--secondary-color);
+            font-size: 21pt;
+            font-weight: 900;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 1.05;
+            letter-spacing: 0.5px;
+        }
+
+        .event-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5mm;
+            flex-shrink: 0;
+            align-items: flex-end;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 2.5mm;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a9aab 100%);
+            color: #fff;
+            padding: 2mm 5mm;
+            border-radius: 30px;
+            font-size: 10pt;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 3px 9px rgba(15,62,68,0.25);
+        }
+
+        .badge.badge-venue {
+            background: linear-gradient(135deg, #C98A1A 0%, var(--accent-color) 100%);
+            color: var(--secondary-color);
+        }
+
+        .badge-icon {
+            font-size: 11pt;
+            line-height: 1;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 8mm;
+            right: 15mm;
+            font-size: 11pt;
+            font-weight: 900;
+            color: var(--secondary-color);
+        }
+
+        /* ============ MAIN CONTENT ============ */
+        main {
+            flex-grow: 1;
+            padding: 4mm 12mm;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 3mm;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ============ EVENT PAGES - WHITE BG WITH VIBRANT SHAPES ============ */
+        .event-page {
+            background-color: #ffffff !important;
+        }
+
+        .bg-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.16;
+            filter: blur(1px);
+        }
+
+        .shape.circle   { border-radius: 50%; }
+        .shape.blob-a   { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; }
+        .shape.blob-b   { border-radius: 67% 33% 47% 53% / 37% 62% 38% 63%; }
+        .shape.blob-c   { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        .shape.blob-d   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+
+        /* ============ REDESIGNED ABOUT / VALUES PAGES ============ */
+        .info-page {
+            background-color: #ffffff !important;
+        }
+
+        .info-main {
+            flex-grow: 1;
+            padding: 8mm 18mm;
+            display: flex;
+            flex-direction: column;
+            gap: 8mm;
+            position: relative;
+            z-index: 2;
+            justify-content: center;
+        }
+
+        .info-eyebrow {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), #e0b94f);
+            color: var(--secondary-color);
+            font-size: 9pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 2mm 6mm;
+            border-radius: 30px;
+            margin-bottom: 4mm;
+            align-self: flex-start;
+        }
+
+        .info-title {
+            color: var(--secondary-color);
+            font-size: 38pt;
+            font-weight: 900;
+            margin: 0 0 6mm 0;
+            line-height: 1.05;
+        }
+
+        .info-title .accent {
+            color: var(--primary-color);
+        }
+
+        /* Hero / mission card */
+        .mission-card {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a5a63 100%);
+            color: #fff;
+            border-radius: 14px;
+            padding: 10mm 12mm;
+            box-shadow: 0 12px 30px rgba(15,62,68,0.28);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-card::after {
+            content: "";
+            position: absolute;
+            right: -20mm;
+            top: -20mm;
+            width: 70mm;
+            height: 70mm;
+            background: rgba(201,168,76,0.22);
+            border-radius: 50%;
+        }
+
+        .mission-card h2 {
+            color: var(--accent-color);
+            font-size: 16pt;
+            font-weight: 900;
+            margin: 0 0 5mm 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-card p {
+            font-size: 13pt;
+            line-height: 1.7;
+            margin: 0;
+            color: rgba(255,255,255,0.96);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Circular impact stats */
+        .impact-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10mm;
+        }
+
+        .impact-item {
+            text-align: center;
+        }
+
+        .impact-circle {
+            width: 42mm;
+            height: 42mm;
+            border-radius: 50%;
+            margin: 0 auto 4mm auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24pt;
+            font-weight: 900;
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+        }
+
+        .impact-circle.c1 { background: linear-gradient(135deg, #FF6B6B, #ff8e53); }
+        .impact-circle.c2 { background: linear-gradient(135deg, #4D96FF, #00C2CB); }
+        .impact-circle.c3 { background: linear-gradient(135deg, #6BCB77, #2bb673); }
+        .impact-circle.c4 { background: linear-gradient(135deg, #A66DD4, #FF6FB5); }
+
+        .impact-label {
+            font-size: 10pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+        }
+
+        /* Values - focus pillars */
+        .quote-banner {
+            border-left: 8px solid var(--accent-color);
+            padding: 4mm 0 4mm 8mm;
+            font-size: 16pt;
+            line-height: 1.5;
+            font-style: italic;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8mm;
+        }
+
+        .focus-card {
+            border-radius: 12px;
+            padding: 8mm 5mm;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
+
+        .focus-card.f1 { background: linear-gradient(135deg, #FF6B6B, #ff8e53); }
+        .focus-card.f2 { background: linear-gradient(135deg, #4D96FF, #00C2CB); }
+        .focus-card.f3 { background: linear-gradient(135deg, #6BCB77, #2bb673); }
+        .focus-card.f4 { background: linear-gradient(135deg, #A66DD4, #FF6FB5); }
+
+        .focus-icon {
+            font-size: 30pt;
+            line-height: 1;
+            margin-bottom: 4mm;
+        }
+
+        .focus-title {
+            font-size: 12pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .focus-desc {
+            font-size: 11pt;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 6mm 0 0 0;
+            text-align: center;
+        }
+
+        .event-description {
+            color: var(--secondary-color);
+            font-size: 14pt;
+            line-height: 1.55;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 6mm;
+            font-style: italic;
+            font-weight: 700;
+            margin: 3mm 0 0 0;
+            flex-shrink: 0;
+        }
+
+        /* ============ PHOTO GALLERY - FULL WIDTH & FLEXIBLE ============ */
+        .photo-gallery {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6mm;
+            width: 100%;
+            margin-top: 10mm;
+            min-height: 0; /* Critical for flex children to shrink properly */
+        }
+
+        /* Three photos - SIDE BY SIDE */
+        .gallery-3photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4mm;
+            width: 100%;
+            flex-grow: 1;
+            min-height: 0;
+        }
+
+        .gallery-3photos .photo-frame {
+            width: 100%;
+            height: 95mm;
+        }
+
+        /* Two photos - SIDE BY SIDE */
+        .gallery-2photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4mm;
+            width: 100%;
+            flex-grow: 1;
+            min-height: 0;
+        }
+
+        .gallery-2photos .photo-frame {
+            width: 100%;
+            height: 108mm;
+        }
+
+        /* Single photo - FULL WIDTH */
+        .gallery-1photo {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            flex-grow: 1;
+            min-height: 0;
+        }
+
+        .gallery-1photo .photo-frame {
+            width: 100%;
+            height: 120mm;
+        }
+
+        /* Photo Frame - LARGE AND PROMINENT */
+        .photo-frame {
+            position: relative;
+            background: white;
+            border: 5mm solid white;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.25), 0 12px 22px rgba(0,0,0,0.18);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0; /* Critical for flex items */
+        }
+
+        .photo-frame:nth-child(1) {
+            transform: rotate(-2deg);
+        }
+
+        .photo-frame:nth-child(2) {
+            transform: rotate(1.5deg);
+        }
+
+        .photo-frame:nth-child(3) {
+            transform: rotate(-1deg);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: white;
+        }
+
+        /* ============ BACK COVER ============ */
+        .back-cover {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 15mm 20mm;
+            justify-content: space-between;
+        }
+
+        .back-header {
+            text-align: center;
+            margin-bottom: 15mm;
+            flex-shrink: 0;
+        }
+
+        .back-header h1 {
+            font-family: 'Great Vibes', cursive;
+            color: var(--accent-color);
+            font-size: 60pt;
+            margin: 0 0 5mm 0;
+            font-weight: 400;
+        }
+
+        .back-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 13pt;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25mm;
+            flex-grow: 1;
+            align-content: center;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            font-size: 13pt;
+            font-weight: 900;
+            margin: 0 0 8mm 0;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 4mm;
+        }
+
+        .footer-section p {
+            font-size: 10pt;
+            line-height: 1.6;
+            margin: 0 0 5mm 0;
+            color: rgba(255,255,255,0.95);
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 6mm;
+            margin-bottom: 5mm;
+            font-size: 10pt;
+            color: rgba(255,255,255,0.95);
+        }
+
+        .contact-icon {
+            color: var(--accent-color);
+            font-weight: 900;
+            min-width: 8mm;
+        }
+
+        .logo-footer {
+            background: var(--secondary-color);
+            padding: 5mm;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 8mm;
+        }
+
+        .logo-footer img {
+            height: 32mm;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page cover-page">
+        
+        <div class="logo-badge">
+            <img src="https://sanskritiandsanskar.com/images/logo.png" alt="SSS Logo">
+        </div>
+        <h1>Stichting Sanskriti<br>& Sanskar Foundation</h1>
+        <div class="divider"></div>
+        <div class="tagline">Culture • Values • Customs • Heritage • Tradition</div>
+        <div class="subtitle">Led • Collaborated • Participated</div>
+        <div class="page-number">1</div>
+    </div>
+
+    <!-- PAGE 2: ABOUT US -->
+    <div class="page info-page" id="about-page">
+        
+        <div class="info-main">
+            <div>
+                <span class="info-eyebrow">Who We Are</span>
+                <h1 class="info-title">About <span class="accent">Us</span></h1>
+            </div>
+
+            <div class="mission-card">
+                <h2>Our Mission</h2>
+                <p>Stichting Sanskriti &amp; Sanskar Foundation is a registered cultural bridge dedicated to uniting, reviving, and helping thrive the Culture, Values, Customs, Heritage, and Traditions of both India and The Netherlands. We connect generations through art, literature, and stories.</p>
+            </div>
+
+            <div class="impact-row">
+                <div class="impact-item">
+                    <div class="impact-circle c1">6K+</div>
+                    <div class="impact-label">People Engaged</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-circle c2">100+</div>
+                    <div class="impact-label">Projects</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-circle c3">200+</div>
+                    <div class="impact-label">Volunteers</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-circle c4">3+</div>
+                    <div class="impact-label">Years</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-number">2</div>
+    </div>
+
+    <!-- PAGE 3: OUR VALUES -->
+    <div class="page info-page" id="values-page">
+        
+        <div class="info-main">
+            <div>
+                <span class="info-eyebrow">What Drives Us</span>
+                <h1 class="info-title">Our Values &amp; <span class="accent">Focus</span></h1>
+            </div>
+
+            <div class="quote-banner">
+                "To be the bridge that connects the past with the future, finding the common thread of humanity through cultural exchange."
+            </div>
+
+            <div class="focus-grid">
+                <div class="focus-card f1">
+                    <div class="focus-icon">🎭</div>
+                    <div class="focus-title">Performing Arts</div>
+                </div>
+                <div class="focus-card f2">
+                    <div class="focus-icon">📚</div>
+                    <div class="focus-title">Literature</div>
+                </div>
+                <div class="focus-card f3">
+                    <div class="focus-icon">🏛️</div>
+                    <div class="focus-title">Festivals</div>
+                </div>
+                <div class="focus-card f4">
+                    <div class="focus-icon">🤝</div>
+                    <div class="focus-title">Social Welfare</div>
+                </div>
+            </div>
+
+            <p class="focus-desc">We celebrate Performing Arts, promote cross-cultural exchange &amp; preserve values, customs, heritage, and traditions.</p>
+        </div>
+        <div class="page-number">3</div>
+    </div>
+
+    <!-- PAGE 4: SAMPLE EVENT (generated below) -->
+    <script>
+        // ---- Single representative event ----
+        const events = [
   {"Sno":1,"date":"2022-07-01T07:00:00.000Z","Year":2022,"name":"Hindi Diwas: Azdi ka Amrit Mahotasav (Embassy collaboration)","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911421/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/IMG_9699.jpg","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911419/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/IMG_9703.jpg","img3":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911421/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/IMG_9676.jpg","venue":"Den Haag","desc":"The first Pravasi Kavya Sangh literary gathering at the Indian Embassy, celebrating Hindi language and diaspora poetry."},
   {"Sno":2,"date":"2022-08-20T07:00:00.000Z","Year":2022,"name":"Bollywood-Musician-Singer (Piyush Mishra Amsterdam)","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911425/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/20220820_192332.jpg","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911430/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/C57F229A-A265-4CF9-969B-9EEB221D99F9.jpg","img3":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911431/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/IMG_1158.jpg","venue":"Amsterdam","desc":"EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter."},
   {"Sno":3,"date":"2022-10-01T07:00:00.000Z","Year":2022,"name":"Kavya Gosthi (Embassy collaboration)","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911988/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0384.jpg","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1765912007/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0459.jpg","img3":"https://res.cloudinary.com/du0lumtob/image/upload/v1765911992/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0397.jpg","venue":"Den Haag","desc":"A literary gathering where poets and poetry enthusiasts came together to recite, share, and appreciate poems, fostering creativity, cultural expression, and meaningful dialogue through the beauty of words."},
@@ -67,4 +777,132 @@
   {"Sno":66,"date":"2026-06-01T07:00:00.000Z","Year":2026,"name":"Uithoorn Desk","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1785664046/Uithoorn_Desk_lawwxd.jpg","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1785664046/Uithoorn_Desk_lawwxd.jpg","img3":"https://res.cloudinary.com/du0lumtob/image/upload/v1785664046/Uithoorn_Desk_lawwxd.jpg","venue":"Uithoorn","desc":"A Community support initiative, the 'Uithoorn Desk', for Uithoorn and De Kwakel cities, in collaboration with Gemeente Uithoorn. "},
   {"Sno":67,"date":"2026-08-01T07:00:00.000Z","Year":2026,"name":"GEN B: GENERATION BHARAT","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1786440335/4730D294-F480-4442-B555-E17D05088581_rx7c2g.png","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1786440335/4730D294-F480-4442-B555-E17D05088581_rx7c2g.png","img3":"https://res.cloudinary.com/du0lumtob/image/upload/v1786440335/4730D294-F480-4442-B555-E17D05088581_rx7c2g.png","venue":"Netherlands","desc":"A space for young Bhartiyas in the Netherlands to Learn, Lead, Serve, Celebrate & Grow together."},
   {"Sno":68,"date":"2026-08-01T07:00:00.000Z","Year":2026,"name":"DE OPENING","img1":"https://res.cloudinary.com/du0lumtob/image/upload/v1787226296/06B3BE77-FA8A-4A26-A7BD-E3AB43A24EE6_jhwcln.jpg","img2":"https://res.cloudinary.com/du0lumtob/image/upload/v1787226296/8fca27a9-2094-4b10-9a97-1eaede99e9d1_upe2ph.jpg","img3":"","venue":"https://res.cloudinary.com/du0lumtob/image/upload/v1787226296/3ace1138-97bb-45fc-bf61-8c45a8cffeea_frnvve.jpg","desc":"A afternoon of Indian-Dutch Pop and Indian Classical performances depicting Kashmir, Punjab and North India"}
-]
+];
+        const body = document.body;
+        let pageNum = 4;
+
+        // ---- Vibrant decorative background shapes ----
+        const shapeColors = ['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#FF6FB5','#A66DD4','#FF9F45','#00C2CB','#ff8e53','#2bb673'];
+        const shapeForms = ['circle','blob-a','blob-b','blob-c','blob-d'];
+
+        function rand(min, max) { return Math.random() * (max - min) + min; }
+        function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+        // ---- Cloudinary optimisation: q_auto + f_auto + c_scale (width sized to layout) ----
+        function cld(url, width) {
+            if (!url || url.indexOf('res.cloudinary.com') === -1 || url.indexOf('/upload/') === -1) return url;
+            if (url.indexOf('/upload/q_auto') !== -1) return url;
+            return url.replace('/upload/', `/upload/q_auto/f_auto/c_scale,w_${width}/`);
+        }
+
+        function buildShapes() {
+            const count = Math.floor(rand(6, 9));
+            let html = '<div class="bg-shapes">';
+            for (let i = 0; i < count; i++) {
+                const size = rand(40, 150);           // mm
+                const top = rand(-8, 92);             // %
+                const left = rand(-8, 92);            // %
+                const color = pick(shapeColors);
+                const form = pick(shapeForms);
+                html += `<div class="shape ${form}" style="width:${size}mm;height:${size}mm;top:${top}%;left:${left}%;background:${color};"></div>`;
+            }
+            html += '</div>';
+            return html;
+        }
+
+        // Add shapes behind the two info pages too
+        ['about-page', 'values-page'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.insertAdjacentHTML('afterbegin', buildShapes());
+        });
+
+        events.forEach((event) => {
+            const imageCount = [event.img1, event.img2, event.img3].filter(i => i).length;
+            let layoutClass = 'gallery-2photos';
+            let galleryHTML = '';
+
+            if (imageCount === 3) {
+                layoutClass = 'gallery-3photos';
+                const w = 900;   // three across → narrower frames
+                if (event.img1) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img1, w)}" alt="Photo"></div>`;
+                if (event.img2) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img2, w)}" alt="Photo"></div>`;
+                if (event.img3) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img3, w)}" alt="Photo"></div>`;
+            } else if (imageCount === 2) {
+                layoutClass = 'gallery-2photos';
+                const w = 1100;  // two across → medium frames
+                if (event.img1) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img1, w)}" alt="Photo"></div>`;
+                if (event.img2) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img2, w)}" alt="Photo"></div>`;
+            } else if (imageCount === 1) {
+                layoutClass = 'gallery-1photo';
+                const w = 1600;  // single full-width → largest frame
+                if (event.img1) galleryHTML += `<div class="photo-frame"><img src="${cld(event.img1, w)}" alt="Photo"></div>`;
+            }
+
+            const html = `
+                <div class="page event-page">
+                    ${buildShapes()}
+                    
+                    <div class="event-header">
+                        <div class="event-title-block">
+                            <h1>${event.name}</h1>
+                        </div>
+                        <div class="event-badges">
+                            <div class="badge"><span class="badge-icon">📅</span> 2023-24-25-26</div>
+                            <div class="badge badge-venue"><span class="badge-icon">📍</span> ${event.venue}</div>
+                        </div>
+                    </div>
+                    <main>
+                        ${galleryHTML ? `<div class="photo-gallery ${layoutClass}">${galleryHTML}</div>` : ''}
+                        ${event.desc ? `<div class="event-description">${event.desc}</div>` : ''}
+                    </main>
+                    <div class="page-number">${pageNum}</div>
+                </div>
+            `;
+            body.insertAdjacentHTML('beforeend', html);
+            pageNum++;
+        });
+    </script>
+
+    <!-- PAGE 5: THANK YOU / BACK COVER -->
+    <div class="page back-cover" id="back-cover">
+        
+        <div class="back-header">
+            <h1>Thank You</h1>
+            <p>Join Our Community</p>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Stichting Sanskriti & Sanskar Foundation preserves and celebrates Cultures, Values, Customs, Heritage & Traditions.</p>
+                <div class="logo-footer">
+                    <img src="https://sanskritiandsanskar.com/images/logo.png" alt="SSS Logo">
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-row">
+                    <span class="contact-icon">✉</span>
+                    <span>info@sanskritiandsanskar.com</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon">📱</span>
+                    <span>+31 6 87 87 64 67</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon">🌐</span>
+                    <span>sanskritiandsanskar.com</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon">📍</span>
+                    <span>Across Netherlands</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-number">5</div>
+    </div>
+
+</body>
+</html>
