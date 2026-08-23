@@ -37,6 +37,7 @@ function loadComponents(pageTitle, activePage) {
                             { text: 'Bhartiya First Conclave', href: 'bhartiyafirst.html' },
                             { text: 'Bhartiya First Collective', href: 'BFCollective.html' }
                         ]},
+                        { text: 'Photobook', href: 'SSS-Photobook.html' },
                         { text: 'About Us', href: 'about.html' },
                         { text: 'Contact Us', href: 'contact.html' },
                         { text: 'Admin', href: 'admin.html' }
