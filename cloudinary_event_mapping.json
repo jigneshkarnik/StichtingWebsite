@@ -1,75 +1,871 @@
 [
   {
+    "event_id": "cd9442eb41096b3b95ba4fa842d92dc2e6",
+    "event_name": "Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
+    "event_date": "2022-07-01",
+    "cloudinary_folder": "Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911421/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre/IMG_9699.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "The first Pravasi Kavya Sangh literary gathering at the Indian Embassy, celebrating Hindi language and diaspora poetry.",
+    "event_name_ref": "Hindi Diwas: Azdi ka Amrit Mahotasav (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd9442f932093b2db0953a9183e233f390",
+    "event_name": "Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
+    "event_date": "2022-08-20",
+    "cloudinary_folder": "Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911425/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam/20220820_192332.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
+    "venue": "Amsterdam",
+    "description": "EU-UK Pravasi Sahitya Sangh's Poets had the privilege to perform in front of Piyush Mishra, Indian actor, singer, lyricist, playwright, musician, and screenwriter.",
+    "event_name_ref": "Bollywood-Musician-Singer (Piyush Mishra Amsterdam)"
+  },
+  {
+    "event_id": "cd94473c5d893c33d80a80bcabb905938a",
+    "event_name": "Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
+    "event_date": "2022-10-01",
+    "cloudinary_folder": "Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911988/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre/DSC_0384.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "A literary gathering where poets and poetry enthusiasts came together to recite, share, and appreciate poems, fostering creativity, cultural expression, and meaningful dialogue through the beauty of words.",
+    "event_name_ref": "Kavya Gosthi (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd944dacf989549656e58797031c946a5d",
+    "event_name": "Sur-India-Utrecht",
+    "event_date": "2023-02-01",
+    "cloudinary_folder": "Sur-India-Utrecht",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912833/archived-events/Sur-India-Utrecht/a0327127-4afd-4229-b57f-ce8fdd0b1db1.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Sur-India-Utrecht",
+    "venue": "Utrecht",
+    "description": "A cultural collaboration strengthening Indo–Surinamese community ties through arts, music, and shared heritage.",
+    "event_name_ref": "Sur India: Celebrating Suriname-India Bond"
+  },
+  {
+    "event_id": "cffd123b0c891077b36ef079de91682ec5",
+    "event_name": "Radio Poetry",
+    "event_date": "2023-02-01",
+    "cloudinary_folder": "Radio Poetry",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1786608147/IMG_0992_vmcwlf.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Radio Poetry",
+    "venue": "Netherlands",
+    "description": "A Radio medium, where Poets and Writers of EU, Netherlands, UK, & India publish their Poetry and Prose",
+    "event_name_ref": "Radio Poetry"
+  },
+  {
     "event_id": "cd9493c008090eb83bb1a82494f4d49bbb",
     "event_name": "2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre",
-    "event_date": "2023",
+    "event_date": "2023-03-01",
     "cloudinary_folder": "2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765922040/archived-events/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre/330459319_222636796812843_2164624880027932783_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2023-10-Holi-Milan-Samaroh-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "A vibrant festival of colours celebrated with cultural performances, music, and community togetherness.",
+    "event_name_ref": "Holi Celebration (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd944cf9c5092ac61218a09ef0c4b2c657",
+    "event_name": "Prasadam-distribution-TTD",
+    "event_date": "2023-05-01",
+    "cloudinary_folder": "Prasadam-distribution-TTD",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912741/archived-events/Prasadam-distribution-TTD/467520768_538803872313404_6668105008673718766_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Prasadam-distribution-TTD",
+    "venue": "Eindhoven",
+    "description": "A sacred religious ceremony conducted in collaboration with Sai Balaji Temple, fostering spiritual unity and devotion.",
+    "event_name_ref": "Balaji Kalyanam Mahotsav"
+  },
+  {
+    "event_id": "cd944b819c895889d098cbd717174694d0",
+    "event_name": "International-Yoga-Day-Eindhoven",
+    "event_date": "2023-06-01",
+    "cloudinary_folder": "International-Yoga-Day-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912569/archived-events/International-Yoga-Day-Eindhoven/346632991_220566274137167_5181154547723674165_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/International-Yoga-Day-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A community wellness celebration promoting yoga, mindfulness, and holistic health in collaboration with the Indian Embassy.",
+    "event_name_ref": "International Day of Yoga (Embassy collaboration)"
   },
   {
     "event_id": "cf7a527f29092cdfccbb09e3e51d37c406",
     "event_name": "2023-6-EU_UK Poetry Idol August",
-    "event_date": "2023",
+    "event_date": "Jul-2023",
     "cloudinary_folder": "2023-6-EU_UK Poetry Idol August",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2023-6-EU_UK Poetry Idol August"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782220970/481764951_614361838090940_1857501221819802789_n_iktrtt.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2023-6-EU_UK Poetry Idol August",
+    "venue": "Online",
+    "description": "A Europe-wide online poetry competition connecting diaspora poets across countries through creative expression.",
+    "event_name_ref": "EU-UK Indian Poetry 'IDOL'"
   },
   {
-    "event_id": "cfe0db9e668948f68314aa4436a0e265f7",
-    "event_name": "2024 Consular Camp",
-    "event_date": "",
-    "cloudinary_folder": "2024 Consular Camp",
+    "event_id": "cd944c0bdd09493fbdc387af384a68005f",
+    "event_name": "Lalaland-Event-The-Magic-of-India-Zaandam",
+    "event_date": "Jul-2023",
+    "cloudinary_folder": "Lalaland-Event-The-Magic-of-India-Zaandam",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024 Consular Camp"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912648/archived-events/Lalaland-Event-The-Magic-of-India-Zaandam/359363181_238311339029327_4487869318913428505_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Lalaland-Event-The-Magic-of-India-Zaandam",
+    "venue": "Amsterdam",
+    "description": "A multicultural collaboration event showcasing creative performances and community participation.",
+    "event_name_ref": "LaLaLand Cultural Event"
   },
   {
-    "event_id": "cf7b2272ac097e04e8da047dbe4a1dc4a2",
-    "event_name": "2024 Philips Yoga Day",
-    "event_date": "",
-    "cloudinary_folder": "2024 Philips Yoga Day",
+    "event_id": "cd94472882895462ab2de09c9b3d22827c",
+    "event_name": "First-ever-Embassy-Counsellor-Camp-Eindhoven",
+    "event_date": "2023-08-01",
+    "cloudinary_folder": "First-ever-Embassy-Counsellor-Camp-Eindhoven",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024 Philips Yoga Day"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911974/archived-events/First-ever-Embassy-Counsellor-Camp-Eindhoven/347249322_6199887880106774_7741407431382431857_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/First-ever-Embassy-Counsellor-Camp-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A consular outreach camp providing essential embassy services and support to the Indian diaspora.",
+    "event_name_ref": "Consular Camp (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd9446c92c890bed8e79d4180d18236800",
+    "event_name": "Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
+    "event_date": "2023-09-01",
+    "cloudinary_folder": "Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911935/archived-events/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre/20230915_175706.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "A formal Hindi Diwas celebration honouring the Hindi language and literature under the aegis of the Indian Embassy.",
+    "event_name_ref": "Hindi Diwas: Ek Shaam Dinkar Ke Naam (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd94477f8e091310ab0952658793367915",
+    "event_name": "Gita-Mahotsav-2023-The-Gandhi-Centre",
+    "event_date": "2023-12-18",
+    "cloudinary_folder": "Gita-Mahotsav-2023-The-Gandhi-Centre",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912070/archived-events/Gita-Mahotsav-2023-The-Gandhi-Centre/20231216_162856.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Gita-Mahotsav-2023-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "A celebration dedicated to the timeless wisdom of the Bhagavad Gita, brought people together through discourses, cultural programs, and spiritual activities that inspired values of peace, duty, and self-realization.",
+    "event_name_ref": "Gita Mahotasav (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd944a6d430910464b780192659fc33b43",
+    "event_name": "India-Day-2023-Eindhoven",
+    "event_date": "2023-12-01",
+    "cloudinary_folder": "India-Day-2023-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912431/archived-events/India-Day-2023-Eindhoven/fa5c54d4-8775-4e26-9e41-dd8baaed1e27.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/India-Day-2023-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A large-scale cultural showcase celebrating India’s traditions, customs, and diversity for the wider Dutch community.",
+    "event_name_ref": "India Day: Muziekgebouw"
+  },
+  {
+    "event_id": "cd944d3d34097e0f3839e1bb6b438920d9",
+    "event_name": "Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
+    "event_date": "2024-01-01",
+    "cloudinary_folder": "Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912816/archived-events/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag/IMG_8247.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
+    "venue": "Den Haag",
+    "description": "A historic spiritual gathering celebrating the consecration of Shri Ram Mandir.",
+    "event_name_ref": "Shri Ram Mandir 'Pran Prathistha'"
+  },
+  {
+    "event_id": "cfe38f418089466076230905fd9bafd427",
+    "event_name": "April-2024-Ramnavami",
+    "event_date": "2024-04-01",
+    "cloudinary_folder": "April-2024-Ramnavami",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785752199/6B4D284D-0BC1-465A-993A-E625C4715665_1_ghnrrf.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/April-2024-Ramnavami",
+    "venue": "Eindhoven",
+    "description": "A devotional collaboration with ISKCON and community associations to celebrate Ram Navami with spiritual programmes.",
+    "event_name_ref": "Ram Navami Bhog Seva (ISKCON Collaboration)"
+  },
+  {
+    "event_id": "cd9446e119897ff2e39de699fa979ded06",
+    "event_name": "Embassy-Consular-Camp-Eindhoven",
+    "event_date": "2024-03-01",
+    "cloudinary_folder": "Embassy-Consular-Camp-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911946/archived-events/Embassy-Consular-Camp-Eindhoven/IMG_9087.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Embassy-Consular-Camp-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "An embassy-supported consular camp facilitating key documentation and consular services for the Indian community.",
+    "event_name_ref": "Consular Camp (Embassy collaboration)"
   },
   {
     "event_id": "cd949595f989479142dfa76a83a1d6c27c",
     "event_name": "2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn",
-    "event_date": "2024",
+    "event_date": "2024-03-01",
     "cloudinary_folder": "2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765922301/archived-events/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn/6a481306-d5e0-4c3e-a421-ff66fdf8f56d-1.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-02-Bura-Na-Mano-HOLI-hai-Uithoorn",
+    "venue": "Uithoorn",
+    "description": "A joyful Holi celebration in Uithoorn bringing together communities through colours, music, dance, and cultural bonding.",
+    "event_name_ref": "Holi: ‘Bura Na Mano, Holi Hai’"
   },
   {
     "event_id": "cd9494ee2a0925558f308658ad6e496766",
     "event_name": "2024-03-Holi-Festival-2024-The-Gandhi-Centre",
-    "event_date": "2024",
+    "event_date": "2024-03-01",
     "cloudinary_folder": "2024-03-Holi-Festival-2024-The-Gandhi-Centre",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-03-Holi-Festival-2024-The-Gandhi-Centre"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765922232/archived-events/2024-03-Holi-Festival-2024-The-Gandhi-Centre/97c2f1e8-60c0-4f68-881b-ba2cc5968947.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-03-Holi-Festival-2024-The-Gandhi-Centre",
+    "venue": "Den Haag",
+    "description": "A grand Holi celebration featuring songs, dances, poetry, regional performances, and cultural togetherness.",
+    "event_name_ref": "Holi Celebration (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd944b685d097c0fe8c57be0a3bf87dc1c",
+    "event_name": "International-Womens-Day",
+    "event_date": "2024-03-01",
+    "cloudinary_folder": "International-Womens-Day",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912540/archived-events/International-Womens-Day/Brown-Beige-Minimalist-Fall-Leaves-Photo-Collage-Facebook-Post-3.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/International-Womens-Day",
+    "venue": "Online",
+    "description": "Daily engagement sessions introducing participants and building momentum towards the International Women’s Day celebration.",
+    "event_name_ref": "International Women's Day (2 instances)"
+  },
+  {
+    "event_id": "cd944bbd418975ee04dfdd0ca3b20da6e7",
+    "event_name": "Kalam-Mic-Muskurahat-Literary-Fest",
+    "event_date": "2024-04-01",
+    "cloudinary_folder": "Kalam-Mic-Muskurahat-Literary-Fest",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912594/archived-events/Kalam-Mic-Muskurahat-Literary-Fest/13.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Kalam-Mic-Muskurahat-Literary-Fest",
+    "venue": "Uithoorn",
+    "description": "An annual literary festival celebrating words, humour, poetry, and creative expression in a joyful community setting.",
+    "event_name_ref": "Literary Fest: Kalam, Zindagi Aur Muskurahat"
+  },
+  {
+    "event_id": "cfe0db9e668948f68314aa4436a0e265f7",
+    "event_name": "2024 Consular Camp",
+    "event_date": "2024-05-01",
+    "cloudinary_folder": "2024 Consular Camp",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785753115/IMG_3794_yxi6ej.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024 Consular Camp",
+    "venue": "Eindhoven",
+    "description": "A consular services desk organised for the Indian diaspora in collaboration with the Embassy of India and VFS Global.",
+    "event_name_ref": "Embassy Consular Camp  (EMBASSY COLLABORATION)"
+  },
+  {
+    "event_id": "cffae59ad3890225e95156cd51db2c3bb3",
+    "event_name": "The Tulips Lounge",
+    "event_date": "Jul-2024",
+    "cloudinary_folder": "The Tulips Lounge",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1786536398/image5_uzsgss.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The Tulips Lounge",
+    "venue": "Netherlands",
+    "description": "A Podcast featuring accomplished people who are contributing incredibly towards the global community in Netherlands",
+    "event_name_ref": "The Tulips Lounge"
+  },
+  {
+    "event_id": "cd94483f84093b671066d7b760dbc41459",
+    "event_name": "HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
+    "event_date": "Jul-2024",
+    "cloudinary_folder": "HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912119/archived-events/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag/PXL_20240623_135552847_Original.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
+    "venue": "Utrecht",
+    "description": "A heartfelt farewell honouring the Indian Ambassador’s service and connection with the community.",
+    "event_name_ref": "H.E. Mrs Reenat Sandhu: Ambassador’s Farewell"
+  },
+  {
+    "event_id": "cd9449257e89136469ee8e84a90b72456b",
+    "event_name": "Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
+    "event_date": "2024-09-01",
+    "cloudinary_folder": "Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912253/archived-events/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India/460848497_497093966484395_4710462554321487204_n-1.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
+    "venue": "Den Haag",
+    "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+    "event_name_ref": "Hindi Diwas (Embassy collaboration)"
+  },
+  {
+    "event_id": "cf7b2272ac097e04e8da047dbe4a1dc4a2",
+    "event_name": "2024 Philips Yoga Day",
+    "event_date": "2024-09-01",
+    "cloudinary_folder": "2024 Philips Yoga Day",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782322959/IMG_3541-EDIT_1_njwlkw.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024 Philips Yoga Day",
+    "venue": "Eindhoven",
+    "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+    "event_name_ref": "International Day of Yoga @Philips"
+  },
+  {
+    "event_id": "cd9442877e897f647eacbe642f5f5c71cf",
+    "event_name": "2024-EU-UK-Indian-Poetry-Idol",
+    "event_date": "2024-10-01",
+    "cloudinary_folder": "2024-EU-UK-Indian-Poetry-Idol",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765911407/archived-events/2024-EU-UK-Indian-Poetry-Idol/Screenshot_20241019-133109_Meet2.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-EU-UK-Indian-Poetry-Idol",
+    "venue": "Online",
+    "description": "An annual poetry competition connecting EU–UK diaspora poets through creativity, recitation, and cultural exchange.",
+    "event_name_ref": "EU-UK Indian Poetry 'IDOL'"
+  },
+  {
+    "event_id": "cd945172ee8927f848ef912f2f7c450534",
+    "event_name": "Women-Hormonal-Health-Session-Uithoorn",
+    "event_date": "Nov-2024",
+    "cloudinary_folder": "Women-Hormonal-Health-Session-Uithoorn",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765913329/archived-events/Women-Hormonal-Health-Session-Uithoorn/465696919_530528043140987_4668979549312427905_n.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Women-Hormonal-Health-Session-Uithoorn",
+    "venue": "Uithoorn",
+    "description": "An informative wellness session focused on women’s hormonal health and awareness.",
+    "event_name_ref": "Multicultural Vrouwen Middag: Women Hormonal Health Session"
+  },
+  {
+    "event_id": "cfe0df0c92094124e87998721444063105",
+    "event_name": "2024, 2025, 2026 Sahitya Chaupal",
+    "event_date": "2024-11-01",
+    "cloudinary_folder": "2024, 2025, 2026 Sahitya Chaupal",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785755266/WhatsApp_Image_2026-08-03_at_13.05.16_j1ktow.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024, 2025, 2026 Sahitya Chaupal",
+    "venue": "Online",
+    "description": "An online literary forum enabling poets and writers to share, discuss, and celebrate literature together.",
+    "event_name_ref": "Sahitya Chaupal (4 instances)"
+  },
+  {
+    "event_id": "cd94bca08f096f87401d533ff214269471",
+    "event_name": "Het-Hoge-Heem-Uithoorn",
+    "event_date": "2024-11-01",
+    "cloudinary_folder": "Het-Hoge-Heem-Uithoorn",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765927450/archived-events/Het-Hoge-Heem-Uithoorn/IMG_9472.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Het-Hoge-Heem-Uithoorn",
+    "venue": "Uithoorn",
+    "description": "A cultural outreach programme bringing music, joy, and Indian traditions to senior citizens in an old age home setting.",
+    "event_name_ref": "India Day: Old Age Home (Het Hoge Heem)"
+  },
+  {
+    "event_id": "cd94bd618b0934072fc2add459628ff7fe",
+    "event_name": "Consular-Camp-Eindhoven",
+    "event_date": "Dec-2024",
+    "cloudinary_folder": "Consular-Camp-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765927476/archived-events/Consular-Camp-Eindhoven/IMG_4265.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Consular-Camp-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "Supporting the Indian diaspora with essential consular services.",
+    "event_name_ref": "Consular Camp (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd944f63f7896c4993e736053143cf6509",
+    "event_name": "Unity-Festival-of-Lights-Eindhoven",
+    "event_date": "2024-11-01",
+    "cloudinary_folder": "Unity-Festival-of-Lights-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765913163/archived-events/Unity-Festival-of-Lights-Eindhoven/DSC05220.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Unity-Festival-of-Lights-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A celebration of unity, light, and cultural harmony within the community.",
+    "event_name_ref": "Unity Festival of Lights"
+  },
+  {
+    "event_id": "cd944e045f89695b1b19952f3d3c1050a5",
+    "event_name": "The-Rythms-of-India-Eindhoven",
+    "event_date": "2024-12-01",
+    "cloudinary_folder": "The-Rythms-of-India-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912974/archived-events/The-Rythms-of-India-Eindhoven/IMG_20241215_152724.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The-Rythms-of-India-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A year-end cultural programme celebrating India’s rhythms and traditions with music and community participation.",
+    "event_name_ref": "The Rhythms of India"
+  },
+  {
+    "event_id": "cd945183150907eaa75d165100023ea668",
+    "event_name": "World-Hindi-Day-Eindhoven",
+    "event_date": "2025-01-01",
+    "cloudinary_folder": "World-Hindi-Day-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765913407/archived-events/World-Hindi-Day-Eindhoven/10.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/World-Hindi-Day-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+    "event_name_ref": "Hindi Diwas (Embassy collaboration)"
+  },
+  {
+    "event_id": "cd94942290893237f1279b76fba07e1df0",
+    "event_name": "2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
+    "event_date": "2025-03-01",
+    "cloudinary_folder": "2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765922143/archived-events/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn/100.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
+    "venue": "Uithoorn",
+    "description": "A colourful Holi celebration bringing communities together through music, dance, and festive cultural activities.",
+    "event_name_ref": "Holi: ‘Bura Na Mano, Holi Hai’"
   },
   {
     "event_id": "cf7c79689e895086e5d860dd0961fdb603",
     "event_name": "2024-18-Nov-prasadam distribution",
-    "event_date": "2024",
+    "event_date": "2025-04-01",
     "cloudinary_folder": "2024-18-Nov-prasadam distribution",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-18-Nov-prasadam distribution"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1786462618/Prasadm-April-2025-2_gv3crv.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-18-Nov-prasadam distribution",
+    "venue": "Eindhoven",
+    "description": "A seva initiative sharing blessed prasadam with devotion and compassion.",
+    "event_name_ref": "Prasadam Distribution @ TTD"
+  },
+  {
+    "event_id": "cd944dda33094ec2a6e793645779efeb96",
+    "event_name": "The-Future-of-Eindhoven-Eindhoven",
+    "event_date": "2025-04-01",
+    "cloudinary_folder": "The-Future-of-Eindhoven-Eindhoven",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782311820/IMG_3293_x8gjuo.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The-Future-of-Eindhoven-Eindhoven",
+    "venue": "Eindhoven",
+    "description": "A Eindhoven Gemeente-driven event that brought together residents, experts, and city leaders to exchange ideas and shape Eindhoven's future. Through open discussions, participants explored themes such as innovation, sustainability, mobility, housing, and social cohesion to help define the city's long-term vision.",
+    "event_name_ref": "Eindhoven-Dialog (The Future of Eindhoven)"
   },
   {
     "event_id": "cf7c832bb3093a6008749890656fae659f",
     "event_name": "2024-25-Aug- Connecting culture",
-    "event_date": "2024",
+    "event_date": "2025-04-01",
     "cloudinary_folder": "2024-25-Aug- Connecting culture",
     "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-25-Aug- Connecting culture"
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782294649/IMG_3133_s4pqdr.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-25-Aug- Connecting culture",
+    "venue": "Eindhoven",
+    "description": "A vibrant event that brought together people from diverse backgrounds to celebrate cultural heritage, foster mutual understanding, and strengthened community bonds through shared experiences and dialogue. It served as a platform for promoting inclusivity, friendship, and cross-cultural exchange.",
+    "event_name_ref": "Connecting Cultures"
+  },
+  {
+    "event_id": "cd9493881d8952d4057fb46a4d40238695",
+    "event_name": "2025-06-Vrouwen-Middag-Uithoorn",
+    "event_date": "2025-05-01",
+    "cloudinary_folder": "2025-06-Vrouwen-Middag-Uithoorn",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782305365/WhatsApp_Image_2026-06-24_at_13.23.13_9_nrb0sa.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-06-Vrouwen-Middag-Uithoorn",
+    "venue": "Uithoorn",
+    "description": "A creative women’s workshop where participants explore art through one-stroke painting techniques.",
+    "event_name_ref": "Multicultural Vrouwen Middag: One Stroke Painting Workshop"
+  },
+  {
+    "event_id": "cf7c63db1a894f1c01e8631bd88bfad1d1",
+    "event_name": "2025-7--May Vouwen-Mmiddag Brain Jamming",
+    "event_date": "2025-05-01",
+    "cloudinary_folder": "2025-7--May Vouwen-Mmiddag Brain Jamming",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782291296/IMG_3196_fnuysr.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-7--May Vouwen-Mmiddag Brain Jamming",
+    "venue": "Uithoorn",
+    "description": "An engaging afternoon event where women came together to exchange ideas, spark creativity, and enjoy meaningful discussions in a relaxed and inspiring atmosphere. It offered a platform for learning, networking, and collaborative thinking.",
+    "event_name_ref": "Multicultural Vrouwen Middag: Brain Jamming session"
+  },
+  {
+    "event_id": "cd944c5d1f89008e11de3f1669aa038766",
+    "event_name": "Literary-Fest-2025-Almere",
+    "event_date": "2025-06-01",
+    "cloudinary_folder": "Literary-Fest-2025-Almere",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1765912699/archived-events/Literary-Fest-2025-Almere/20250614_164037.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Literary-Fest-2025-Almere",
+    "venue": "Almere",
+    "description": "An annual literary festival celebrating words, wisdom, and wonder through poetry, stories, and performances.",
+    "event_name_ref": "Literary Fest: Kalam, Zindagi Aur Muskurahat"
+  },
+  {
+    "event_id": "cf7b1754b5096b96046f7c49f15b093b2c",
+    "event_name": "2025 international Yoga Day",
+    "event_date": "2025-06-01",
+    "cloudinary_folder": "2025 international Yoga Day",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782247953/510974851_695090096684780_4208062857246972695_n_zzpo8k.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025 international Yoga Day",
+    "venue": "Eindhoven",
+    "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+    "event_name_ref": "International Day of Yoga (Embassy collaboration)"
+  },
+  {
+    "event_id": "cf7ce2be80093277936df2440586e92d8c",
+    "event_name": "2025-24-June Vrouwen Middag session on health issue",
+    "event_date": "2025-06-01",
+    "cloudinary_folder": "2025-24-June Vrouwen Middag session on health issue",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782307204/WhatsApp_Image_2026-06-24_at_13.20.38_owiwsw.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-24-June Vrouwen Middag session on health issue",
+    "venue": "Uithoorn",
+    "description": "A event that brought women together for an informative and engaging afternoon focused on health, wellness, and healthy living. The session provided valuable insights and encouraged meaningful discussions on physical and mental well-being.",
+    "event_name_ref": "Multicultural Vrouwen Middag: Health session"
+  },
+  {
+    "event_id": "cf7ac7d72b892504cc6350d943c485e669",
+    "event_name": "2025 August Janamastami",
+    "event_date": "2025-08-01",
+    "cloudinary_folder": "2025 August Janamastami",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782236491/IMG_3125_i1rkor.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025 August Janamastami",
+    "venue": "Eindhoven",
+    "description": "A joyful celebration marked the birth of Lord Krishna, filled with devotional prayers, bhajans, cultural performances, and festivities that bring families and communities together in a spirit of faith and happiness.",
+    "event_name_ref": "Janmashtami Celebration"
+  },
+  {
+    "event_id": "cf7caa500c896633586eeee03bb123f3a8",
+    "event_name": "2025-5-September Vrouwen Vrijdag Teachers Day",
+    "event_date": "2025-09-01",
+    "cloudinary_folder": "2025-5-September Vrouwen Vrijdag Teachers Day",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782312547/IMG_3353_fiwa6j_nqbg5o.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-5-September Vrouwen Vrijdag Teachers Day",
+    "venue": "Eindhoven",
+    "description": "A special Teacher’s Day edition celebrating educators and women’s community engagement in collaboration with Brahma Kumaris.",
+    "event_name_ref": "Multicultural Vrouwen Vrijdag: Teacher’s Day Special (with Brahma Kumaris)"
+  },
+  {
+    "event_id": "cf7a1f9674891f7956bef04db58bd61019",
+    "event_name": "2025-12-September Vrouwen Middag Garba Workshop",
+    "event_date": "2025-09-01",
+    "cloudinary_folder": "2025-12-September Vrouwen Middag Garba Workshop",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782308297/551057478_18053814503532782_1715559363972233583_n_gtdj2x_wmnocz.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-12-September Vrouwen Middag Garba Workshop",
+    "venue": "Uithoorn",
+    "description": "A dedicated Garba workshop for ladies and girls (12+), celebrating folk dance, fitness, and festive culture.",
+    "event_name_ref": "Multicultural Vrouwen Middag: Garba Workshop"
+  },
+  {
+    "event_id": "cf7d091d570935f3a96e2e2100f8545d9d",
+    "event_name": "2025-17-September Hindi Diwas Denhaag",
+    "event_date": "2025-09-01",
+    "cloudinary_folder": "2025-17-September Hindi Diwas Denhaag",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782316851/IMG_3422_fjzmug.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-17-September Hindi Diwas Denhaag",
+    "venue": "Den Haag",
+    "description": "A grand Hindi Diwas programme led at Gandhi Centre under embassy guidance, celebrating Hindi language and literature.",
+    "event_name_ref": "Hindi Diwas (Embassy collaboration)"
+  },
+  {
+    "event_id": "cf79e73714094daa3ef714be0c529c2609",
+    "event_name": "2025-BhartiyaFirst",
+    "event_date": "2025-09-01",
+    "cloudinary_folder": "2025-BhartiyaFirst",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782233680/IMG_3122-EDIT_f4rd7v.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-BhartiyaFirst",
+    "venue": "Den Haag",
+    "description": "A community cultural initiative celebrating Indian identity, heritage, and togetherness.",
+    "event_name_ref": "Bhartiya First: Bharat outside Bharat"
+  },
+  {
+    "event_id": "cf7cc9c061097f3dee436e32d2843393b2",
+    "event_name": "2025-31-october Vrouwen-Middag zumba workshop",
+    "event_date": "2025-10-01",
+    "cloudinary_folder": "2025-31-october Vrouwen-Middag zumba workshop",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782306351/WhatsApp_Image_2026-06-24_at_14.33.17_7_h2x3xo.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-31-october Vrouwen-Middag zumba workshop",
+    "venue": "Uithoorn",
+    "description": "An energising Zumba workshop where fitness meets fun, encouraging healthy lifestyle and joyful movement.",
+    "event_name_ref": "Multicultural  Vrouwen Middag: Zumba Workshop"
+  },
+  {
+    "event_id": "cf7a93b6b2892564938371d141d292d422",
+    "event_name": "2025-28-Diwali Philips October",
+    "event_date": "2025-10-01",
+    "cloudinary_folder": "2025-28-Diwali Philips October",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782231286/WhatsApp_Image_2026-06-23_at_17.10.00_4_lvc25j.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-28-Diwali Philips October",
+    "venue": "Eindhoven",
+    "description": "A Diwali celebration at Philips fostering multicultural inclusivity, festive spirit, and community togetherness.",
+    "event_name_ref": "Diwali Celebration at Philips"
+  },
+  {
+    "event_id": "cf7a1ce0cd093e61ee3b64b8d62e572e3e",
+    "event_name": "2025-28-Vrouwen Vrijdag painting workshop November",
+    "event_date": "Nov-2025",
+    "cloudinary_folder": "2025-28-Vrouwen Vrijdag painting workshop November",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782298746/IMG_3160_1_u6zkup.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-28-Vrouwen Vrijdag painting workshop November",
+    "venue": "Eindhoven",
+    "description": "A women’s art workshop celebrating Madhubani painting traditions, welcoming ladies and girls above 12 years.",
+    "event_name_ref": "Multicultural Vrouwen Vrijdag: Madhubani Painting Workshop"
+  },
+  {
+    "event_id": "cda7fa04b4094822d52ba0ca85128ac466",
+    "event_name": "UnityFestivalOfLights2025",
+    "event_date": "Dec-2025",
+    "cloudinary_folder": "UnityFestivalOfLights2025",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1766574431/archived-events/UnityFestivalOfLights2025/IMG_7913.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/UnityFestivalOfLights2025",
+    "venue": "Eindhoven",
+    "description": "A festive light celebration promoting multicultural harmony and community togetherness.",
+    "event_name_ref": "Unity Festival of Lights"
+  },
+  {
+    "event_id": "cf79e4bacd897d0e76dbb1841d0ac2ae12",
+    "event_name": "2026-ITF",
+    "event_date": "2026-01-01",
+    "cloudinary_folder": "2026-ITF",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782211476/IMG_9508_lhd5cn.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-ITF",
+    "venue": "Hoofddorp",
+    "description": "A theatre event presenting cultural storytelling through performance and artistic expression.",
+    "event_name_ref": "International Theatre Festival (ITF)"
+  },
+  {
+    "event_id": "cf7a327be7097b32dd4c871ecb4e9e42d3",
+    "event_name": "2026-10- Hindi Diwas January",
+    "event_date": "2026-01-01",
+    "cloudinary_folder": "2026-10- Hindi Diwas January",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782217264/WhatsApp_Image_2026-06-23_at_14.10.12_1_ejg6id.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-10- Hindi Diwas January",
+    "venue": "Eindhoven",
+    "description": "A vibrant gathering featuring poetry, speeches, and cultural performances to commemorate and promote the Hindi language.",
+    "event_name_ref": "Hindi Diwas (Embassy collaboration)"
+  },
+  {
+    "event_id": "cf79e4ccad096533e97d848498cfa502af",
+    "event_name": "2026-Holi",
+    "event_date": "2026-03-01",
+    "cloudinary_folder": "2026-Holi",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782209582/WhatsApp_Image_2026-06-23_at_12.07.09_2_ymvnt0.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-Holi",
+    "venue": "Uithoorn",
+    "description": "A vibrant celebration of colors, music, and togetherness, brought people of all ages and backgrounds together to rejoice in the spirit of joy, friendship, and cultural harmony.",
+    "event_name_ref": "Holi: ‘Bura Na Mano, Holi Hai’"
+  },
+  {
+    "event_id": "cf7a2c6db709371a92df51f907bc445596",
+    "event_name": "2025-5-April Vrouwen Vrijdag Poetic Fairytale",
+    "event_date": "2026-04-01",
+    "cloudinary_folder": "2025-5-April Vrouwen Vrijdag Poetic Fairytale",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782298914/IMG_3113_1_wk67xi_s1wfed.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-5-April Vrouwen Vrijdag Poetic Fairytale",
+    "venue": "Eindhoven",
+    "description": "A Friday evening celebrated creativity and expression through a captivating Lyrical Theatrical theme, where poetry, music, and dramatic performances came together to create an inspiring and memorable evening.",
+    "event_name_ref": "Multicultural Vrouwen Vrijdag: Lyrical Theatre"
+  },
+  {
+    "event_id": "cf79e59079090eb76909a81d36154e706f",
+    "event_name": "2026-LiteraryFest",
+    "event_date": "2026-06-01",
+    "cloudinary_folder": "2026-LiteraryFest",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1783716602/IMG_3616_1_qppu6g.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-LiteraryFest",
+    "venue": "Almere",
+    "description": "An annual literary festival celebrating words, wisdom, and wonder through poetry, stories, and performances.",
+    "event_name_ref": "Literary Fest: Kalam, Zindagi Aur Muskurahat"
+  },
+  {
+    "event_id": "cf7ab7e72489717ff8dc018fe2841a324b",
+    "event_name": "2026-21- International Yoga Day",
+    "event_date": "2026-06-01",
+    "cloudinary_folder": "2026-21- International Yoga Day",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1782234972/730640170_122117038814847997_9057511683225597410_n_zght25.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-21- International Yoga Day",
+    "venue": "Eindhoven",
+    "description": "A celebration that promoted the physical, mental, and spiritual benefits of yoga while encouraging harmony, wellness, and a healthy lifestyle.",
+    "event_name_ref": "International Day of Yoga (Embassy collaboration)"
+  },
+  {
+    "event_id": "cfe0ecbc29893f7859e944dd0c9f2a7398",
+    "event_name": "Bharat Dutch Times_June 2026",
+    "event_date": "2026-06-01",
+    "cloudinary_folder": "Bharat Dutch Times_June 2026",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785663700/BDT_1_gi0sli.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bharat Dutch Times_June 2026",
+    "venue": "Netherlands",
+    "description": "A digital community publication launched in June 2026  to serve as a cultural bridge for the Indian diaspora in the Netherlands.",
+    "event_name_ref": "Bharat Dutch Times"
+  },
+  {
+    "event_id": "cfe0ea79b60979cbba584e8b5266af5e6a",
+    "event_name": "Bharat Dutch Times_July 2026",
+    "event_date": "2026-07-01",
+    "cloudinary_folder": "Bharat Dutch Times_July 2026",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785663403/bdt----BDT_4_waxlx5.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bharat Dutch Times_July 2026",
+    "venue": "Netherlands",
+    "description": "A digital community publication launched in June 2026  to serve as a cultural bridge for the Indian diaspora in the Netherlands.",
+    "event_name_ref": "Bharat Dutch Times"
+  },
+  {
+    "event_id": "cfe0eeadc0894e482471d1fde61731c51e",
+    "event_name": "Uithoorn Desk",
+    "event_date": "2026-06-01",
+    "cloudinary_folder": "Uithoorn Desk",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1785664046/Uithoorn_Desk_lawwxd.jpg"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Uithoorn Desk",
+    "venue": "Uithoorn",
+    "description": "A Community support initiative, the 'Uithoorn Desk', for Uithoorn and De Kwakel cities, in collaboration with Gemeente Uithoorn. ",
+    "event_name_ref": "Uithoorn Desk"
+  },
+  {
+    "event_id": "d00f7e458809005624fe553a7292261021",
+    "event_name": "2026 DE OPENING",
+    "event_date": "2026-08-01",
+    "cloudinary_folder": "2026 DE OPENING",
+    "photo_count": 2901,
+    "cloudinary_urls": [
+      "https://res.cloudinary.com/du0lumtob/image/upload/v1786440335/4730D294-F480-4442-B555-E17D05088581_rx7c2g.png"
+    ],
+    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026 DE OPENING",
+    "venue": "Netherlands",
+    "description": "A space for young Bhartiyas in the Netherlands to Learn, Lead, Serve, Celebrate & Grow together.",
+    "event_name_ref": "GEN B: GENERATION BHARAT"
   },
   {
     "event_id": "cd94464011090e9f7eae457d17f9ed91c0",
@@ -81,15 +877,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-29- Diwali Philpis October"
   },
   {
-    "event_id": "cd9442877e897f647eacbe642f5f5c71cf",
-    "event_name": "2024-EU-UK-Indian-Poetry-Idol",
-    "event_date": "2024",
-    "cloudinary_folder": "2024-EU-UK-Indian-Poetry-Idol",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-EU-UK-Indian-Poetry-Idol"
-  },
-  {
     "event_id": "cd944b44f0092d95bc8e49cbb5127974a9",
     "event_name": "2024-International-Day-of-Yoga-Eindhoven",
     "event_date": "2024",
@@ -97,42 +884,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024-International-Day-of-Yoga-Eindhoven"
-  },
-  {
-    "event_id": "cfe0df0c92094124e87998721444063105",
-    "event_name": "2024, 2025, 2026 Sahitya Chaupal",
-    "event_date": "",
-    "cloudinary_folder": "2024, 2025, 2026 Sahitya Chaupal",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2024, 2025, 2026 Sahitya Chaupal"
-  },
-  {
-    "event_id": "cf7ac7d72b892504cc6350d943c485e669",
-    "event_name": "2025 August Janamastami",
-    "event_date": "",
-    "cloudinary_folder": "2025 August Janamastami",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025 August Janamastami"
-  },
-  {
-    "event_id": "cf7b1754b5096b96046f7c49f15b093b2c",
-    "event_name": "2025 international Yoga Day",
-    "event_date": "",
-    "cloudinary_folder": "2025 international Yoga Day",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025 international Yoga Day"
-  },
-  {
-    "event_id": "cd94942290893237f1279b76fba07e1df0",
-    "event_name": "2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-01-Bura-Na-Mano-Holi-Hai-Uithoorn"
   },
   {
     "event_id": "cd9493667f0920db0bfd9453f4c62ff945",
@@ -144,60 +895,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-05-Vrouwen-Middag Menopause in women"
   },
   {
-    "event_id": "cd9493881d8952d4057fb46a4d40238695",
-    "event_name": "2025-06-Vrouwen-Middag-Uithoorn",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-06-Vrouwen-Middag-Uithoorn",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-06-Vrouwen-Middag-Uithoorn"
-  },
-  {
-    "event_id": "cf7a1f9674891f7956bef04db58bd61019",
-    "event_name": "2025-12-September Vrouwen Middag Garba Workshop",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-12-September Vrouwen Middag Garba Workshop",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-12-September Vrouwen Middag Garba Workshop"
-  },
-  {
-    "event_id": "cf7d091d570935f3a96e2e2100f8545d9d",
-    "event_name": "2025-17-September Hindi Diwas Denhaag",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-17-September Hindi Diwas Denhaag",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-17-September Hindi Diwas Denhaag"
-  },
-  {
-    "event_id": "cf7ce2be80093277936df2440586e92d8c",
-    "event_name": "2025-24-June Vrouwen Middag session on health issue",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-24-June Vrouwen Middag session on health issue",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-24-June Vrouwen Middag session on health issue"
-  },
-  {
-    "event_id": "cf7a93b6b2892564938371d141d292d422",
-    "event_name": "2025-28-Diwali Philips October",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-28-Diwali Philips October",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-28-Diwali Philips October"
-  },
-  {
-    "event_id": "cf7a1ce0cd093e61ee3b64b8d62e572e3e",
-    "event_name": "2025-28-Vrouwen Vrijdag painting workshop November",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-28-Vrouwen Vrijdag painting workshop November",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-28-Vrouwen Vrijdag painting workshop November"
-  },
-  {
     "event_id": "cf7c6f1cf509297eaaf6c00353dd842def",
     "event_name": "2025-29-April Vrouwen-Middag Hormonal problems in women",
     "event_date": "2025",
@@ -205,51 +902,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-29-April Vrouwen-Middag Hormonal problems in women"
-  },
-  {
-    "event_id": "cf7cc9c061097f3dee436e32d2843393b2",
-    "event_name": "2025-31-october Vrouwen-Middag zumba workshop",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-31-october Vrouwen-Middag zumba workshop",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-31-october Vrouwen-Middag zumba workshop"
-  },
-  {
-    "event_id": "cf7a2c6db709371a92df51f907bc445596",
-    "event_name": "2025-5-April Vrouwen Vrijdag Poetic Fairytale",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-5-April Vrouwen Vrijdag Poetic Fairytale",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-5-April Vrouwen Vrijdag Poetic Fairytale"
-  },
-  {
-    "event_id": "cf7caa500c896633586eeee03bb123f3a8",
-    "event_name": "2025-5-September Vrouwen Vrijdag Teachers Day",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-5-September Vrouwen Vrijdag Teachers Day",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-5-September Vrouwen Vrijdag Teachers Day"
-  },
-  {
-    "event_id": "cf7c63db1a894f1c01e8631bd88bfad1d1",
-    "event_name": "2025-7--May Vouwen-Mmiddag Brain Jamming",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-7--May Vouwen-Mmiddag Brain Jamming",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-7--May Vouwen-Mmiddag Brain Jamming"
-  },
-  {
-    "event_id": "cf79e73714094daa3ef714be0c529c2609",
-    "event_name": "2025-BhartiyaFirst",
-    "event_date": "2025",
-    "cloudinary_folder": "2025-BhartiyaFirst",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-BhartiyaFirst"
   },
   {
     "event_id": "cfa5d2812d8919b74ac1390c45e6f63804",
@@ -270,42 +922,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2025-September-Sahitya Chaupal"
   },
   {
-    "event_id": "d00f7e458809005624fe553a7292261021",
-    "event_name": "2026 DE OPENING",
-    "event_date": "",
-    "cloudinary_folder": "2026 DE OPENING",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026 DE OPENING"
-  },
-  {
-    "event_id": "cf7a327be7097b32dd4c871ecb4e9e42d3",
-    "event_name": "2026-10- Hindi Diwas January",
-    "event_date": "2026",
-    "cloudinary_folder": "2026-10- Hindi Diwas January",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-10- Hindi Diwas January"
-  },
-  {
-    "event_id": "cf7ab7e72489717ff8dc018fe2841a324b",
-    "event_name": "2026-21- International Yoga Day",
-    "event_date": "2026",
-    "cloudinary_folder": "2026-21- International Yoga Day",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-21- International Yoga Day"
-  },
-  {
-    "event_id": "cf79e4ccad096533e97d848498cfa502af",
-    "event_name": "2026-Holi",
-    "event_date": "2026",
-    "cloudinary_folder": "2026-Holi",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-Holi"
-  },
-  {
     "event_id": "cf79e5a8850909a103b12056362561e2b5",
     "event_name": "2026-InternationalYogaDay",
     "event_date": "2026",
@@ -313,24 +929,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-InternationalYogaDay"
-  },
-  {
-    "event_id": "cf79e4bacd897d0e76dbb1841d0ac2ae12",
-    "event_name": "2026-ITF",
-    "event_date": "2026",
-    "cloudinary_folder": "2026-ITF",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-ITF"
-  },
-  {
-    "event_id": "cf79e59079090eb76909a81d36154e706f",
-    "event_name": "2026-LiteraryFest",
-    "event_date": "2026",
-    "cloudinary_folder": "2026-LiteraryFest",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/2026-LiteraryFest"
   },
   {
     "event_id": "cfe109279f893c5d738351e1dba79ff52c",
@@ -342,60 +940,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/25 August 2027 Ramnavami"
   },
   {
-    "event_id": "cfe38f418089466076230905fd9bafd427",
-    "event_name": "April-2024-Ramnavami",
-    "event_date": "2024",
-    "cloudinary_folder": "April-2024-Ramnavami",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/April-2024-Ramnavami"
-  },
-  {
-    "event_id": "cd9442eb41096b3b95ba4fa842d92dc2e6",
-    "event_name": "Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
-    "event_date": "",
-    "cloudinary_folder": "Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Azadi-ka-Amrit-Mahotsav-Poetry-The-Gandhi-Centre"
-  },
-  {
-    "event_id": "cfe0ea79b60979cbba584e8b5266af5e6a",
-    "event_name": "Bharat Dutch Times_July 2026",
-    "event_date": "",
-    "cloudinary_folder": "Bharat Dutch Times_July 2026",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bharat Dutch Times_July 2026"
-  },
-  {
-    "event_id": "cfe0ecbc29893f7859e944dd0c9f2a7398",
-    "event_name": "Bharat Dutch Times_June 2026",
-    "event_date": "",
-    "cloudinary_folder": "Bharat Dutch Times_June 2026",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bharat Dutch Times_June 2026"
-  },
-  {
-    "event_id": "cd9442f932093b2db0953a9183e233f390",
-    "event_name": "Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
-    "event_date": "",
-    "cloudinary_folder": "Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Bollywood-Musician-Singer-Piyush-Mishras-Amsterdam"
-  },
-  {
-    "event_id": "cd94bd618b0934072fc2add459628ff7fe",
-    "event_name": "Consular-Camp-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "Consular-Camp-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Consular-Camp-Eindhoven"
-  },
-  {
     "event_id": "cd9446b31789254692380d2b7694ee2405",
     "event_name": "Desi-Holland-Day-Eindhoven",
     "event_date": "",
@@ -405,60 +949,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Desi-Holland-Day-Eindhoven"
   },
   {
-    "event_id": "cd9446c92c890bed8e79d4180d18236800",
-    "event_name": "Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
-    "event_date": "",
-    "cloudinary_folder": "Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Ek-Shaam-Dinkar-ke-Naam-Hindi-Diwas-The-Gandhi-Centre"
-  },
-  {
-    "event_id": "cd9446e119897ff2e39de699fa979ded06",
-    "event_name": "Embassy-Consular-Camp-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "Embassy-Consular-Camp-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Embassy-Consular-Camp-Eindhoven"
-  },
-  {
-    "event_id": "cd94472882895462ab2de09c9b3d22827c",
-    "event_name": "First-ever-Embassy-Counsellor-Camp-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "First-ever-Embassy-Counsellor-Camp-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/First-ever-Embassy-Counsellor-Camp-Eindhoven"
-  },
-  {
-    "event_id": "cd94473c5d893c33d80a80bcabb905938a",
-    "event_name": "Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
-    "event_date": "",
-    "cloudinary_folder": "Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Gandhi-Jayanti-Kavya-Goshthi-The-Gandhi-Centre"
-  },
-  {
-    "event_id": "cd94477f8e091310ab0952658793367915",
-    "event_name": "Gita-Mahotsav-2023-The-Gandhi-Centre",
-    "event_date": "2023",
-    "cloudinary_folder": "Gita-Mahotsav-2023-The-Gandhi-Centre",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Gita-Mahotsav-2023-The-Gandhi-Centre"
-  },
-  {
-    "event_id": "cd94483f84093b671066d7b760dbc41459",
-    "event_name": "HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
-    "event_date": "",
-    "cloudinary_folder": "HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/HE-Mrs-Reenat-Sandhu-Ambassadors-Farewell-Den-Haag"
-  },
-  {
     "event_id": "cd94484dee093f433a2859bce72703dfc2",
     "event_name": "HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam",
     "event_date": "",
@@ -466,24 +956,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/HE-Ram-Nath-Kovind-President-of-India-Visit-Amsterdam"
-  },
-  {
-    "event_id": "cd94bca08f096f87401d533ff214269471",
-    "event_name": "Het-Hoge-Heem-Uithoorn",
-    "event_date": "",
-    "cloudinary_folder": "Het-Hoge-Heem-Uithoorn",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Het-Hoge-Heem-Uithoorn"
-  },
-  {
-    "event_id": "cd9449257e89136469ee8e84a90b72456b",
-    "event_name": "Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
-    "event_date": "",
-    "cloudinary_folder": "Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Hindi-Diwas-The-Gandhi-Centre-Embassy-of-India"
   },
   {
     "event_id": "cd9449683f8950321fa3092117dfefcebc",
@@ -502,15 +974,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Holi-Milan-Samaroh-The-Gandhi-Centre"
-  },
-  {
-    "event_id": "cd944a6d430910464b780192659fc33b43",
-    "event_name": "India-Day-2023-Eindhoven",
-    "event_date": "2023",
-    "cloudinary_folder": "India-Day-2023-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/India-Day-2023-Eindhoven"
   },
   {
     "event_id": "cd944aac8989389a4a0522b3f7c8d3029c",
@@ -538,51 +1001,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/International-Indian-Diaspora-Conference-Wassenaar"
-  },
-  {
-    "event_id": "cd944b685d097c0fe8c57be0a3bf87dc1c",
-    "event_name": "International-Womens-Day",
-    "event_date": "",
-    "cloudinary_folder": "International-Womens-Day",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/International-Womens-Day"
-  },
-  {
-    "event_id": "cd944b819c895889d098cbd717174694d0",
-    "event_name": "International-Yoga-Day-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "International-Yoga-Day-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/International-Yoga-Day-Eindhoven"
-  },
-  {
-    "event_id": "cd944bbd418975ee04dfdd0ca3b20da6e7",
-    "event_name": "Kalam-Mic-Muskurahat-Literary-Fest",
-    "event_date": "",
-    "cloudinary_folder": "Kalam-Mic-Muskurahat-Literary-Fest",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Kalam-Mic-Muskurahat-Literary-Fest"
-  },
-  {
-    "event_id": "cd944c0bdd09493fbdc387af384a68005f",
-    "event_name": "Lalaland-Event-The-Magic-of-India-Zaandam",
-    "event_date": "",
-    "cloudinary_folder": "Lalaland-Event-The-Magic-of-India-Zaandam",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Lalaland-Event-The-Magic-of-India-Zaandam"
-  },
-  {
-    "event_id": "cd944c5d1f89008e11de3f1669aa038766",
-    "event_name": "Literary-Fest-2025-Almere",
-    "event_date": "2025",
-    "cloudinary_folder": "Literary-Fest-2025-Almere",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Literary-Fest-2025-Almere"
   },
   {
     "event_id": "cd944cb28d893e70eb6922be9a2e270833",
@@ -621,15 +1039,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Prasadam-April-2025"
   },
   {
-    "event_id": "cd944cf9c5092ac61218a09ef0c4b2c657",
-    "event_name": "Prasadam-distribution-TTD",
-    "event_date": "",
-    "cloudinary_folder": "Prasadam-distribution-TTD",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Prasadam-distribution-TTD"
-  },
-  {
     "event_id": "cd944d0e488924c9e815f7c5ece56611b9",
     "event_name": "President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp",
     "event_date": "",
@@ -637,15 +1046,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/President-of-Suriname-Mr-Chan-Santokhi-Hoofddorp"
-  },
-  {
-    "event_id": "cffd123b0c891077b36ef079de91682ec5",
-    "event_name": "Radio Poetry",
-    "event_date": "",
-    "cloudinary_folder": "Radio Poetry",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Radio Poetry"
   },
   {
     "event_id": "cd944d22bb09191cc9eef5a068359e802b",
@@ -666,78 +1066,6 @@
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Shivaji-Jayanti-Celebrations-The-Gandhi-Centre"
   },
   {
-    "event_id": "cd944d3d34097e0f3839e1bb6b438920d9",
-    "event_name": "Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
-    "event_date": "",
-    "cloudinary_folder": "Shri-Ram-Mandir-Pran-Prathistha-Den-Haag",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Shri-Ram-Mandir-Pran-Prathistha-Den-Haag"
-  },
-  {
-    "event_id": "cd944dacf989549656e58797031c946a5d",
-    "event_name": "Sur-India-Utrecht",
-    "event_date": "",
-    "cloudinary_folder": "Sur-India-Utrecht",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Sur-India-Utrecht"
-  },
-  {
-    "event_id": "cffae59ad3890225e95156cd51db2c3bb3",
-    "event_name": "The Tulips Lounge",
-    "event_date": "",
-    "cloudinary_folder": "The Tulips Lounge",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The Tulips Lounge"
-  },
-  {
-    "event_id": "cd944dda33094ec2a6e793645779efeb96",
-    "event_name": "The-Future-of-Eindhoven-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "The-Future-of-Eindhoven-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The-Future-of-Eindhoven-Eindhoven"
-  },
-  {
-    "event_id": "cd944e045f89695b1b19952f3d3c1050a5",
-    "event_name": "The-Rythms-of-India-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "The-Rythms-of-India-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/The-Rythms-of-India-Eindhoven"
-  },
-  {
-    "event_id": "cfe0eeadc0894e482471d1fde61731c51e",
-    "event_name": "Uithoorn Desk",
-    "event_date": "",
-    "cloudinary_folder": "Uithoorn Desk",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Uithoorn Desk"
-  },
-  {
-    "event_id": "cd944f63f7896c4993e736053143cf6509",
-    "event_name": "Unity-Festival-of-Lights-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "Unity-Festival-of-Lights-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Unity-Festival-of-Lights-Eindhoven"
-  },
-  {
-    "event_id": "cda7fa04b4094822d52ba0ca85128ac466",
-    "event_name": "UnityFestivalOfLights2025",
-    "event_date": "",
-    "cloudinary_folder": "UnityFestivalOfLights2025",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/UnityFestivalOfLights2025"
-  },
-  {
     "event_id": "cd944f5b01893af7ac4ef29de70ae645db",
     "event_name": "UP-CM-Indian-Diaspora-Amsterdam",
     "event_date": "",
@@ -745,24 +1073,6 @@
     "photo_count": 2901,
     "cloudinary_urls": [],
     "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/UP-CM-Indian-Diaspora-Amsterdam"
-  },
-  {
-    "event_id": "cd945172ee8927f848ef912f2f7c450534",
-    "event_name": "Women-Hormonal-Health-Session-Uithoorn",
-    "event_date": "",
-    "cloudinary_folder": "Women-Hormonal-Health-Session-Uithoorn",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/Women-Hormonal-Health-Session-Uithoorn"
-  },
-  {
-    "event_id": "cd945183150907eaa75d165100023ea668",
-    "event_name": "World-Hindi-Day-Eindhoven",
-    "event_date": "",
-    "cloudinary_folder": "World-Hindi-Day-Eindhoven",
-    "photo_count": 2901,
-    "cloudinary_urls": [],
-    "folder_url": "https://console.cloudinary.com/console/c-du0lumtob/media_library/folders/archived-events/World-Hindi-Day-Eindhoven"
   },
   {
     "event_id": "cd9452d1f6894674f3ec484ac023c7146b",
