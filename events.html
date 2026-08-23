@@ -3204,15 +3204,16 @@ window.reloadEvents = function() {
 };
 </script>
 
-<!-- FOOTER PLACEHOLDER -->
+</main>
+
+<!-- 2. FOOTER PLACEHOLDER -->
+<div id="footer-placeholder"></div>
+
+<!-- 3. INCLUDE JAVASCRIPT -->
+<script src="include.js"></script>
 <script>
-    // Load header and footer from placeholders (keep existing pattern)
-    document.addEventListener('DOMContentLoaded', function() {
-        const headerPlaceholder = document.getElementById('header-placeholder');
-        if (headerPlaceholder) {
-            // Replace with actual header component if available
-            headerPlaceholder.innerHTML = '<header><!-- Header goes here --></header>';
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+        loadComponents('Events Archive - Sanskriti & Sanskar', 'events.html');
     });
 </script>
 
