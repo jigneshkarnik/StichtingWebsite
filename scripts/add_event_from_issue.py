@@ -2,22 +2,266 @@
 """
 Add Event from GitHub Issue
 
-This script parses a GitHub issue to extract event details,
-fetches photos from Cloudinary, and updates the event mapping files.
+Parses a GitHub issue (created from the "Add New Event" template),
+fetches all photos from the named Cloudinary folder, and updates:
+  - events_data.json          (source-of-truth list used by sync scripts)
+  - cloudinary_event_mapping.json  (gallery mapping with full URL list)
+  - events.html               (re-embeds the updated mapping JSON)
+
+Run by GitHub Actions when the `new-event` label is applied to an issue.
 """
 
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime
 import cloudinary
 import cloudinary.api
 
-# Configuration
 CLOUDINARY_CLOUD_NAME = os.environ.get('CLOUDINARY_CLOUD_NAME', 'du0lumtob')
 MAPPING_FILE = "cloudinary_event_mapping.json"
-GALLERY_JS_FILE = "gallery.js"
+EVENTS_DATA_FILE = "events_data.json"
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+# ---------------------------------------------------------------------------
+# Parsing
+# ---------------------------------------------------------------------------
+
+def _field(issue_body, label):
+    """Extract the value following a GitHub Forms field heading."""
+    m = re.search(
+        rf'###\s+{re.escape(label)}\s*\n+([^\n#][^\n]*(?:\n(?!###)[^\n]*)*)',
+        issue_body
+    )
+    if not m:
+        return None
+    value = m.group(1).strip()
+    if value.lower() in ('no response', '_no response_', ''):
+        return None
+    return value
+
+
+def parse_issue_body(issue_body):
+    print("📋 Parsing issue body...")
+
+    data = {
+        'event_name':        _field(issue_body, 'Event Name'),
+        'cloudinary_folder': _field(issue_body, 'Cloudinary Folder Name'),
+        'event_date':        _field(issue_body, 'Event Date'),
+        'event_time':        _field(issue_body, 'Event Time'),
+        'venue':             _field(issue_body, 'Venue / Location'),
+        'description':       _field(issue_body, 'Short Description'),
+        'img1':              _field(issue_body, 'Hero Image (img1)'),
+        'img2':              _field(issue_body, 'Second Image (img2)'),
+        'img3':              _field(issue_body, 'Third Image (img3)'),
+    }
+
+    required = ['event_name', 'cloudinary_folder', 'event_date', 'venue', 'description', 'img1']
+    missing = [f for f in required if not data.get(f)]
+    if missing:
+        print(f"❌ Missing required fields: {', '.join(missing)}")
+        sys.exit(1)
+
+    for k, v in data.items():
+        if v:
+            print(f"   ✅ {k}: {v[:80]}")
+
+    return data
+
+
+# ---------------------------------------------------------------------------
+# Cloudinary
+# ---------------------------------------------------------------------------
+
+def connect_cloudinary():
+    print("\n🔌 Connecting to Cloudinary...")
+    api_key    = os.environ.get('CLOUDINARY_API_KEY')
+    api_secret = os.environ.get('CLOUDINARY_API_SECRET')
+    if not api_key or not api_secret:
+        print("❌ Missing CLOUDINARY_API_KEY / CLOUDINARY_API_SECRET")
+        sys.exit(1)
+    cloudinary.config(cloud_name=CLOUDINARY_CLOUD_NAME,
+                      api_key=api_key, api_secret=api_secret, secure=True)
+    print(f"   ✅ Connected (cloud: {CLOUDINARY_CLOUD_NAME})")
+
+
+def fetch_cloudinary_photos(folder_name):
+    print(f"\n📸 Fetching photos from archived-events/{folder_name} …")
+    full_path = f"archived-events/{folder_name}"
+    resources, cursor = [], None
+    while True:
+        kwargs = dict(type="upload", prefix=full_path, max_results=500)
+        if cursor:
+            kwargs['next_cursor'] = cursor
+        result = cloudinary.api.resources(**kwargs)
+        resources.extend(result.get('resources', []))
+        cursor = result.get('next_cursor')
+        if not cursor:
+            break
+
+    if not resources:
+        print(f"❌ No photos found in {full_path} — check the folder name")
+        sys.exit(1)
+
+    urls = [r['secure_url'] for r in resources]
+    print(f"   ✅ {len(urls)} photos found")
+    return urls, full_path
+
+
+# ---------------------------------------------------------------------------
+# File updates
+# ---------------------------------------------------------------------------
+
+def next_sno(events):
+    """Return max Sno + 1 (or 1 if list is empty)."""
+    if not events:
+        return 1
+    return max((e.get('Sno', 0) for e in events), default=0) + 1
+
+
+def update_events_data(data, photo_urls):
+    print(f"\n📝 Updating {EVENTS_DATA_FILE} …")
+    try:
+        with open(EVENTS_DATA_FILE, encoding='utf-8') as f:
+            events = json.load(f)
+        print(f"   Loaded {len(events)} existing entries")
+    except FileNotFoundError:
+        events = []
+
+    # Avoid duplicates: check if folder already present
+    folder = data['cloudinary_folder']
+    for e in events:
+        for img_key in ('img1', 'img2', 'img3'):
+            url = e.get(img_key, '')
+            if url and folder in url:
+                print(f"   ⚠️  Folder already in events_data.json (Sno {e['Sno']}) — skipping")
+                return events
+
+    new_entry = {
+        "Sno":   next_sno(events),
+        "date":  data['event_date'],
+        "Year":  int(data['event_date'][:4]),
+        "name":  data['event_name'],
+        "img1":  data['img1'],
+        "img2":  data.get('img2') or photo_urls[1] if len(photo_urls) > 1 else data['img1'],
+        "img3":  data.get('img3') or photo_urls[2] if len(photo_urls) > 2 else data['img1'],
+        "venue": data['venue'],
+        "desc":  data['description'],
+    }
+    if data.get('event_time'):
+        new_entry['time'] = data['event_time']
+
+    events.append(new_entry)
+    # Keep sorted newest-first by date string
+    events.sort(key=lambda x: str(x.get('date', '')), reverse=True)
+
+    with open(EVENTS_DATA_FILE, 'w', encoding='utf-8') as f:
+        json.dump(events, f, indent=2, ensure_ascii=False)
+    print(f"   ✅ Saved {len(events)} entries (new Sno: {new_entry['Sno']})")
+    return events
+
+
+def update_mapping(data, photo_urls, folder_path):
+    print(f"\n📝 Updating {MAPPING_FILE} …")
+    try:
+        with open(MAPPING_FILE, encoding='utf-8') as f:
+            mapping = json.load(f)
+        print(f"   Loaded {len(mapping)} existing events")
+    except FileNotFoundError:
+        mapping = []
+
+    folder = data['cloudinary_folder']
+
+    # Avoid duplicates
+    for e in mapping:
+        if e.get('cloudinary_folder') == folder:
+            print(f"   ⚠️  Folder already in mapping — skipping")
+            return mapping
+
+    # Hero image first, then remaining gallery images
+    hero = data['img1']
+    rest = [u for u in photo_urls if u != hero]
+    all_urls = [hero] + rest
+
+    event_id = str(int(datetime.now().timestamp()))
+    entry = {
+        "event_id":          event_id,
+        "event_name":        data['event_name'],
+        "event_name_ref":    data['event_name'],
+        "event_date":        data['event_date'],
+        "venue":             data['venue'],
+        "description":       data['description'],
+        "cloudinary_folder": folder,
+        "photo_count":       len(all_urls),
+        "cloudinary_urls":   all_urls,
+        "folder_url":        f"https://res.cloudinary.com/{CLOUDINARY_CLOUD_NAME}/image/upload/{folder_path}/",
+        "event_details":     {},
+    }
+    if data.get('event_time'):
+        entry['event_time'] = data['event_time']
+
+    # Prepend so it appears first (newest)
+    mapping.insert(0, entry)
+
+    with open(MAPPING_FILE, 'w', encoding='utf-8') as f:
+        json.dump(mapping, f, indent=2, ensure_ascii=False)
+    print(f"   ✅ Saved {len(mapping)} events (new event_id: {event_id})")
+    return mapping
+
+
+def rebuild_events_html():
+    print(f"\n⚡ Rebuilding events.html …")
+    script = os.path.join(SCRIPTS_DIR, 'update_events_html.py')
+    result = subprocess.run([sys.executable, script], capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"   ❌ update_events_html.py failed:\n{result.stderr}")
+        sys.exit(1)
+    for line in result.stdout.splitlines():
+        print(f"   {line}")
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    print("=" * 70)
+    print("🚀 Add Event from GitHub Issue")
+    print("=" * 70)
+
+    issue_body = os.environ.get('ISSUE_BODY', '')
+    if not issue_body:
+        print("❌ ISSUE_BODY environment variable is not set")
+        sys.exit(1)
+
+    data = parse_issue_body(issue_body)
+    connect_cloudinary()
+    photo_urls, folder_path = fetch_cloudinary_photos(data['cloudinary_folder'])
+
+    update_events_data(data, photo_urls)
+    update_mapping(data, photo_urls, folder_path)
+    rebuild_events_html()
+
+    print("\n" + "=" * 70)
+    print("✅ Done!")
+    print("=" * 70)
+    print(f"\n   📌 {data['event_name']}")
+    print(f"   📅 {data['event_date']}  📍 {data['venue']}")
+    print(f"   📷 {len(photo_urls)} photos")
+    print("\n📁 Files updated:")
+    print(f"   • {EVENTS_DATA_FILE}")
+    print(f"   • {MAPPING_FILE}")
+    print(f"   • events.html")
+    print("\n🎉 PR is ready for review!")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
+
 
 
 def parse_issue_body(issue_body):

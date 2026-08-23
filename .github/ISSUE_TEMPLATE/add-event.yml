@@ -1,6 +1,6 @@
-name: Add New Event
-description: Add a new event to the gallery with photos from Cloudinary
-title: "[Event]: "
+name: Add New Event to Archive
+description: Submit a new event to the website archive. A PR will be created automatically for your review.
+title: "[New Event]: "
 labels: ["new-event"]
 assignees:
   - jigneshkarnik
@@ -8,42 +8,18 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Add New Event to Gallery
-        Fill out this form to automatically add a new event to the website gallery. The automation will fetch photos from Cloudinary and update the website.
+        ## 📸 Add New Event to Archive
+        Fill in the details below. Once you submit, a Pull Request will be created automatically.
+        You can review and merge the PR when you are happy with the result.
+
+        > **Before submitting:** Make sure photos are already uploaded to Cloudinary under `archived-events/<your-folder>/`
 
   - type: input
     id: event-name
     attributes:
       label: Event Name
-      description: Full name of the event (e.g., 'Vrouwen Middag' @Uithoorn)
-      placeholder: "Event Name @Location"
-    validations:
-      required: true
-
-  - type: input
-    id: location
-    attributes:
-      label: Location
-      description: City or venue where the event took place
-      placeholder: Amsterdam
-    validations:
-      required: true
-
-  - type: input
-    id: event-date
-    attributes:
-      label: Event Date
-      description: Date in YYYY-MM-DD format
-      placeholder: "2025-06-09"
-    validations:
-      required: true
-
-  - type: textarea
-    id: thumbnail
-    attributes:
-      label: Thumbnail Image
-      description: Upload or provide a link to the event thumbnail image. This will be the cover image for the event card.
-      placeholder: Drag and drop an image here or paste an image URL
+      description: Full display name of the event
+      placeholder: "Vrouwen Middag @Uithoorn"
     validations:
       required: true
 
@@ -51,54 +27,96 @@ body:
     id: cloudinary-folder
     attributes:
       label: Cloudinary Folder Name
-      description: Name of the folder in Cloudinary containing event photos (WITHOUT 'archived-events/' prefix)
+      description: Exact folder name inside `archived-events/` on Cloudinary (no prefix needed)
       placeholder: "2025-06-Vrouwen-Middag-Uithoorn"
     validations:
       required: true
 
   - type: input
-    id: photo-count
+    id: event-date
     attributes:
-      label: Number of Photos
-      description: Approximate number of photos in the Cloudinary folder (optional - will be auto-detected)
-      placeholder: "24"
+      label: Event Date
+      description: Date the event took place (YYYY-MM-DD)
+      placeholder: "2025-06-09"
+    validations:
+      required: true
+
+  - type: input
+    id: event-time
+    attributes:
+      label: Event Time
+      description: Start time of the event including timezone (optional)
+      placeholder: "18:30 CET"
     validations:
       required: false
 
-  - type: textarea
-    id: video-links
+  - type: input
+    id: venue
     attributes:
-      label: Video Links (Optional)
-      description: YouTube or Vimeo video links related to this event (one per line)
-      placeholder: |
-        https://youtu.be/abc123
-        https://vimeo.com/123456789
+      label: Venue / Location
+      description: City or venue name
+      placeholder: "Uithoorn"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short Description
+      description: 1–3 sentences describing the event (shown on the event card and gallery page)
+      placeholder: "An afternoon of cultural exchange and celebration bringing together families from the community..."
+    validations:
+      required: true
+
+  - type: input
+    id: img1
+    attributes:
+      label: Hero Image (img1)
+      description: Full Cloudinary URL of the primary image — this appears as the event card thumbnail
+      placeholder: "https://res.cloudinary.com/du0lumtob/image/upload/v.../archived-events/<folder>/photo1.jpg"
+    validations:
+      required: true
+
+  - type: input
+    id: img2
+    attributes:
+      label: Second Image (img2)
+      description: Full Cloudinary URL of a second representative image (optional)
+      placeholder: "https://res.cloudinary.com/du0lumtob/image/upload/v.../archived-events/<folder>/photo2.jpg"
+    validations:
+      required: false
+
+  - type: input
+    id: img3
+    attributes:
+      label: Third Image (img3)
+      description: Full Cloudinary URL of a third representative image (optional)
+      placeholder: "https://res.cloudinary.com/du0lumtob/image/upload/v.../archived-events/<folder>/photo3.jpg"
     validations:
       required: false
 
   - type: checkboxes
-    id: completion-checklist
+    id: checklist
     attributes:
-      label: Completion Checklist
-      description: Check these items to ensure everything is ready
+      label: Pre-submission Checklist
       options:
-        - label: Photos are uploaded to Cloudinary in the specified folder
+        - label: Photos are uploaded to Cloudinary in the folder named above
           required: true
-        - label: Cloudinary folder name is correct
+        - label: The Cloudinary folder name is correct (no `archived-events/` prefix)
           required: true
         - label: Event date is in YYYY-MM-DD format
           required: true
-        - label: Thumbnail image is provided
+        - label: Hero image URL is a valid Cloudinary link
           required: true
 
   - type: markdown
     attributes:
       value: |
         ---
-        ### What happens next?
-        1. When you apply the `new-event` label, the automation will trigger
-        2. The script will fetch photos from your Cloudinary folder
-        3. A Pull Request will be created automatically with the changes
-        4. Review and merge the PR to publish the event to the website
-        
-        **Note:** Make sure you have uploaded all photos to Cloudinary before creating this issue!
+        ### ⚙️ What happens after you submit?
+        1. The `new-event` label triggers the automation workflow
+        2. The script fetches **all photos** from the Cloudinary folder you named
+        3. `events_data.json` and `cloudinary_event_mapping.json` are updated
+        4. `events.html` is re-generated with the new event at the top
+        5. A **Pull Request** is opened for your review
+        6. Merge the PR → event goes live on the website
