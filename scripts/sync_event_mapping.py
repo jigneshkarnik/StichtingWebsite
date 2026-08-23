@@ -129,16 +129,21 @@ def main() -> None:
     with open(MAPPING_PATH, encoding="utf-8") as f:
         mapping: list[dict] = json.load(f)
 
-    # Load enhanced file for full gallery URL lists
+    # Load enhanced file for full gallery URL lists AND metadata
     enhanced_by_folder: dict[str, list[str]] = {}
+    enhanced_meta: dict[str, dict] = {}
     if os.path.exists(ENHANCED_PATH):
         with open(ENHANCED_PATH, encoding="utf-8") as f:
             enhanced = json.load(f)
         for e in enhanced:
             folder = e.get("cloudinary_folder", "")
             urls   = e.get("cloudinary_urls", [])
-            if folder and urls:
-                enhanced_by_folder[folder] = urls
+            if folder:
+                if urls:
+                    enhanced_by_folder[folder] = urls
+                details = e.get("event_details", {})
+                # Store metadata even when event_details exists
+                enhanced_meta[folder] = details
         print(f"  📂 Loaded enhanced URLs for {len(enhanced_by_folder)} folders\n")
 
     # index by folder name for O(1) lookup
@@ -227,19 +232,31 @@ def main() -> None:
         print(f"  ✅  Sno {sno:>3} [{source}]: {len(full_urls):>3} photos → [{folder}]")
 
     # ── append unmatched cloudinary entries at the end ─────────────────────
-    # Also copy any enhanced URLs they may have
+    # Populate photos AND metadata (date, venue, description) from enhanced file
     unmatched = [e for e in mapping if e["cloudinary_folder"] not in matched_folders]
     if unmatched:
         print(f"\n  ℹ️  {len(unmatched)} cloudinary entries had no match (appended at end):")
         for e in unmatched:
             folder = e["cloudinary_folder"]
+            # Copy URLs
             enhanced_urls = enhanced_by_folder.get(folder, [])
             if enhanced_urls:
                 e["cloudinary_urls"] = enhanced_urls
                 e["photo_count"]     = len(enhanced_urls)
-                print(f"       • {folder}  ({len(enhanced_urls)} photos from enhanced)")
-            else:
-                print(f"       • {folder}  (no photos)")
+            # Copy metadata from event_details in enhanced
+            details = enhanced_meta.get(folder, {})
+            if details.get("date") and not e.get("event_date"):
+                e["event_date"] = parse_iso_date(str(details["date"])) if str(details.get("date","")).isdigit() else str(details["date"])
+            if details.get("year") and not e.get("event_date"):
+                e["event_date"] = str(details["year"])
+            if details.get("venue") and not e.get("venue"):
+                e["venue"] = details["venue"]
+            if details.get("description") and not e.get("description"):
+                e["description"] = details["description"]
+            if details.get("name") and not e.get("event_name_ref"):
+                e["event_name_ref"] = details["name"]
+            photos = len(e.get("cloudinary_urls", []))
+            print(f"       • {folder}  ({photos} photos, date={e.get('event_date','?')}, venue={e.get('venue','?')})")
     ordered_output.extend(unmatched)
 
     with open(MAPPING_OUT_PATH, "w", encoding="utf-8") as f:
