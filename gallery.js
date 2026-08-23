@@ -63,17 +63,25 @@ function initializeGallery() {
     
     // Display event information
     const details = eventData.event_details || {};
-    const displayName = details.name || eventData.event_name;
-    const photoCount = eventData.cloudinary_urls ? eventData.cloudinary_urls.length : eventData.image_count || 0;
-    
+    const displayName = details.name || eventData.event_name_ref || eventData.event_name;
+    const photoCount  = eventData.cloudinary_urls ? eventData.cloudinary_urls.length : eventData.image_count || 0;
+    const description = eventData.description || details.description || '';
+    const venue       = eventData.venue || details.venue || '';
+
     document.getElementById('event-title').textContent = displayName;
-    document.getElementById('event-date').textContent = `📅 ${formatDate(details.date || details.year)}`;
+    document.getElementById('event-date').textContent  = `📅 ${formatDate(eventData.event_date || details.date || details.year)}`;
     document.getElementById('photo-count').textContent = `📷 ${photoCount} photos`;
-    
-    if (details.venue) {
+
+    const descEl = document.getElementById('event-description');
+    if (description && descEl) {
+        descEl.textContent = description;
+        descEl.style.cssText = 'margin:10px auto 0;max-width:700px;opacity:.9;font-size:.95rem;line-height:1.6;';
+    }
+
+    if (venue) {
         const venueEl = document.createElement('p');
-        venueEl.style.marginTop = '10px';
-        venueEl.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${details.venue}`;
+        venueEl.style.marginTop = '8px';
+        venueEl.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${venue}`;
         document.querySelector('.gallery-header').appendChild(venueEl);
     }
     

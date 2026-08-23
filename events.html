@@ -2989,9 +2989,15 @@ function renderEvents() {
         
         // Sort events by date (newest first)
         const sortedEvents = eventsData.sort((a, b) => {
-            const dateA = a.event_details?.date || a.event_details?.year || 0;
-            const dateB = b.event_details?.date || b.event_details?.year || 0;
-            return dateB - dateA;
+            const toMs = v => {
+                if (!v) return 0;
+                if (typeof v === 'number') return v < 1e11 ? v * 1000 : v;
+                const s = String(v).trim();
+                if (/^\d{10,13}$/.test(s)) return Number(s);
+                const d = new Date(s);
+                return isNaN(d) ? 0 : d.getTime();
+            };
+            return toMs(b.event_date) - toMs(a.event_date);
         });
         
         // Create and append cards for each event
